@@ -20,14 +20,6 @@ CREATE TABLE IF NOT EXISTS tipocabina(
   nombre VARCHAR(50),
   PRIMARY KEY(id)
 );
-CREATE TABLE IF NOT EXISTS cabina(
-  id INTEGER(10),
-  tipo INTEGER(2),
-  avion VARCHAR(10),
-  FOREIGN KEY(tipo) REFERENCES tipocabina(id),
-  FOREIGN KEY(avion) REFERENCES avion(id),
-  PRIMARY KEY(id)
-);
 
 
 
@@ -77,6 +69,15 @@ CREATE TABLE IF NOT EXISTS vuelo(
   fecha DATETIME,
   FOREIGN KEY(aeropuerto_salida) REFERENCES aeropuerto(id),
   FOREIGN KEY(aeropuerto_llegada) REFERENCES aeropuerto(id),
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS cabina(
+  id INTEGER(10),
+  tipo INTEGER(2),
+  avion VARCHAR(10),
+  FOREIGN KEY(tipo) REFERENCES tipocabina(id),
+  FOREIGN KEY(avion) REFERENCES avion(id),
   PRIMARY KEY(id)
 );
 

@@ -15,7 +15,7 @@ import javax.ejb.EJB;
  *
  * @author daemonsoft
  */
-@Named(value = "searchBean")
+@Named(value = "vueloBean")
 @SessionScoped
 public class vueloBean implements Serializable {
     

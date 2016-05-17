@@ -37,6 +37,34 @@
                 </div>
             </nav>
             <div class="container">
+                <form class="col s12">
+                    <div class="row">
+                        <input class="with-gap" name="tipodeviaje" type="radio" id="idayregreso"/>
+                        <label for="idayregreso">Ida y regreso</label>
+                        <input class="with-gap" name="tipodeviaje" type="radio" id="soloida" />
+                        <label for="soloida">Solo ida</label>
+                    </div>
+                    <div class="row">
+                        <h:form>
+                        <p:growl id="msgs" showDetail="true" />
+                        <div class="input-field col s6">
+                            <p:outputLabel value="Simple:" for="acSimple" />
+                            <p:autoComplete id="acSimple" value="#{aeropuertoBean.aeroTxt}" completeMethod="#{aeropuertoBean.completeText}" />
+                        </div>
+                        </h:form>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <input id="ciudad_origen" type="text" class="validate"/>
+                            <label for="ciudad_origen">Cuidad de origen</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="ciudad_regreso" type="text" class="validate"/>
+                            <label for="ciudad_regreso">Cuidad de destino</label>
+                        </div>
+                    </div>
+                </form>
+
+
                 <div class="row">
                     <div class="col s3">
                         <p:outputLabel for="fechaida" value="fechaida" />

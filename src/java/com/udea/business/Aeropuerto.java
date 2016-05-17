@@ -124,7 +124,7 @@ public class Aeropuerto implements Serializable {
 
     @Override
     public String toString() {
-        return "com.udea.business.Aeropuerto[ id=" + id + " ]";
+        return  id + "";
     }
     
 }
