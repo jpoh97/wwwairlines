@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS 'cabina' (
 CREATE TABLE IF NOT EXISTS 'tiquete' (
   'vuelo' NUMBER(10),
   'asiento' NUMBER(10),
-  'precio' NUMBER(15),  este precio no es mas bien del asiento o donde porque como depende de la cabina
+  'precio' NUMBER(15),
 	PRIMARY KEY (idavion));
   
 CREATE TABLE IF NOT EXISTS 'aeropuerto' (
