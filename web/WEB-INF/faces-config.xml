@@ -61,9 +61,4 @@
             <to-view-id>/index.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
-    <managed-bean>
-        <managed-bean-name>aeropuertoBean</managed-bean-name>
-        <managed-bean-class>com.udea.controller.AeropuertoBean</managed-bean-class>
-    
-        <managed-bean-scope>session</managed-bean-scope></managed-bean>
 </faces-config>
