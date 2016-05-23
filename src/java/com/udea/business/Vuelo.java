@@ -15,8 +15,6 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
@@ -30,7 +28,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "vuelo")
@@ -50,11 +48,8 @@ public class Vuelo implements Serializable {
     @Column(name = "fecha")
     @Temporal(TemporalType.TIMESTAMP)
     private Date fecha;
-    @JoinTable(name = "vueloxescala", joinColumns = {
-        @JoinColumn(name = "idvuelo", referencedColumnName = "id")}, inverseJoinColumns = {
-        @JoinColumn(name = "idescala", referencedColumnName = "id")})
-    @ManyToMany(fetch = FetchType.LAZY)
-    private List<Escala> escalaList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "vuelo", fetch = FetchType.LAZY)
+    private List<Vueloxcabina> vueloxcabinaList;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "vuelo1", fetch = FetchType.LAZY)
     private List<Tiquete> tiqueteList;
     @JoinColumn(name = "aeropuerto_salida", referencedColumnName = "id")
@@ -64,7 +59,7 @@ public class Vuelo implements Serializable {
     @ManyToOne(fetch = FetchType.LAZY)
     private Aeropuerto aeropuertoLlegada;
     @OneToMany(mappedBy = "idvuelo", fetch = FetchType.LAZY)
-    private List<Escala> escalaList1;
+    private List<Escala> escalaList;
 
     public Vuelo() {
     }
@@ -90,12 +85,12 @@ public class Vuelo implements Serializable {
     }
 
     @XmlTransient
-    public List<Escala> getEscalaList() {
-        return escalaList;
+    public List<Vueloxcabina> getVueloxcabinaList() {
+        return vueloxcabinaList;
     }
 
-    public void setEscalaList(List<Escala> escalaList) {
-        this.escalaList = escalaList;
+    public void setVueloxcabinaList(List<Vueloxcabina> vueloxcabinaList) {
+        this.vueloxcabinaList = vueloxcabinaList;
     }
 
     @XmlTransient
@@ -124,12 +119,12 @@ public class Vuelo implements Serializable {
     }
 
     @XmlTransient
-    public List<Escala> getEscalaList1() {
-        return escalaList1;
+    public List<Escala> getEscalaList() {
+        return escalaList;
     }
 
-    public void setEscalaList1(List<Escala> escalaList1) {
-        this.escalaList1 = escalaList1;
+    public void setEscalaList(List<Escala> escalaList) {
+        this.escalaList = escalaList;
     }
 
     @Override

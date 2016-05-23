@@ -16,60 +16,60 @@ import javax.validation.constraints.NotNull;
  * @author JPOH97
  */
 @Embeddable
-public class TiquetePK implements Serializable {
+public class VueloxcabinaPK implements Serializable {
 
     @Basic(optional = false)
     @NotNull
-    @Column(name = "vuelo")
-    private int vuelo;
+    @Column(name = "idvuelo")
+    private int idvuelo;
     @Basic(optional = false)
     @NotNull
-    @Column(name = "asiento")
-    private int asiento;
+    @Column(name = "idcabina")
+    private int idcabina;
 
-    public TiquetePK() {
+    public VueloxcabinaPK() {
     }
 
-    public TiquetePK(int vuelo, int asiento) {
-        this.vuelo = vuelo;
-        this.asiento = asiento;
+    public VueloxcabinaPK(int idvuelo, int idcabina) {
+        this.idvuelo = idvuelo;
+        this.idcabina = idcabina;
     }
 
-    public int getVuelo() {
-        return vuelo;
+    public int getIdvuelo() {
+        return idvuelo;
     }
 
-    public void setVuelo(int vuelo) {
-        this.vuelo = vuelo;
+    public void setIdvuelo(int idvuelo) {
+        this.idvuelo = idvuelo;
     }
 
-    public int getAsiento() {
-        return asiento;
+    public int getIdcabina() {
+        return idcabina;
     }
 
-    public void setAsiento(int asiento) {
-        this.asiento = asiento;
+    public void setIdcabina(int idcabina) {
+        this.idcabina = idcabina;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (int) vuelo;
-        hash += (int) asiento;
+        hash += (int) idvuelo;
+        hash += (int) idcabina;
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof TiquetePK)) {
+        if (!(object instanceof VueloxcabinaPK)) {
             return false;
         }
-        TiquetePK other = (TiquetePK) object;
-        if (this.vuelo != other.vuelo) {
+        VueloxcabinaPK other = (VueloxcabinaPK) object;
+        if (this.idvuelo != other.idvuelo) {
             return false;
         }
-        if (this.asiento != other.asiento) {
+        if (this.idcabina != other.idcabina) {
             return false;
         }
         return true;
@@ -77,7 +77,7 @@ public class TiquetePK implements Serializable {
 
     @Override
     public String toString() {
-        return "com.udea.business.TiquetePK[ vuelo=" + vuelo + ", asiento=" + asiento + " ]";
+        return "com.udea.business.VueloxcabinaPK[ idvuelo=" + idvuelo + ", idcabina=" + idcabina + " ]";
     }
     
 }

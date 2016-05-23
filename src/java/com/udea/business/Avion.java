@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "avion")
@@ -31,9 +31,7 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Avion.findAll", query = "SELECT a FROM Avion a"),
     @NamedQuery(name = "Avion.findById", query = "SELECT a FROM Avion a WHERE a.id = :id"),
-    @NamedQuery(name = "Avion.findByNombre", query = "SELECT a FROM Avion a WHERE a.nombre = :nombre"),
-    @NamedQuery(name = "Avion.findByCapacidadPrimera", query = "SELECT a FROM Avion a WHERE a.capacidadPrimera = :capacidadPrimera"),
-    @NamedQuery(name = "Avion.findByCapacidadEconomica", query = "SELECT a FROM Avion a WHERE a.capacidadEconomica = :capacidadEconomica")})
+    @NamedQuery(name = "Avion.findByNombre", query = "SELECT a FROM Avion a WHERE a.nombre = :nombre")})
 public class Avion implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -46,12 +44,10 @@ public class Avion implements Serializable {
     @Size(max = 50)
     @Column(name = "nombre")
     private String nombre;
-    @Column(name = "capacidad_primera")
-    private Integer capacidadPrimera;
-    @Column(name = "capacidad_economica")
-    private Integer capacidadEconomica;
     @OneToMany(mappedBy = "avion", fetch = FetchType.LAZY)
     private List<Cabina> cabinaList;
+    @OneToMany(mappedBy = "idavion", fetch = FetchType.LAZY)
+    private List<Escala> escalaList;
 
     public Avion() {
     }
@@ -76,22 +72,6 @@ public class Avion implements Serializable {
         this.nombre = nombre;
     }
 
-    public Integer getCapacidadPrimera() {
-        return capacidadPrimera;
-    }
-
-    public void setCapacidadPrimera(Integer capacidadPrimera) {
-        this.capacidadPrimera = capacidadPrimera;
-    }
-
-    public Integer getCapacidadEconomica() {
-        return capacidadEconomica;
-    }
-
-    public void setCapacidadEconomica(Integer capacidadEconomica) {
-        this.capacidadEconomica = capacidadEconomica;
-    }
-
     @XmlTransient
     public List<Cabina> getCabinaList() {
         return cabinaList;
@@ -99,6 +79,15 @@ public class Avion implements Serializable {
 
     public void setCabinaList(List<Cabina> cabinaList) {
         this.cabinaList = cabinaList;
+    }
+
+    @XmlTransient
+    public List<Escala> getEscalaList() {
+        return escalaList;
+    }
+
+    public void setEscalaList(List<Escala> escalaList) {
+        this.escalaList = escalaList;
     }
 
     @Override

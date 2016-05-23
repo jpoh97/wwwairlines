@@ -5,13 +5,14 @@
  */
 package com.udea.ejb;
 
+import com.udea.business.Avion;
 import com.udea.business.Cabina;
 import java.util.List;
 import javax.ejb.Local;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Local
 public interface CabinaFacadeLocal {
@@ -22,7 +23,7 @@ public interface CabinaFacadeLocal {
 
     void remove(Cabina cabina);
 
-    Cabina find(Object id);
+    List<Cabina> find(Avion avion);
 
     List<Cabina> findAll();
 

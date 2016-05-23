@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "aeropuerto")
@@ -52,6 +52,8 @@ public class Aeropuerto implements Serializable {
     private List<Vuelo> vueloList;
     @OneToMany(mappedBy = "aeropuertoLlegada", fetch = FetchType.LAZY)
     private List<Vuelo> vueloList1;
+    @OneToMany(mappedBy = "aeropuerto", fetch = FetchType.LAZY)
+    private List<Escala> escalaList;
 
     public Aeropuerto() {
     }
@@ -102,6 +104,15 @@ public class Aeropuerto implements Serializable {
         this.vueloList1 = vueloList1;
     }
 
+    @XmlTransient
+    public List<Escala> getEscalaList() {
+        return escalaList;
+    }
+
+    public void setEscalaList(List<Escala> escalaList) {
+        this.escalaList = escalaList;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -124,7 +135,7 @@ public class Aeropuerto implements Serializable {
 
     @Override
     public String toString() {
-        return  id + "";
+        return "com.udea.business.Aeropuerto[ id=" + id + " ]";
     }
     
 }

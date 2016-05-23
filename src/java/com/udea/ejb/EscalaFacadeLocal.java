@@ -6,12 +6,13 @@
 package com.udea.ejb;
 
 import com.udea.business.Escala;
+import com.udea.business.Vuelo;
 import java.util.List;
 import javax.ejb.Local;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Local
 public interface EscalaFacadeLocal {
@@ -22,7 +23,7 @@ public interface EscalaFacadeLocal {
 
     void remove(Escala escala);
 
-    Escala find(Object id);
+    Escala find(Vuelo idvuelo);
 
     List<Escala> findAll();
 

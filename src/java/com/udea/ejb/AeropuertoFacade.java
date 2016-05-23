@@ -9,6 +9,7 @@ import com.udea.business.Aeropuerto;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +29,15 @@ public class AeropuertoFacade extends AbstractFacade<Aeropuerto> implements Aero
     public AeropuertoFacade() {
         super(Aeropuerto.class);
     }
-    
+
+    @Override
+    public Aeropuerto find(String nombre) {
+        Query query = em.createQuery("SELECT a FROM Aeropuerto a WHERE a.nombre = :value");
+        query.setParameter("value", nombre);
+        if (query.getResultList().isEmpty()) {
+            return null;
+        }
+        return (Aeropuerto) query.getResultList().get(0);
+    }
+
 }

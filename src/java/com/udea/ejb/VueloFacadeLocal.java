@@ -5,7 +5,9 @@
  */
 package com.udea.ejb;
 
+import com.udea.business.Aeropuerto;
 import com.udea.business.Vuelo;
+import java.util.Date;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -28,6 +30,8 @@ public interface VueloFacadeLocal {
 
     List<Vuelo> findRange(int[] range);
 
+    List<Vuelo> findFlights(Aeropuerto aeropuerto_salida, Aeropuerto aeropuerto_llegada, Date fecha1);
+
     int count();
-    
+
 }

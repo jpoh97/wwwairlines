@@ -32,3 +32,4 @@
             </nav>
         </div>
         <div class="container">
+            <h4 class="center"><p>${message}</p></h4>

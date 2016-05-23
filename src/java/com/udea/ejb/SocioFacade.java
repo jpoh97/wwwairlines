@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Stateless
 public class SocioFacade extends AbstractFacade<Socio> implements SocioFacadeLocal {

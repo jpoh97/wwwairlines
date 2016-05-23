@@ -7,27 +7,25 @@ package com.udea.business;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "escala")
@@ -35,26 +33,27 @@ import javax.xml.bind.annotation.XmlTransient;
 @NamedQueries({
     @NamedQuery(name = "Escala.findAll", query = "SELECT e FROM Escala e"),
     @NamedQuery(name = "Escala.findById", query = "SELECT e FROM Escala e WHERE e.id = :id"),
-    @NamedQuery(name = "Escala.findByAeropuerto", query = "SELECT e FROM Escala e WHERE e.aeropuerto = :aeropuerto"),
     @NamedQuery(name = "Escala.findByHora", query = "SELECT e FROM Escala e WHERE e.hora = :hora")})
 public class Escala implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @NotNull
     @Column(name = "id")
     private Integer id;
-    @Column(name = "aeropuerto")
-    private Integer aeropuerto;
     @Column(name = "hora")
     @Temporal(TemporalType.TIMESTAMP)
     private Date hora;
-    @ManyToMany(mappedBy = "escalaList", fetch = FetchType.LAZY)
-    private List<Vuelo> vueloList;
     @JoinColumn(name = "idvuelo", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.LAZY)
     private Vuelo idvuelo;
+    @JoinColumn(name = "idavion", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Avion idavion;
+    @JoinColumn(name = "aeropuerto", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Aeropuerto aeropuerto;
 
     public Escala() {
     }
@@ -71,14 +70,6 @@ public class Escala implements Serializable {
         this.id = id;
     }
 
-    public Integer getAeropuerto() {
-        return aeropuerto;
-    }
-
-    public void setAeropuerto(Integer aeropuerto) {
-        this.aeropuerto = aeropuerto;
-    }
-
     public Date getHora() {
         return hora;
     }
@@ -87,21 +78,28 @@ public class Escala implements Serializable {
         this.hora = hora;
     }
 
-    @XmlTransient
-    public List<Vuelo> getVueloList() {
-        return vueloList;
-    }
-
-    public void setVueloList(List<Vuelo> vueloList) {
-        this.vueloList = vueloList;
-    }
-
     public Vuelo getIdvuelo() {
         return idvuelo;
     }
 
     public void setIdvuelo(Vuelo idvuelo) {
         this.idvuelo = idvuelo;
+    }
+
+    public Avion getIdavion() {
+        return idavion;
+    }
+
+    public void setIdavion(Avion idavion) {
+        this.idavion = idavion;
+    }
+
+    public Aeropuerto getAeropuerto() {
+        return aeropuerto;
+    }
+
+    public void setAeropuerto(Aeropuerto aeropuerto) {
+        this.aeropuerto = aeropuerto;
     }
 
     @Override

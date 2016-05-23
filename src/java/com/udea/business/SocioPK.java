@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Embeddable
 public class SocioPK implements Serializable {

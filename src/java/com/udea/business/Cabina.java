@@ -6,7 +6,9 @@
 package com.udea.business;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -15,20 +17,23 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "cabina")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Cabina.findAll", query = "SELECT c FROM Cabina c"),
-    @NamedQuery(name = "Cabina.findById", query = "SELECT c FROM Cabina c WHERE c.id = :id")})
+    @NamedQuery(name = "Cabina.findById", query = "SELECT c FROM Cabina c WHERE c.id = :id"),
+    @NamedQuery(name = "Cabina.findByCapacidad", query = "SELECT c FROM Cabina c WHERE c.capacidad = :capacidad")})
 public class Cabina implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -37,6 +42,14 @@ public class Cabina implements Serializable {
     @NotNull
     @Column(name = "id")
     private Integer id;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "capacidad")
+    private int capacidad;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cabina", fetch = FetchType.LAZY)
+    private List<Vueloxcabina> vueloxcabinaList;
+    @OneToMany(mappedBy = "cabina", fetch = FetchType.LAZY)
+    private List<Asiento> asientoList;
     @JoinColumn(name = "tipo", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.LAZY)
     private Tipocabina tipo;
@@ -51,12 +64,43 @@ public class Cabina implements Serializable {
         this.id = id;
     }
 
+    public Cabina(Integer id, int capacidad) {
+        this.id = id;
+        this.capacidad = capacidad;
+    }
+
     public Integer getId() {
         return id;
     }
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    @XmlTransient
+    public List<Vueloxcabina> getVueloxcabinaList() {
+        return vueloxcabinaList;
+    }
+
+    public void setVueloxcabinaList(List<Vueloxcabina> vueloxcabinaList) {
+        this.vueloxcabinaList = vueloxcabinaList;
+    }
+
+    @XmlTransient
+    public List<Asiento> getAsientoList() {
+        return asientoList;
+    }
+
+    public void setAsientoList(List<Asiento> asientoList) {
+        this.asientoList = asientoList;
     }
 
     public Tipocabina getTipo() {

@@ -5,14 +5,18 @@
  */
 package com.udea.ejb;
 
+import com.udea.business.Avion;
 import com.udea.business.Cabina;
+import com.udea.business.Escala;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Stateless
 public class CabinaFacade extends AbstractFacade<Cabina> implements CabinaFacadeLocal {
@@ -28,5 +32,16 @@ public class CabinaFacade extends AbstractFacade<Cabina> implements CabinaFacade
     public CabinaFacade() {
         super(Cabina.class);
     }
-    
+
+    @Override
+    public List<Cabina> find(Avion avion) {
+        Query query = em.createQuery("SELECT c FROM Cabina c WHERE c.avion = :value1");
+        query.setParameter("value1", avion);
+        if (query.getResultList().isEmpty()) {
+            return null;
+        }
+        return query.getResultList();
+
+    }
+
 }

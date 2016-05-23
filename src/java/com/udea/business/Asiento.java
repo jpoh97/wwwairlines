@@ -13,6 +13,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -23,15 +25,14 @@ import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Entity
 @Table(name = "asiento")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Asiento.findAll", query = "SELECT a FROM Asiento a"),
-    @NamedQuery(name = "Asiento.findById", query = "SELECT a FROM Asiento a WHERE a.id = :id"),
-    @NamedQuery(name = "Asiento.findByCabina", query = "SELECT a FROM Asiento a WHERE a.cabina = :cabina")})
+    @NamedQuery(name = "Asiento.findById", query = "SELECT a FROM Asiento a WHERE a.id = :id")})
 public class Asiento implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,8 +41,9 @@ public class Asiento implements Serializable {
     @NotNull
     @Column(name = "id")
     private Integer id;
-    @Column(name = "cabina")
-    private Integer cabina;
+    @JoinColumn(name = "cabina", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Cabina cabina;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "asiento1", fetch = FetchType.LAZY)
     private List<Tiquete> tiqueteList;
 
@@ -60,11 +62,11 @@ public class Asiento implements Serializable {
         this.id = id;
     }
 
-    public Integer getCabina() {
+    public Cabina getCabina() {
         return cabina;
     }
 
-    public void setCabina(Integer cabina) {
+    public void setCabina(Cabina cabina) {
         this.cabina = cabina;
     }
 

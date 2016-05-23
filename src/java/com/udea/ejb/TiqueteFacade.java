@@ -12,7 +12,7 @@ import javax.persistence.PersistenceContext;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Stateless
 public class TiqueteFacade extends AbstractFacade<Tiquete> implements TiqueteFacadeLocal {

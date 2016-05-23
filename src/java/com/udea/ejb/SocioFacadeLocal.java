@@ -11,7 +11,7 @@ import javax.ejb.Local;
 
 /**
  *
- * @author daemonsoft
+ * @author JPOH97
  */
 @Local
 public interface SocioFacadeLocal {
