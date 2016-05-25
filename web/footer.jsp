@@ -5,14 +5,13 @@
         <div class="row">
             <div class="col l6 s12">
                 <h5 class="white-text">WWW Airlines</h5>
-                <p class="grey-text text-lighten-4">Aplicación que permite manejar la información de un concesionario de vehículos</p>
+                <p class="grey-text text-lighten-4">Venta y reserva de tiquetes</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Enlaces de interes</h5>
                 <ul>
                     <li><a class="grey-text text-lighten-3" href="http://www.udea.edu.co/" target="_blank">UdeA</a></li>
                     <li><a class="grey-text text-lighten-3" href="https://sites.google.com/site/cursosdiegobotia/" target="_blank">Site del curso</a></li>
-                    <li><a class="grey-text text-lighten-3" href="https://drive.google.com/a/udea.edu.co/file/d/0B8pcBysRGLwVX0pPcWxhY0lHRlU/view?ts=56df7805" target="_blank">Enunciado</a></li>
                 </ul>
             </div>
         </div>

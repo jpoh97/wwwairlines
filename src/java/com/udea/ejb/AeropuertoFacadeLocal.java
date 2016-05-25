@@ -6,6 +6,7 @@
 package com.udea.ejb;
 
 import com.udea.business.Aeropuerto;
+import com.udea.business.Ciudad;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -22,7 +23,7 @@ public interface AeropuertoFacadeLocal {
 
     void remove(Aeropuerto aeropuerto);
 
-    Aeropuerto find(String nombre);
+    Aeropuerto findByCity(String ciudad); 
 
     List<Aeropuerto> findAll();
 

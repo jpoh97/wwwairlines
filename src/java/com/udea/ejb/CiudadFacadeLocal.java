@@ -11,7 +11,7 @@ import javax.ejb.Local;
 
 /**
  *
- * @author JPOH97
+ * @author daemonsoft
  */
 @Local
 public interface CiudadFacadeLocal {

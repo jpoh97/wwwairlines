@@ -32,6 +32,13 @@
                     <label id="textofecharegreso" for="fecharegreso">Fecha regreso</label>
                 </div>                
             </div>   
+            <div class="row center">
+                <input class="with-gap" name="tipofecha" type="radio" id="exacta" value="exacta" />
+                <label for="exacta">Fechas Exactas</label>
+                <input class="with-gap" name="tipofecha" type="radio" id="flexible" value="flexible" checked="true"/>
+                <label for="flexible">Fechas Flexibles</label>
+            </div>
+            
             <div class="row center-align">
                 <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="Search">BUSCAR
                     <i class="material-icons right">search</i>

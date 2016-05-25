@@ -6,7 +6,6 @@
 package com.udea.business;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,16 +15,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
- * @author JPOH97
+ * @author daemonsoft
  */
 @Entity
 @Table(name = "ciudad")
@@ -45,8 +42,6 @@ public class Ciudad implements Serializable {
     @Size(max = 50)
     @Column(name = "nombre")
     private String nombre;
-    @OneToMany(mappedBy = "ciudad", fetch = FetchType.LAZY)
-    private List<Aeropuerto> aeropuertoList;
     @JoinColumn(name = "estado", referencedColumnName = "id")
     @ManyToOne(fetch = FetchType.LAZY)
     private Estado estado;
@@ -72,15 +67,6 @@ public class Ciudad implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    @XmlTransient
-    public List<Aeropuerto> getAeropuertoList() {
-        return aeropuertoList;
-    }
-
-    public void setAeropuertoList(List<Aeropuerto> aeropuertoList) {
-        this.aeropuertoList = aeropuertoList;
     }
 
     public Estado getEstado() {

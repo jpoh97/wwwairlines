@@ -50,6 +50,8 @@ public class IndexServlet extends HttpServlet {
             String origen = request.getParameter("origen");
             String destino = request.getParameter("destino");
             String fechaidaStr = request.getParameter("fechaida");
+            String tipofecha = request.getParameter("tipofecha");
+            
             String fecharegresoStr;
             boolean flag = false;
 
@@ -61,7 +63,7 @@ public class IndexServlet extends HttpServlet {
 
             if (fechaidaStr != null && !fechaidaStr.trim().equals("")) {
                 fechaida = new Date(fechaidaStr);
-                if (fechaida.compareTo(new Date()) == -1 || fechaida.compareTo(new Date()) == 0) {
+                if (fechaida.compareTo(new Date()) == -1) {
                     request.setAttribute("message", "FECHA DE IDA NO VALIDA");
                     flag = true;
                 }
@@ -74,7 +76,7 @@ public class IndexServlet extends HttpServlet {
                 fecharegresoStr = request.getParameter("fecharegreso");
                 if (fecharegresoStr != null && !fecharegresoStr.trim().equals("")) {
                     fecharegreso = new Date(fecharegresoStr);
-                    if (fecharegreso.compareTo(fechaida) == -1 || fecharegreso.compareTo(fechaida) == 0) {
+                    if (fecharegreso.compareTo(fechaida) == -1) {
                         request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
                         flag = true;
                     } else {
@@ -85,17 +87,20 @@ public class IndexServlet extends HttpServlet {
                     flag = true;
                 }
             }
-
-            aeropuertoLlegada = aeropuertoDAO.find(destino);
+            
+            origen = Character.toUpperCase(origen.charAt(0))+origen.substring(1).toLowerCase();
+            destino = Character.toUpperCase(destino.charAt(0))+destino.substring(1).toLowerCase();
+            
+            System.out.println(origen+destino);
+            aeropuertoLlegada = aeropuertoDAO.findByCity(destino);
             if (aeropuertoLlegada == null) {
-                request.setAttribute("message", "AEROPUERTO DE DESTINO NO EXISTE");
-                System.out.println("hpta");
+                request.setAttribute("message", "CIUDAD DE DESTINO NO EXISTE");
                 flag = true;
             }
 
-            aeropuertoSalida = aeropuertoDAO.find(origen);
+            aeropuertoSalida = aeropuertoDAO.findByCity(origen);
             if (aeropuertoSalida == null) {
-                request.setAttribute("message", "AEROPUERTO DE ORIGEN NO EXISTE");
+                request.setAttribute("message", "CIUDAD DE ORIGEN NO EXISTE");
                 flag = true;
             }
 
@@ -105,7 +110,7 @@ public class IndexServlet extends HttpServlet {
                     flag = true;
                 }
             }
-
+            
             if (!flag) {
                 List<Vuelo> vuelosIda = vueloDAO.findFlights(aeropuertoSalida, aeropuertoLlegada, fechaida);
                 List<Vuelo> vuelosLlegada = vueloDAO.findFlights(aeropuertoLlegada, aeropuertoSalida, fecharegreso);
