@@ -19,8 +19,8 @@
                     <a href="index.jsp" class="brand-logo">WWW Airlines</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="ClientServlet">Clientes</a></li>
-                        <li><a href="CarServlet">Vehículos</a></li>
+                        <li><a href="LoginServlet">Ingresar</a></li>
+                        <li><a href="ResgisterServlet">Registrarse</a></li>
                         <li><a href="InvoiceServlet">Facturas</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">

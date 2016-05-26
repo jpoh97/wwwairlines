@@ -7,6 +7,7 @@ package com.udea.ejb;
 
 import com.udea.business.Aeropuerto;
 import com.udea.business.Ciudad;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -32,13 +33,13 @@ public class AeropuertoFacade extends AbstractFacade<Aeropuerto> implements Aero
     }
 
     @Override
-    public Aeropuerto findByCity(String ciudad) {
+    public List<Aeropuerto> findByCity(String ciudad) {
         Query q = em.createQuery("SELECT a FROM Aeropuerto a WHERE a.ciudad = :value");
         q.setParameter("value", ciudad);
         if(q.getResultList().isEmpty()){
             return null;
         }
-        return (Aeropuerto) q.getResultList().get(0);
+        return q.getResultList();
     }
     
 }

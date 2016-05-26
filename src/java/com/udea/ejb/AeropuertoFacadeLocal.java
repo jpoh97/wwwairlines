@@ -23,7 +23,7 @@ public interface AeropuertoFacadeLocal {
 
     void remove(Aeropuerto aeropuerto);
 
-    Aeropuerto findByCity(String ciudad); 
+     List<Aeropuerto> findByCity(String ciudad); 
 
     List<Aeropuerto> findAll();
 

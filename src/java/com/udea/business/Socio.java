@@ -202,6 +202,21 @@ public class Socio implements Serializable {
         return true;
     }
 
+    public Socio(String tipoid, int numeroid, String nombre, String apellido, Date fechaNacimiento, String correo, String contrasena, String genero, Integer paisNacimiento, Integer paisResidencia, Integer departamento, Integer ciudad, String direccion) {
+        this.socioPK = new SocioPK(tipoid, numeroid);
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.genero = genero;
+        this.paisNacimiento = paisNacimiento;
+        this.paisResidencia = paisResidencia;
+        this.departamento = departamento;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+    }
+    
     @Override
     public String toString() {
         return "com.udea.business.Socio[ socioPK=" + socioPK + " ]";

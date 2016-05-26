@@ -50,20 +50,22 @@ public class IndexServlet extends HttpServlet {
             String origen = request.getParameter("origen");
             String destino = request.getParameter("destino");
             String fechaidaStr = request.getParameter("fechaida");
-            String tipofecha = request.getParameter("tipofecha");
-            
             String fecharegresoStr;
             boolean flag = false;
 
-            Aeropuerto aeropuertoSalida;
-            Aeropuerto aeropuertoLlegada;
+            Aeropuerto aeropuertoSalida = null;
+            Aeropuerto aeropuertoLlegada = null;
+            Aeropuerto aeropuertoSalida2 = null;
+            Aeropuerto aeropuertoLlegada2 = null;
+            List<Aeropuerto> aeropuertosSalida;
+            List<Aeropuerto> aeropuertosLlegada;
 
             Date fechaida = new Date();
             Date fecharegreso = new Date();
 
             if (fechaidaStr != null && !fechaidaStr.trim().equals("")) {
                 fechaida = new Date(fechaidaStr);
-                if (fechaida.compareTo(new Date()) == -1) {
+                if (fechaida.compareTo(new Date()) == -1 || fechaida.compareTo(new Date()) == 0) {
                     request.setAttribute("message", "FECHA DE IDA NO VALIDA");
                     flag = true;
                 }
@@ -76,7 +78,7 @@ public class IndexServlet extends HttpServlet {
                 fecharegresoStr = request.getParameter("fecharegreso");
                 if (fecharegresoStr != null && !fecharegresoStr.trim().equals("")) {
                     fecharegreso = new Date(fecharegresoStr);
-                    if (fecharegreso.compareTo(fechaida) == -1) {
+                    if (fecharegreso.compareTo(fechaida) == -1 || fecharegreso.compareTo(fechaida) == 0) {
                         request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
                         flag = true;
                     } else {
@@ -87,33 +89,62 @@ public class IndexServlet extends HttpServlet {
                     flag = true;
                 }
             }
-            
-            origen = Character.toUpperCase(origen.charAt(0))+origen.substring(1).toLowerCase();
-            destino = Character.toUpperCase(destino.charAt(0))+destino.substring(1).toLowerCase();
-            
-            System.out.println(origen+destino);
-            aeropuertoLlegada = aeropuertoDAO.findByCity(destino);
-            if (aeropuertoLlegada == null) {
-                request.setAttribute("message", "CIUDAD DE DESTINO NO EXISTE");
+
+            aeropuertosLlegada = aeropuertoDAO.findByCity(destino);
+            if (aeropuertosLlegada == null) {
+                request.setAttribute("message", "AEROPUERTO DE DESTINO NO EXISTE");
                 flag = true;
             }
 
-            aeropuertoSalida = aeropuertoDAO.findByCity(origen);
-            if (aeropuertoSalida == null) {
-                request.setAttribute("message", "CIUDAD DE ORIGEN NO EXISTE");
+            aeropuertosSalida = aeropuertoDAO.findByCity(origen);
+            if (aeropuertosSalida == null) {
+                request.setAttribute("message", "AEROPUERTO DE ORIGEN NO EXISTE");
                 flag = true;
             }
+
+            if (origen.trim().equalsIgnoreCase(destino.trim())) {
+                request.setAttribute("message", "LA CIUDAD DE ORIGEN DEBE SER DIFERENTE A LA CIUDAD DE DESTINO");
+                flag = true;
+            }
+            
+            List<Vuelo> vuelosLlegada = new ArrayList<>();
+            List<Vuelo> vuelosIda = new ArrayList<>();
 
             if (!flag) {
-                if (aeropuertoSalida.getNombre().equalsIgnoreCase(aeropuertoLlegada.getNombre())) {
-                    request.setAttribute("message", "EL AEROPUERTO DE SALIDA DEBE SER DIFERENTE AL DE LLEGADA");
-                    flag = true;
+                boolean flag2 = false;
+                for (Aeropuerto e1 : aeropuertosSalida) {
+                    for (Aeropuerto e2 : aeropuertosLlegada) {
+                        vuelosIda = vueloDAO.findFlights(e1, e2, fechaida);
+                        if (vuelosIda != null) {
+                            aeropuertoSalida = e1;
+                            aeropuertoLlegada = e2;
+                            flag2 = true;
+                            break;
+                        }
+                    }
+                    if (flag2) {
+                        break;
+                    }
                 }
-            }
-            
-            if (!flag) {
-                List<Vuelo> vuelosIda = vueloDAO.findFlights(aeropuertoSalida, aeropuertoLlegada, fechaida);
-                List<Vuelo> vuelosLlegada = vueloDAO.findFlights(aeropuertoLlegada, aeropuertoSalida, fecharegreso);
+                
+                flag2 = false;
+                for (Aeropuerto e1 : aeropuertosLlegada) {
+                    for (Aeropuerto e2 : aeropuertosSalida) {
+                        vuelosLlegada = vueloDAO.findFlights(e1, e2, fecharegreso);
+                        if (vuelosLlegada != null) {
+                            aeropuertoSalida2 = e1;
+                            aeropuertoLlegada2 = e2;
+                            flag2 = true;
+                            break;
+                        }
+                    }
+                    if (flag2) {
+                        break;
+                    }
+                }
+                
+                
+
                 List<Vueloxcabina> vuelos1 = new ArrayList<>();
                 List<Vueloxcabina> vuelos2 = new ArrayList<>();
 
@@ -134,11 +165,9 @@ public class IndexServlet extends HttpServlet {
                 request.setAttribute("vuelosida", vuelos1);
                 if (tipo != null && tipo.equalsIgnoreCase("0")) {
                     if (vuelosLlegada != null) {
-                        System.out.println("Lista1" + vuelosLlegada.toString());
                         vuelosLlegada.stream().forEach((v2) -> {
                             List<Cabina> cabinas = cabinaDAO.find(escalaDAO.find(v2).getIdavion());
                             if (cabinas != null) {
-                                System.out.println("Lista2" + cabinas.toString());
                                 cabinas.stream().forEach((c2) -> {
                                     Vueloxcabina vc = vueloxcabinaDAO.find(c2, v2);
                                     if (vc != null) {
