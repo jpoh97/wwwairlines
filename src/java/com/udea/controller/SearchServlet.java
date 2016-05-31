@@ -5,12 +5,20 @@
  */
 package com.udea.controller;
 
+import com.udea.business.Cabina;
+import com.udea.business.Vuelo;
+import com.udea.business.Vueloxcabina;
+import com.udea.ejb.CabinaFacadeLocal;
+import com.udea.ejb.VueloFacadeLocal;
+import com.udea.ejb.VueloxcabinaFacadeLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -18,30 +26,72 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class SearchServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    @EJB
+    private VueloFacadeLocal vueloDAO;
+
+    @EJB
+    private CabinaFacadeLocal cabinaDAO;
+
+    @EJB
+    private VueloxcabinaFacadeLocal vueloxcabinaDAO;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            String origen = (String) request.getAttribute("origen1");
-            String destino = (String) request.getAttribute("destino1");
 
-            System.err.println(origen);
-            System.err.println(destino);
-            
-            request.setAttribute("origen", origen);
-            request.setAttribute("destino", destino);
-            
-            request.getRequestDispatcher("/search.jsp").forward(request, response);
+            HttpSession session = request.getSession();
+
+            String idaStr = request.getParameter("ida");
+
+            String[] aux1 = idaStr.split("-");
+
+            int idvuelo;
+            int idcabina;
+
+            Vuelo vuelo;
+            Cabina cabina;
+            Vueloxcabina vc;
+
+            if (aux1 != null && aux1.length > 1) {
+                idvuelo = Integer.parseInt(aux1[0]);
+                idcabina = Integer.parseInt(aux1[1]);
+
+                vuelo = vueloDAO.find(idvuelo);
+                cabina = cabinaDAO.find(idcabina);
+
+                vc = vueloxcabinaDAO.find(cabina, vuelo);
+
+                session.setAttribute("aeropuertosalida1", vc.getVuelo().getAeropuertoSalida().getNombre());
+                session.setAttribute("aeropuertollegada1", vc.getVuelo().getAeropuertoLlegada().getNombre());
+                session.setAttribute("fechaida", vc.getVuelo().getFecha());
+                session.setAttribute("precioida", vc.getPrecio());
+            }
+
+            String tipo = (String) request.getSession().getAttribute("tipo");
+            if (tipo != null && tipo.equalsIgnoreCase("0")) {
+                
+                String regresoStr = request.getParameter("regreso");
+                String[] aux2 = regresoStr.split("-");
+                
+                if (aux2 != null && aux2.length > 1) {
+                    idvuelo = Integer.parseInt(aux2[0]);
+                    idcabina = Integer.parseInt(aux2[1]);
+
+                    vuelo = vueloDAO.find(idvuelo);
+                    cabina = cabinaDAO.find(idcabina);
+
+                    vc = vueloxcabinaDAO.find(cabina, vuelo);
+
+                    session.setAttribute("aeropuertosalida2", vc.getVuelo().getAeropuertoSalida().getNombre());
+                    session.setAttribute("aeropuertollegada2", vc.getVuelo().getAeropuertoLlegada().getNombre());
+                    session.setAttribute("fecharegreso", vc.getVuelo().getFecha());
+                    session.setAttribute("precioregreso", vc.getPrecio());
+                }
+
+            } 
+
+            request.getRequestDispatcher("/details.jsp").forward(request, response);
         }
     }
 

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    
-    
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
         <servlet-class>com.udea.controller.IndexServlet</servlet-class>
@@ -10,6 +8,14 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.udea.controller.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>com.udea.controller.SearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DetailServlet</servlet-name>
+        <servlet-class>com.udea.controller.DetailServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/IndexServlet</url-pattern>
@@ -17,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailServlet</servlet-name>
+        <url-pattern>/DetailServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

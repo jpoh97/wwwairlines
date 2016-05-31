@@ -21,6 +21,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class IndexServlet extends HttpServlet {
 
@@ -44,8 +45,8 @@ public class IndexServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
-            String action = request.getParameter("action");
-
+            HttpSession session = request.getSession();
+            
             String tipo = request.getParameter("tipodeviaje");
             String origen = request.getParameter("origen");
             String destino = request.getParameter("destino");
@@ -82,7 +83,7 @@ public class IndexServlet extends HttpServlet {
                         request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
                         flag = true;
                     } else {
-                        request.setAttribute("fecharegreso", fecharegresoStr);
+                        session.setAttribute("fecharegreso", fecharegresoStr);                        
                     }
                 } else {
                     request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
@@ -178,15 +179,16 @@ public class IndexServlet extends HttpServlet {
                         });
                     }
                     request.setAttribute("vuelosllegada", vuelos2);
-                    request.setAttribute("tabla2", "block");
+                    session.setAttribute("tabla2", "block");
                 } else {
-                    request.setAttribute("tabla2", "none");
+                    session.setAttribute("tabla2", "none");
                 }
             }
 
-            request.setAttribute("origen", origen);
-            request.setAttribute("destino", destino);
-            request.setAttribute("fechaida", fechaidaStr);
+            session.setAttribute("tipo", tipo);
+            session.setAttribute("origen", origen);
+            session.setAttribute("destino", destino);
+            session.setAttribute("fechaida", fechaidaStr);
             if (flag) {
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
             } else {

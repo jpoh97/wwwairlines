@@ -24,6 +24,8 @@ public interface CabinaFacadeLocal {
     void remove(Cabina cabina);
 
     List<Cabina> find(Avion avion);
+    
+    Cabina find(Object id);
 
     List<Cabina> findAll();
 

@@ -7,7 +7,8 @@
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
+        
+        <link type="text/css" rel="stylesheet" href="css/customize.css"  media="screen,projection"/>
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>WWWAirlines</title>
@@ -20,7 +21,7 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="LoginServlet">Ingresar</a></li>
-                        <li><a href="ResgisterServlet">Registrarse</a></li>
+                        <li><a href="RegisterServlet">Registrarse</a></li>
                         <li><a href="InvoiceServlet">Facturas</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
@@ -31,5 +32,6 @@
                 </div>
             </nav>
         </div>
-        <div class="container">
-            <h4 class="center"><p>${message}</p></h4>
+        <main>
+            <div class="container">
+                <h4 class="center"><p>${message}</p></h4>

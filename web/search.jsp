@@ -7,11 +7,11 @@
 
             <div class="row">
                 <div class="input-field col s6">
-                    <input type="text" id="origen" name="origen" value="<%= request.getAttribute("origen")%>" disabled="true">
+                    <input type="text" id="origen" name="origen" value="<%= request.getSession().getAttribute("origen")%>" disabled="true">
                     <label for="origen">Origen</label>
                 </div>
                 <div class="input-field col s6">
-                    <input type="text" id="destino" name="destino" value="<%= request.getAttribute("destino")%>" disabled="true">
+                    <input type="text" id="destino" name="destino" value="<%= request.getSession().getAttribute("destino")%>" disabled="true">
                     <label for="destino">Destino</label>
                 </div>                
             </div>
@@ -37,7 +37,7 @@
                                 <td>${vi.vuelo.getFecha()}</td>
                                 <td>${vi.cabina.getTipo().getNombre()}</td>
                                 <td>${vi.precio}</td>
-                                <td><input class="with-gap" name="ida" type="radio" id="${vi.vuelo.getId()}-${vi.cabina.getId()}" value="${vi.vuelo.getId()}-${vi.cabina.getId()}"/><label for="${vi.vuelo.getId()}-${vi.cabina.getId()}"></label></td>
+                                <td><input class="with-gap" name="ida" type="radio" id="${vi.vuelo.getId()}-${vi.cabina.getId()}" value="${vi.vuelo.getId()}-${vi.cabina.getId()}" checked="true"/><label for="${vi.vuelo.getId()}-${vi.cabina.getId()}"></label></td>
                             </tr>
                         </c:forEach>
                     </tbody>
@@ -65,7 +65,7 @@
                                 <td>${vl.vuelo.getFecha()}</td>
                                 <td>${vl.cabina.getTipo().getNombre()}</td>
                                 <td>${vl.precio}</td>
-                                <td><input class="with-gap" name="regreso" type="radio" id="${vl.vuelo.getId()}-${vl.cabina.getId()}" value="${vl.vuelo.getId()}-${vl.cabina.getId()}"/><label for="${vl.vuelo.getId()}-${vl.cabina.getId()}"></label></td>
+                                <td><input class="with-gap" name="regreso" type="radio" id="${vl.vuelo.getId()}-${vl.cabina.getId()}" value="${vl.vuelo.getId()}-${vl.cabina.getId()}" checked="true"/><label for="${vl.vuelo.getId()}-${vl.cabina.getId()}"></label></td>
                             </tr>                     
                         </c:forEach>
                     </tbody>
