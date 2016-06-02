@@ -74,6 +74,16 @@ public class Socio implements Serializable {
     @Size(max = 50)
     @Column(name = "direccion")
     private String direccion;
+    @Column(name = "millas")
+    private int millas;
+
+    public int getMillas() {
+        return millas;
+    }
+
+    public void setMillas(int millas) {
+        this.millas = millas;
+    }
 
     public Socio() {
     }
@@ -215,6 +225,7 @@ public class Socio implements Serializable {
         this.departamento = departamento;
         this.ciudad = ciudad;
         this.direccion = direccion;
+        this.millas = 0;
     }
     
     @Override

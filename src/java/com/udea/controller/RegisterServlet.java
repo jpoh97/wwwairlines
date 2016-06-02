@@ -52,6 +52,7 @@ public class RegisterServlet extends HttpServlet {
             String direccion = request.getParameter("direccion");
             String tipoid = request.getParameter("tipoId");
             String numeroId = request.getParameter("numeroId");
+            
 
             request.setAttribute("message", "hubo un problem");
             if (tipoid != null && numeroId != null && !tipoid.trim().equals("") && !numeroId.trim().equals("")) {

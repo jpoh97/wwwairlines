@@ -42,7 +42,10 @@ public class LoginServlet extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
 
             HttpSession session = request.getSession();
-
+            
+            if(session.getAttribute("socio")==null){
+                
+            }
             String action = request.getParameter("action");
             if (action.equalsIgnoreCase("Ingresar")) {
                 String tipoIdentifiacion = request.getParameter("tipoIdentificacion");
