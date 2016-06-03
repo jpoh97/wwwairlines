@@ -1,13 +1,17 @@
 package com.udea.controller;
 
 import com.udea.business.Aeropuerto;
+import com.udea.business.Asiento;
 import com.udea.business.Avion;
 import com.udea.business.Cabina;
+import com.udea.business.TiquetePK;
 import com.udea.business.Vuelo;
 import com.udea.business.Vueloxcabina;
 import com.udea.ejb.AeropuertoFacadeLocal;
+import com.udea.ejb.AsientoFacadeLocal;
 import com.udea.ejb.CabinaFacadeLocal;
 import com.udea.ejb.EscalaFacadeLocal;
+import com.udea.ejb.TiqueteFacadeLocal;
 import com.udea.ejb.VueloFacadeLocal;
 import com.udea.ejb.VueloxcabinaFacadeLocal;
 import java.util.ArrayList;
@@ -40,17 +44,24 @@ public class IndexServlet extends HttpServlet {
     @EJB
     private VueloxcabinaFacadeLocal vueloxcabinaDAO;
 
+    @EJB
+    private AsientoFacadeLocal asientoDAO;
+
+    @EJB
+    private TiqueteFacadeLocal tiqueteDAO;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
             HttpSession session = request.getSession();
-            
+
             String tipo = request.getParameter("tipodeviaje");
             String origen = request.getParameter("origen");
             String destino = request.getParameter("destino");
             String fechaidaStr = request.getParameter("fechaida");
+            String pasajeros = request.getParameter("pasajeros");
             String fecharegresoStr;
             boolean flag = false;
 
@@ -83,7 +94,7 @@ public class IndexServlet extends HttpServlet {
                         request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
                         flag = true;
                     } else {
-                        session.setAttribute("fecharegreso", fecharegresoStr);                        
+                        session.setAttribute("fecharegreso", fecharegresoStr);
                     }
                 } else {
                     request.setAttribute("message", "FECHA DE REGRESO NO VALIDA");
@@ -107,7 +118,7 @@ public class IndexServlet extends HttpServlet {
                 request.setAttribute("message", "LA CIUDAD DE ORIGEN DEBE SER DIFERENTE A LA CIUDAD DE DESTINO");
                 flag = true;
             }
-            
+
             List<Vuelo> vuelosLlegada = new ArrayList<>();
             List<Vuelo> vuelosIda = new ArrayList<>();
 
@@ -127,7 +138,7 @@ public class IndexServlet extends HttpServlet {
                         break;
                     }
                 }
-                
+
                 flag2 = false;
                 for (Aeropuerto e1 : aeropuertosLlegada) {
                     for (Aeropuerto e2 : aeropuertosSalida) {
@@ -143,8 +154,6 @@ public class IndexServlet extends HttpServlet {
                         break;
                     }
                 }
-                
-                
 
                 List<Vueloxcabina> vuelos1 = new ArrayList<>();
                 List<Vueloxcabina> vuelos2 = new ArrayList<>();
@@ -156,7 +165,10 @@ public class IndexServlet extends HttpServlet {
                             cabinas.stream().forEach((c1) -> {
                                 Vueloxcabina vc = vueloxcabinaDAO.find(c1, v1);
                                 if (vc != null) {
-                                    vuelos1.add(vc);
+                                    int asientos1 = getAvailableSeats(c1, v1);
+                                    if (asientos1 >= Integer.parseInt(pasajeros)) {
+                                        vuelos1.add(vc);
+                                    }
                                 }
                             });
                         }
@@ -172,7 +184,10 @@ public class IndexServlet extends HttpServlet {
                                 cabinas.stream().forEach((c2) -> {
                                     Vueloxcabina vc = vueloxcabinaDAO.find(c2, v2);
                                     if (vc != null) {
-                                        vuelos2.add(vc);
+                                        int asientos2 = getAvailableSeats(c2, v2);
+                                        if (asientos2 >= Integer.parseInt(pasajeros)) {
+                                            vuelos2.add(vc);
+                                        }
                                     }
                                 });
                             }
@@ -189,12 +204,29 @@ public class IndexServlet extends HttpServlet {
             session.setAttribute("origen", origen);
             session.setAttribute("destino", destino);
             session.setAttribute("fechaida", fechaidaStr);
+            session.setAttribute("pasajeros", pasajeros);
             if (flag) {
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("/search.jsp").forward(request, response);
             }
         }
+    }
+
+    public int getAvailableSeats(Cabina c, Vuelo v) {
+        if (c == null || v == null) {
+            return 0;
+        }
+        List<Asiento> asientos = asientoDAO.findByCabina(c);
+        if (asientos == null) {
+            return 0;
+        }
+        int tiquetes = 0;
+        tiquetes = asientos.stream().filter((a) -> (tiqueteDAO.find(new TiquetePK(v.getId(), a.getId())) != null)).map((_item) -> 1).reduce(tiquetes, Integer::sum);
+        if (asientos.isEmpty()) {
+            return 0;
+        }
+        return asientos.size() - tiquetes;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

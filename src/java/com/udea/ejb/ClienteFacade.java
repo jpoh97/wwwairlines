@@ -5,19 +5,17 @@
  */
 package com.udea.ejb;
 
-import com.udea.business.Tiquete;
-import java.util.List;
+import com.udea.business.Cliente;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 
 /**
  *
  * @author JPOH97
  */
 @Stateless
-public class TiqueteFacade extends AbstractFacade<Tiquete> implements TiqueteFacadeLocal {
+public class ClienteFacade extends AbstractFacade<Cliente> implements ClienteFacadeLocal {
 
     @PersistenceContext(unitName = "WWWAirlinesPU")
     private EntityManager em;
@@ -27,17 +25,8 @@ public class TiqueteFacade extends AbstractFacade<Tiquete> implements TiqueteFac
         return em;
     }
 
-    public TiqueteFacade() {
-        super(Tiquete.class);
+    public ClienteFacade() {
+        super(Cliente.class);
     }
-
-    @Override
-    public List<Tiquete> findAvalibles(Object id) {
-        Query q = em.createQuery("SELECT t FROM Tiquete t WHERE t.tiquetePK = :value");
-        q.setParameter("value", id);
-        if (q.getResultList().isEmpty()) {
-            return null;
-        }
-        return q.getResultList();
-    }
+    
 }

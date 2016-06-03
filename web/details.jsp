@@ -23,6 +23,18 @@
                                 <td>PRECIO:</td>
                                 <td><p><%= request.getSession().getAttribute("precioida")%></p></td>
                             </tr>
+                            <tr>
+                                <td>PASAJEROS:</td>
+                                <td><p><%= request.getSession().getAttribute("pasajeros")%></p></td>
+                            </tr>
+                            <tr>    
+                                <td colspan="2">    
+                                    <p>
+                                        <input type="checkbox" name="sillasida" id="sillasida" />
+                                        <label for="sillasida">Seleccionar sillas</label>
+                                    </p>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -52,6 +64,14 @@
                             <tr>
                                 <td>PRECIO:</td>
                                 <td><p><%= request.getSession().getAttribute("precioregreso")%></p></td>
+                            </tr>                            
+                            <tr>    
+                                <td colspan="2">    
+                                    <p>
+                                        <input type="checkbox" name="sillasregreso" id="sillasregreso" />
+                                        <label for="sillasregreso">Seleccionar sillas</label>
+                                    </p>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

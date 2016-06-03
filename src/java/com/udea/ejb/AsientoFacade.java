@@ -6,9 +6,12 @@
 package com.udea.ejb;
 
 import com.udea.business.Asiento;
+import com.udea.business.Cabina;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,5 +31,15 @@ public class AsientoFacade extends AbstractFacade<Asiento> implements AsientoFac
     public AsientoFacade() {
         super(Asiento.class);
     }
-    
+
+    @Override
+    public List<Asiento> findByCabina(Cabina cabina) {
+        Query q = em.createQuery("SELECT a FROM Asiento a WHERE a.cabina = :value");
+        q.setParameter("value", cabina);
+        if (q.getResultList().isEmpty()) {
+            return null;
+        }
+        return q.getResultList();
+    }
+
 }

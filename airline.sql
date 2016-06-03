@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.1deb1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Servidor: localhost
--- Tiempo de generación: 24-05-2016 a las 19:24:35
--- Versión del servidor: 5.6.30-1
--- Versión de PHP: 7.0.6-1
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 03-06-2016 a las 17:50:25
+-- Versión del servidor: 10.1.9-MariaDB
+-- Versión de PHP: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -3014,6 +3014,8 @@ CREATE TABLE `asiento` (
 
 INSERT INTO `asiento` (`id`, `cabina`) VALUES
 (2, 1),
+(3, 1),
+(4, 1),
 (1, 2);
 
 -- --------------------------------------------------------
@@ -3077,6 +3079,34 @@ CREATE TABLE `ciudad` (
 INSERT INTO `ciudad` (`id`, `nombre`, `estado`) VALUES
 (1, 'Medellín', 1),
 (2, 'Bogota', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `cliente`
+--
+
+CREATE TABLE `cliente` (
+  `tipoid` varchar(2) NOT NULL,
+  `numeroid` int(15) NOT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  `apellido` varchar(50) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  `correo` varchar(50) DEFAULT NULL,
+  `genero` varchar(1) DEFAULT NULL,
+  `pais_nacimiento` int(4) DEFAULT NULL,
+  `pais_residencia` int(4) DEFAULT NULL,
+  `departamento` int(4) DEFAULT NULL,
+  `ciudad` int(4) DEFAULT NULL,
+  `direccion` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`) VALUES
+('3', 123456789, 'el ', 'jefazo', '2016-06-01', 'oe@oe.oe', 'M', 13, 13, 9, 9, 'calle 9');
 
 -- --------------------------------------------------------
 
@@ -3157,8 +3187,16 @@ CREATE TABLE `socio` (
   `pais_residencia` int(4) DEFAULT NULL,
   `departamento` int(4) DEFAULT NULL,
   `ciudad` int(4) DEFAULT NULL,
-  `direccion` varchar(50) DEFAULT NULL
+  `direccion` varchar(50) DEFAULT NULL,
+  `millas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `socio`
+--
+
+INSERT INTO `socio` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `contrasena`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`, `millas`) VALUES
+('2', 1152707477, 'juan pablo', 'ospina herrera', '1997-02-09', 'jpoh97@gmail.com', 'jpoh97', 'M', 12, 234, 1, 1, 'carrera 72', 0);
 
 -- --------------------------------------------------------
 
@@ -3188,8 +3226,18 @@ INSERT INTO `tipocabina` (`id`, `nombre`) VALUES
 CREATE TABLE `tiquete` (
   `vuelo` int(10) NOT NULL,
   `asiento` int(10) NOT NULL,
-  `precio` int(15) DEFAULT NULL
+  `precio` int(15) DEFAULT NULL,
+  `tipoid` varchar(2) NOT NULL,
+  `numeroid` int(15) NOT NULL,
+  `tipo` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tiquete`
+--
+
+INSERT INTO `tiquete` (`vuelo`, `asiento`, `precio`, `tipoid`, `numeroid`, `tipo`) VALUES
+(1, 2, 10000, '1', 123, 1);
 
 -- --------------------------------------------------------
 
@@ -3209,8 +3257,8 @@ CREATE TABLE `vuelo` (
 --
 
 INSERT INTO `vuelo` (`id`, `aeropuerto_salida`, `aeropuerto_llegada`, `fecha`) VALUES
-(1, 2423, 2394, '2016-05-28 00:00:00'),
-(2, 2394, 2423, '2016-05-29 00:00:00');
+(1, 2423, 2394, '2016-06-04 00:00:00'),
+(2, 2394, 2423, '2016-06-05 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -3271,6 +3319,12 @@ ALTER TABLE `cabina`
 ALTER TABLE `ciudad`
   ADD PRIMARY KEY (`id`),
   ADD KEY `estado` (`estado`);
+
+--
+-- Indices de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  ADD PRIMARY KEY (`tipoid`,`numeroid`);
 
 --
 -- Indices de la tabla `escala`

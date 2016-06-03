@@ -74,10 +74,6 @@
                         <input type="email" id="correo" name="correo" class="validate" value="${socio.correo}">
                         <label for="correo">Correo</label>
                     </div>
-                    <div class="input-field col s12 l6">
-                        <input type="password" id="contrasena" name="contrasena" value="${socio.contrasena}">
-                        <label for="contrasena">Contrasena</label>
-                    </div>                
 
                     <div class="input-field col s12 l6">
                         <select name="genero" value="${socio.genero}">
@@ -106,16 +102,16 @@
                         <input type="text" id="direccion" name="direccion" value="${socio.direccion}">
                         <label for="direccion">Direccion</label>
                     </div>
+                    <br/>
+                    <div class="col s12 center">
+                        <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="continuar">CONTINUAR
+                            <i class="material-icons right">language</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>               
-    <br/><br/>
-    <div class="col s12 center">
-        <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="register">CONTINUAR
-            <i class="material-icons right">language</i>
-        </button>
-    </div>
+    </div>       
 </form>
 
 <jsp:include page="footer.jsp" />

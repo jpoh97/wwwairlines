@@ -11,13 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author JPOH97
  */
-public class DetailServlet extends HttpServlet {
+public class clientDetailServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,15 +31,6 @@ public class DetailServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            
-            HttpSession session = request.getSession();
-            
-            String sillasida = request.getParameter("sillasida");
-            String sillasregreso = request.getParameter("sillasregreso");
-            
-            session.setAttribute("sillasida", sillasida);
-            session.setAttribute("sillasregreso", sillasregreso);
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
             
         }
     }

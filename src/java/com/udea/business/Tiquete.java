@@ -6,6 +6,7 @@
 package com.udea.business;
 
 import java.io.Serializable;
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
@@ -15,6 +16,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -28,7 +31,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Tiquete.findAll", query = "SELECT t FROM Tiquete t"),
     @NamedQuery(name = "Tiquete.findByVuelo", query = "SELECT t FROM Tiquete t WHERE t.tiquetePK.vuelo = :vuelo"),
     @NamedQuery(name = "Tiquete.findByAsiento", query = "SELECT t FROM Tiquete t WHERE t.tiquetePK.asiento = :asiento"),
-    @NamedQuery(name = "Tiquete.findByPrecio", query = "SELECT t FROM Tiquete t WHERE t.precio = :precio")})
+    @NamedQuery(name = "Tiquete.findByPrecio", query = "SELECT t FROM Tiquete t WHERE t.precio = :precio"),
+    @NamedQuery(name = "Tiquete.findByTipoid", query = "SELECT t FROM Tiquete t WHERE t.tipoid = :tipoid"),
+    @NamedQuery(name = "Tiquete.findByNumeroid", query = "SELECT t FROM Tiquete t WHERE t.numeroid = :numeroid"),
+    @NamedQuery(name = "Tiquete.findByTipo", query = "SELECT t FROM Tiquete t WHERE t.tipo = :tipo")})
 public class Tiquete implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -36,6 +42,19 @@ public class Tiquete implements Serializable {
     protected TiquetePK tiquetePK;
     @Column(name = "precio")
     private Integer precio;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 2)
+    @Column(name = "tipoid")
+    private String tipoid;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "numeroid")
+    private int numeroid;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "tipo")
+    private int tipo;
     @JoinColumn(name = "vuelo", referencedColumnName = "id", insertable = false, updatable = false)
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Vuelo vuelo1;
@@ -48,6 +67,13 @@ public class Tiquete implements Serializable {
 
     public Tiquete(TiquetePK tiquetePK) {
         this.tiquetePK = tiquetePK;
+    }
+
+    public Tiquete(TiquetePK tiquetePK, String tipoid, int numeroid, int tipo) {
+        this.tiquetePK = tiquetePK;
+        this.tipoid = tipoid;
+        this.numeroid = numeroid;
+        this.tipo = tipo;
     }
 
     public Tiquete(int vuelo, int asiento) {
@@ -68,6 +94,30 @@ public class Tiquete implements Serializable {
 
     public void setPrecio(Integer precio) {
         this.precio = precio;
+    }
+
+    public String getTipoid() {
+        return tipoid;
+    }
+
+    public void setTipoid(String tipoid) {
+        this.tipoid = tipoid;
+    }
+
+    public int getNumeroid() {
+        return numeroid;
+    }
+
+    public void setNumeroid(int numeroid) {
+        this.numeroid = numeroid;
+    }
+
+    public int getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(int tipo) {
+        this.tipo = tipo;
     }
 
     public Vuelo getVuelo1() {

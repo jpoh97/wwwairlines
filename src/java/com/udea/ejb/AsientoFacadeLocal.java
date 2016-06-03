@@ -6,6 +6,7 @@
 package com.udea.ejb;
 
 import com.udea.business.Asiento;
+import com.udea.business.Cabina;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -23,6 +24,8 @@ public interface AsientoFacadeLocal {
     void remove(Asiento asiento);
 
     Asiento find(Object id);
+    
+    List<Asiento> findByCabina(Cabina cabina);
 
     List<Asiento> findAll();
 

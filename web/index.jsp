@@ -12,33 +12,42 @@
             </div>
 
             <div class="row">
-                <div class="input-field col s4 offset-s2">
+                <div class="input-field col s12 l4  offset-l2">
                     <input type="text" id="origen" name="origen">
                     <label for="origen">Origen</label>
                 </div>
-                <div class="input-field col s4">
+                <div class="input-field col s12 l4">
                     <input type="text" id="destino" name="destino">
                     <label for="destino">Destino</label>
                 </div>                
             </div>
 
             <div class="row">
-                <div class="input-field col s4 offset-s2">
+                <div class="input-field col s12 l4 offset-l2">
                     <input type="date" id="fechaida" name="fechaida" class="datepicker">
                     <label for="fechaida">Fecha ida</label>
                 </div>
-                <div class="input-field col s4">
+                <div class="input-field col s12 l4">
                     <input type="date" id="fecharegreso" name="fecharegreso" class="datepicker">
                     <label id="textofecharegreso" for="fecharegreso">Fecha regreso</label>
                 </div>                
-            </div>   
-            <div class="row center">
-                <input class="with-gap" name="tipofecha" type="radio" id="exacta" value="exacta" />
-                <label for="exacta">Fechas Exactas</label>
-                <input class="with-gap" name="tipofecha" type="radio" id="flexible" value="flexible" checked="true"/>
-                <label for="flexible">Fechas Flexibles</label>
+            </div>  
+            <div class="row">
+                <div class="offset-l4 input-field col s12 l4">
+                    <select name="pasajeros">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <label>* NÚMERO DE PASAJEROS</label>
+                </div>
             </div>
-            
             <div class="row center-align">
                 <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="Search">BUSCAR
                     <i class="material-icons right">search</i>

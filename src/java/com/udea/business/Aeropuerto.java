@@ -6,18 +6,22 @@
 package com.udea.business;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -34,6 +38,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Aeropuerto.findByCiudad", query = "SELECT a FROM Aeropuerto a WHERE a.ciudad = :ciudad"),
     @NamedQuery(name = "Aeropuerto.findByPais", query = "SELECT a FROM Aeropuerto a WHERE a.pais = :pais")})
 public class Aeropuerto implements Serializable {
+
+    @OneToMany(mappedBy = "aeropuertoSalida", fetch = FetchType.LAZY)
+    private List<Vuelo> vueloList;
+    @OneToMany(mappedBy = "aeropuertoLlegada", fetch = FetchType.LAZY)
+    private List<Vuelo> vueloList1;
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -140,6 +149,24 @@ public class Aeropuerto implements Serializable {
     @Override
     public String toString() {
         return "com.udea.business.Aeropuerto[ id=" + id + " ]";
+    }
+
+    @XmlTransient
+    public List<Vuelo> getVueloList() {
+        return vueloList;
+    }
+
+    public void setVueloList(List<Vuelo> vueloList) {
+        this.vueloList = vueloList;
+    }
+
+    @XmlTransient
+    public List<Vuelo> getVueloList1() {
+        return vueloList1;
+    }
+
+    public void setVueloList1(List<Vuelo> vueloList1) {
+        this.vueloList1 = vueloList1;
     }
     
 }

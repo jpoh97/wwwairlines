@@ -59,7 +59,10 @@ public class SearchServlet extends HttpServlet {
 
                 vuelo = vueloDAO.find(idvuelo);
                 cabina = cabinaDAO.find(idcabina);
-
+                
+                session.setAttribute("cabina1", cabina);
+                session.setAttribute("vuelo1", vuelo);
+                
                 vc = vueloxcabinaDAO.find(cabina, vuelo);
 
                 session.setAttribute("aeropuertosalida1", vc.getVuelo().getAeropuertoSalida().getNombre());
@@ -70,16 +73,19 @@ public class SearchServlet extends HttpServlet {
 
             String tipo = (String) request.getSession().getAttribute("tipo");
             if (tipo != null && tipo.equalsIgnoreCase("0")) {
-                
+
                 String regresoStr = request.getParameter("regreso");
                 String[] aux2 = regresoStr.split("-");
-                
+
                 if (aux2 != null && aux2.length > 1) {
                     idvuelo = Integer.parseInt(aux2[0]);
                     idcabina = Integer.parseInt(aux2[1]);
 
                     vuelo = vueloDAO.find(idvuelo);
                     cabina = cabinaDAO.find(idcabina);
+
+                    session.setAttribute("cabina2", cabina);
+                    session.setAttribute("vuelo2", vuelo);
 
                     vc = vueloxcabinaDAO.find(cabina, vuelo);
 
@@ -89,7 +95,7 @@ public class SearchServlet extends HttpServlet {
                     session.setAttribute("precioregreso", vc.getPrecio());
                 }
 
-            } 
+            }
 
             request.getRequestDispatcher("/details.jsp").forward(request, response);
         }

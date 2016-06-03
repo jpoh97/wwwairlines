@@ -5,7 +5,7 @@
  */
 package com.udea.ejb;
 
-import com.udea.business.Tiquete;
+import com.udea.business.Cliente;
 import java.util.List;
 import javax.ejb.Local;
 
@@ -14,21 +14,19 @@ import javax.ejb.Local;
  * @author JPOH97
  */
 @Local
-public interface TiqueteFacadeLocal {
+public interface ClienteFacadeLocal {
 
-    void create(Tiquete tiquete);
+    void create(Cliente cliente);
 
-    void edit(Tiquete tiquete);
+    void edit(Cliente cliente);
 
-    void remove(Tiquete tiquete);
+    void remove(Cliente cliente);
 
-    Tiquete find(Object id);
+    Cliente find(Object id);
 
-    List<Tiquete> findAvalibles(Object id);
-    
-    List<Tiquete> findAll();
+    List<Cliente> findAll();
 
-    List<Tiquete> findRange(int[] range);
+    List<Cliente> findRange(int[] range);
 
     int count();
     
