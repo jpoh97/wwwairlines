@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-06-2016 a las 17:50:25
+-- Tiempo de generación: 06-06-2016 a las 17:07:45
 -- Versión del servidor: 10.1.9-MariaDB
 -- Versión de PHP: 5.6.15
 
@@ -3016,7 +3016,10 @@ INSERT INTO `asiento` (`id`, `cabina`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(1, 2);
+(5, 1),
+(1, 2),
+(7, 3),
+(8, 3);
 
 -- --------------------------------------------------------
 
@@ -3098,15 +3101,25 @@ CREATE TABLE `cliente` (
   `pais_residencia` int(4) DEFAULT NULL,
   `departamento` int(4) DEFAULT NULL,
   `ciudad` int(4) DEFAULT NULL,
-  `direccion` varchar(50) DEFAULT NULL
+  `direccion` varchar(50) DEFAULT NULL,
+  `tarjeta_credito` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `cliente`
 --
 
-INSERT INTO `cliente` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`) VALUES
-('3', 123456789, 'el ', 'jefazo', '2016-06-01', 'oe@oe.oe', 'M', 13, 13, 9, 9, 'calle 9');
+INSERT INTO `cliente` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`, `tarjeta_credito`) VALUES
+('1', 42, 'mia', 'kalifha', '1995-12-30', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('1', 2222222, 'oe', 'oe', '2016-06-01', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('1', 970209140, 'J p', 'o h', '2013-11-12', 'juan.ospina3@udea.edu.co', 'M', 1, 1, 1, 1, 'Cra 72 # 91 a 16', 0),
+('3', 69, 'megan', 'fox', '2010-06-10', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('3', 321, 'bbbb', 'cc', '2003-06-04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('3', 111222, 'aaaaaaa', 'bbbbb', '2016-06-02', 'juan.ospina3@udea.edu.co', 'M', 1, 1, 1, 1, 'Cra 72 # 91 a 16', 3.242123412342343e15),
+('3', 123456789, 'el ', 'jefazo', '2016-06-01', 'oe@oe.oe', 'M', 13, 13, 9, 9, 'calle 9', 0),
+('4', 90, 'estefi', 'errote', '1995-02-28', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('4', 111, 'lucho', 'portuano', '2016-06-04', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
+('4', 321, 'bbbbbbbbb', 'ccccc', '2016-05-22', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3188,15 +3201,16 @@ CREATE TABLE `socio` (
   `departamento` int(4) DEFAULT NULL,
   `ciudad` int(4) DEFAULT NULL,
   `direccion` varchar(50) DEFAULT NULL,
-  `millas` int(11) NOT NULL
+  `millas` double NOT NULL,
+  `tarjeta_credito` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `socio`
 --
 
-INSERT INTO `socio` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `contrasena`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`, `millas`) VALUES
-('2', 1152707477, 'juan pablo', 'ospina herrera', '1997-02-09', 'jpoh97@gmail.com', 'jpoh97', 'M', 12, 234, 1, 1, 'carrera 72', 0);
+INSERT INTO `socio` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `contrasena`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`, `millas`, `tarjeta_credito`) VALUES
+('2', 1152707477, 'juan pablo', 'ospina herrera', '1997-02-09', 'jpoh97@gmail.com', 'jpoh97', 'M', 12, 234, 1, 1, 'carrera 72', 5368000, 1.234567890123456e15);
 
 -- --------------------------------------------------------
 
@@ -3226,18 +3240,20 @@ INSERT INTO `tipocabina` (`id`, `nombre`) VALUES
 CREATE TABLE `tiquete` (
   `vuelo` int(10) NOT NULL,
   `asiento` int(10) NOT NULL,
-  `precio` int(15) DEFAULT NULL,
+  `precio` double DEFAULT NULL,
   `tipoid` varchar(2) NOT NULL,
   `numeroid` int(15) NOT NULL,
-  `tipo` int(1) NOT NULL
+  `tipo` int(1) NOT NULL,
+  `codigo` varchar(6) NOT NULL,
+  `checkedin` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `tiquete`
 --
 
-INSERT INTO `tiquete` (`vuelo`, `asiento`, `precio`, `tipoid`, `numeroid`, `tipo`) VALUES
-(1, 2, 10000, '1', 123, 1);
+INSERT INTO `tiquete` (`vuelo`, `asiento`, `precio`, `tipoid`, `numeroid`, `tipo`, `codigo`, `checkedin`) VALUES
+(1, 1, 360000, '3', 111222, 2, 'D4BF3E', 0);
 
 -- --------------------------------------------------------
 
@@ -3257,8 +3273,8 @@ CREATE TABLE `vuelo` (
 --
 
 INSERT INTO `vuelo` (`id`, `aeropuerto_salida`, `aeropuerto_llegada`, `fecha`) VALUES
-(1, 2423, 2394, '2016-06-04 00:00:00'),
-(2, 2394, 2423, '2016-06-05 00:00:00');
+(1, 2423, 2394, '2016-06-07 00:00:00'),
+(2, 2394, 2423, '2016-06-08 00:00:00');
 
 -- --------------------------------------------------------
 
