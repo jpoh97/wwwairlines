@@ -6,13 +6,16 @@
 package com.udea.controller;
 
 import com.udea.business.Cabina;
+import com.udea.business.Escala;
 import com.udea.business.Vuelo;
 import com.udea.business.Vueloxcabina;
 import com.udea.ejb.CabinaFacadeLocal;
+import com.udea.ejb.EscalaFacadeLocal;
 import com.udea.ejb.VueloFacadeLocal;
 import com.udea.ejb.VueloxcabinaFacadeLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,6 +37,9 @@ public class SearchServlet extends HttpServlet {
 
     @EJB
     private VueloxcabinaFacadeLocal vueloxcabinaDAO;
+
+    @EJB
+    private EscalaFacadeLocal escalaDAO;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -59,16 +65,19 @@ public class SearchServlet extends HttpServlet {
 
                 vuelo = vueloDAO.find(idvuelo);
                 cabina = cabinaDAO.find(idcabina);
-                
+
                 session.setAttribute("cabina1", cabina);
                 session.setAttribute("vuelo1", vuelo);
-                
+
                 vc = vueloxcabinaDAO.find(cabina, vuelo);
 
                 session.setAttribute("aeropuertosalida1", vc.getVuelo().getAeropuertoSalida().getNombre());
                 session.setAttribute("aeropuertollegada1", vc.getVuelo().getAeropuertoLlegada().getNombre());
                 session.setAttribute("fechaida", vc.getVuelo().getFecha());
                 session.setAttribute("precioida", vc.getPrecio());
+
+                List<Escala> escalas = escalaDAO.findByVuelo(vuelo);
+                session.setAttribute("escalasida", escalas);
             }
 
             String tipo = (String) request.getSession().getAttribute("tipoDeViaje");
@@ -93,6 +102,10 @@ public class SearchServlet extends HttpServlet {
                     session.setAttribute("aeropuertollegada2", vc.getVuelo().getAeropuertoLlegada().getNombre());
                     session.setAttribute("fecharegreso", vc.getVuelo().getFecha());
                     session.setAttribute("precioregreso", vc.getPrecio());
+
+                    List<Escala> escalas = escalaDAO.findByVuelo(vuelo);
+                    session.setAttribute("escalasvenida", escalas);
+                    
                 }
 
             }

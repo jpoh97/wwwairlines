@@ -24,7 +24,9 @@ public interface EscalaFacadeLocal {
     void remove(Escala escala);
 
     Escala find(Vuelo idvuelo);
-
+    
+    List<Escala> findByVuelo(Vuelo idvuelo);
+    
     List<Escala> findAll();
 
     List<Escala> findRange(int[] range);

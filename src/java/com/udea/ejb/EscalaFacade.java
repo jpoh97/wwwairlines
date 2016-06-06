@@ -7,6 +7,7 @@ package com.udea.ejb;
 
 import com.udea.business.Escala;
 import com.udea.business.Vuelo;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -39,6 +40,16 @@ public class EscalaFacade extends AbstractFacade<Escala> implements EscalaFacade
             return null;
         }
         return (Escala) query.getResultList().get(0);
+    }
+
+    @Override
+    public List<Escala> findByVuelo(Vuelo idvuelo) {
+        Query query = em.createQuery("SELECT e FROM Escala e WHERE e.idvuelo = :value1");
+        query.setParameter("value1", idvuelo);
+        if (query.getResultList().isEmpty()) {
+            return null;
+        }
+        return query.getResultList();        
     }
 
 }

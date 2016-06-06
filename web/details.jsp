@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp"/>
 <form action="./DetailServlet" method="POST">
     <div class="row">
@@ -35,7 +36,32 @@
                                     </p>
                                 </td>
                             </tr>
-                        </tbody>
+                            <tr>
+                                <td colspan="2" class="center"><B>ESCALAS</B></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="center">
+                                    <table class="highlight centered responsive-table">
+                                        <thead>                    
+                                        <th>CIUDAD</th>
+                                        <th>AEROPUERTO</th>
+                                        <th>AVION</th>
+                                        <th>HORA</th>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${escalasida}" var="e1">
+                                            <tr>
+                                                <td>${e1.aeropuerto.ciudad}</td>
+                                                <td>${e1.aeropuerto.nombre}</td>
+                                                <td>${e1.idavion.id}</td>                        
+                                                <td>${e1.hora}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                    </tbody>
                     </table>
                 </div>
             </div>
@@ -75,6 +101,31 @@
                                         <input type="checkbox" name="sillasregreso" id="sillasregreso" />
                                         <label for="sillasregreso">Seleccionar sillas</label>
                                     </p>
+                                </td>
+                            </tr>                                                       
+                            <tr>
+                                <td colspan="2" class="center"><B>ESCALAS</B></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="center">
+                                    <table class="highlight centered responsive-table">
+                                        <thead>                    
+                                        <th>CIUDAD</th>
+                                        <th>AEROPUERTO</th>
+                                        <th>AVION</th>
+                                        <th>HORA</th>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${escalasvenida}" var="e1">
+                                            <tr>
+                                                <td>${e1.aeropuerto.ciudad}</td>
+                                                <td>${e1.aeropuerto.nombre}</td>
+                                                <td>${e1.idavion.id}</td>                        
+                                                <td>${e1.hora}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
                         </tbody>
