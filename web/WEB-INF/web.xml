@@ -40,10 +40,6 @@
         <servlet-name>CheckIn</servlet-name>
         <servlet-class>com.udea.controller.CheckIn</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>EmailSendingServlet</servlet-name>
-        <servlet-class>com.udea.controller.EmailSendingServlet</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/IndexServlet</url-pattern>
@@ -84,13 +80,6 @@
         <servlet-name>CheckIn</servlet-name>
         <url-pattern>/CheckIn</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EmailSendingServlet</servlet-name>
-        <url-pattern>/EmailSendingServlet</url-pattern>
-    </servlet-mapping>
-    
-    
-    
     <session-config>
         <session-timeout>
             30
