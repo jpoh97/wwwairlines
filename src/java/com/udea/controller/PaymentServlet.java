@@ -6,8 +6,8 @@
 package com.udea.controller;
 
 import com.udea.business.Asiento;
-import com.udea.business.Cabina;
 import com.udea.business.Cliente;
+import com.udea.business.SendEmail;
 import com.udea.business.Socio;
 import com.udea.business.Tiquete;
 import com.udea.business.TiquetePK;
@@ -118,9 +118,11 @@ public class PaymentServlet extends HttpServlet {
                 }
                 for (Tiquete t : tiquetesClientes) {
                     tiqueteDAO.create(t);
+                    request.setAttribute("message", SendEmail.send(t));
                 }
                 for (Tiquete t : tiquetesClientes2) {
                     tiqueteDAO.create(t);
+                    request.setAttribute("message", SendEmail.send(t));
                 }
             }
 
@@ -148,6 +150,7 @@ public class PaymentServlet extends HttpServlet {
                 if (tiquetesida != null) {
                     tiquete1 = new Tiquete(new TiquetePK(vuelo.getId(), Integer.parseInt(tiquetesida[0])), precioIdaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                     tiqueteDAO.create(tiquete1);
+                    request.setAttribute("message", SendEmail.send(tiquete1));
                     if (tipo == 0) {
                         double precioVenidaSocio = Integer.parseInt(request.getSession().getAttribute("precioregreso").toString());
                         if (flag) {
@@ -160,9 +163,11 @@ public class PaymentServlet extends HttpServlet {
                         if (tiquetesvenida != null) {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                         } else {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                             asientos2.remove(0);
                         }
                     }
@@ -173,6 +178,7 @@ public class PaymentServlet extends HttpServlet {
                     }
                     tiquete1 = new Tiquete(new TiquetePK(vuelo.getId(), asientos1.get(0).getId()), precioIdaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                     tiqueteDAO.create(tiquete1);
+                    request.setAttribute("message", SendEmail.send(tiquete1));
                     asientos1.remove(0);
                     if (tipo == 0) {
                         double precioVenidaSocio = Integer.parseInt(request.getSession().getAttribute("precioregreso").toString());
@@ -186,9 +192,11 @@ public class PaymentServlet extends HttpServlet {
                         if (tiquetesvenida != null) {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                         } else {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                             asientos2.remove(0);
                         }
                     }
@@ -224,6 +232,7 @@ public class PaymentServlet extends HttpServlet {
                 if (tiquetesida != null) {
                     tiquete1 = new Tiquete(new TiquetePK(vuelo.getId(), Integer.parseInt(tiquetesida[0])), precioIdaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                     tiqueteDAO.create(tiquete1);
+                    request.setAttribute("message", SendEmail.send(tiquete1));
                     if (tipo == 0) {
                         double precioVenidaCliente = Integer.parseInt(request.getSession().getAttribute("precioregreso").toString());
                         if (flag) {
@@ -232,15 +241,18 @@ public class PaymentServlet extends HttpServlet {
                         if (tiquetesvenida != null) {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                         } else {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                             asientos2.remove(0);
                         }
                     }
                 } else {
                     tiquete1 = new Tiquete(new TiquetePK(vuelo.getId(), asientos1.get(0).getId()), precioIdaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                     tiqueteDAO.create(tiquete1);
+                    request.setAttribute("message", SendEmail.send(tiquete1));
                     asientos1.remove(0);
                     if (tipo == 0) {
                         double precioVenidacliente = Integer.parseInt(request.getSession().getAttribute("precioregreso").toString());
@@ -250,9 +262,11 @@ public class PaymentServlet extends HttpServlet {
                         if (tiquetesvenida != null) {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidacliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                         } else {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidacliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
+                            request.setAttribute("message", SendEmail.send(tiquete2));
                             asientos2.remove(0);
                         }
                     }

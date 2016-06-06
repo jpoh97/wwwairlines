@@ -22,10 +22,12 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="MiCuenta">Mi Cuenta</a></li>
                         <li><a href="RegisterServlet">Registrarse</a></li>
+                        <li><a href="CheckIn">CheckIn</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
                         <li><a href="MiCuenta">MiCuenta</a></li>
                         <li><a href="RegisterServlet">Registrarse</a></li>
+                        <li><a href="CheckIn">CheckIn</a></li>
                     </ul>
                 </div>
             </nav>
