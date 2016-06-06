@@ -114,7 +114,13 @@ public class LoginServlet extends HttpServlet {
                             session.setAttribute("genero", "Femenino");
                         }
 
+                    } else {
+                        request.setAttribute("message", "ERROR AL INICIAR COMO SOCIO");
+                        request.getRequestDispatcher("/login.jsp").forward(request, response);
                     }
+                } else {
+                    request.setAttribute("message", "ERROR AL INICIAR COMO SOCIO");
+                    request.getRequestDispatcher("/login.jsp").forward(request, response);
                 }
                 List<Asiento> asientos1 = getAvailableSeats(cabina1, vuelo1);
                 List<Asiento> asientos2 = getAvailableSeats(cabina2, vuelo2);
@@ -155,7 +161,8 @@ public class LoginServlet extends HttpServlet {
                     ClientePK clientePK = new ClientePK(tipoId, Integer.parseInt(identificacion));
                     Cliente cliente = clienteDAO.find(clientePK);
                     if (cliente == null) {
-                        clienteDAO.create(new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion));
+                        cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion);
+                        clienteDAO.create(cliente);
                     } else {
                         cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion);
                         clienteDAO.edit(cliente);
@@ -189,7 +196,9 @@ public class LoginServlet extends HttpServlet {
                         session.setAttribute("tiquetesvenida", asientos2);
                     }
                     request.getRequestDispatcher("/clientDetails.jsp").forward(request, response);
+                    return;
                 }
+                request.setAttribute("message", "ERROR INGRESANDO LOS DATOS");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             } else {
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
@@ -206,8 +215,8 @@ public class LoginServlet extends HttpServlet {
         if (asientos == null) {
             return null;
         }
-        for(Asiento a : asientos) {
-            if(tiqueteDAO.find(new TiquetePK(v.getId(), a.getId())) == null) {
+        for (Asiento a : asientos) {
+            if (tiqueteDAO.find(new TiquetePK(v.getId(), a.getId())) == null) {
                 asientosAvailable.add(a);
             }
         }

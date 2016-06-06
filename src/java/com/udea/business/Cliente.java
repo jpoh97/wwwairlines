@@ -94,8 +94,22 @@ public class Cliente implements Serializable {
         this.departamento = departamento;
         this.ciudad = ciudad;
         this.direccion = direccion;
-    }    
-    
+    }
+
+    public Cliente(ClientePK clientePK, String nombre, String apellido, Date date) {
+        this.clientePK = clientePK;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = date;
+        this.correo = null;
+        this.genero = null;
+        this.paisNacimiento = null;
+        this.paisResidencia = null;
+        this.departamento = null;
+        this.ciudad = null;
+        this.direccion = null;
+    }
+
     public ClientePK getClientePK() {
         return clientePK;
     }
@@ -208,5 +222,5 @@ public class Cliente implements Serializable {
     public String toString() {
         return "com.udea.business.Cliente[ clientePK=" + clientePK + " ]";
     }
-    
+
 }

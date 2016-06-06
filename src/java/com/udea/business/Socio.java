@@ -75,13 +75,13 @@ public class Socio implements Serializable {
     @Column(name = "direccion")
     private String direccion;
     @Column(name = "millas")
-    private int millas;
+    private double millas;
 
-    public int getMillas() {
+    public double getMillas() {
         return millas;
     }
 
-    public void setMillas(int millas) {
+    public void setMillas(double millas) {
         this.millas = millas;
     }
 

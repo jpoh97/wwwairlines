@@ -174,7 +174,9 @@ public class IndexServlet extends HttpServlet {
                         }
                     });
                 }
-
+                if (vuelos1.isEmpty()) {
+                    request.setAttribute("desabilitaBoton", "disabled");
+                }
                 request.setAttribute("vuelosida", vuelos1);
                 if (tipo != null && tipo.equalsIgnoreCase("0")) {
                     if (vuelosLlegada != null) {
@@ -193,6 +195,9 @@ public class IndexServlet extends HttpServlet {
                             }
                         });
                     }
+                    if (vuelos2.isEmpty()) {
+                        request.setAttribute("desabilitaBoton", "disabled");
+                    }
                     request.setAttribute("vuelosllegada", vuelos2);
                     session.setAttribute("tabla2", "block");
                 } else {
@@ -200,7 +205,7 @@ public class IndexServlet extends HttpServlet {
                 }
             }
 
-            session.setAttribute("tipo", tipo);
+            session.setAttribute("tipoDeViaje", tipo);
             session.setAttribute("origen", origen);
             session.setAttribute("destino", destino);
             session.setAttribute("fechaida", fechaidaStr);

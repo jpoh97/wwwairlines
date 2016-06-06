@@ -15,7 +15,6 @@
                     <label for="destino">Destino</label>
                 </div>                
             </div>
-            <br/><br/>
             <h5 class="center-align">VUELOS DE IDA</h5>
             <br/>
             <div class="col s12">
@@ -73,7 +72,7 @@
                 <br/><br/>
             </div>
             <div class="row center-align">
-                <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="Search">SIGUIENTE
+                <button class="btn waves-effect waves-light indigo accent-2" type="submit" name="action" value="Search" ${desabilitaBoton}>SIGUIENTE
                     <i class="material-icons right">play_arrow</i>
                 </button>            
             </div>

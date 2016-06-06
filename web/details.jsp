@@ -64,7 +64,11 @@
                             <tr>
                                 <td>PRECIO:</td>
                                 <td><p><%= request.getSession().getAttribute("precioregreso")%></p></td>
-                            </tr>                            
+                            </tr>   
+                            <tr>
+                                <td>PASAJEROS:</td>
+                                <td><p><%= request.getSession().getAttribute("pasajeros")%></p></td>
+                            </tr>
                             <tr>    
                                 <td colspan="2">    
                                     <p>

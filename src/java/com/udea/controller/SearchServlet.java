@@ -71,7 +71,7 @@ public class SearchServlet extends HttpServlet {
                 session.setAttribute("precioida", vc.getPrecio());
             }
 
-            String tipo = (String) request.getSession().getAttribute("tipo");
+            String tipo = (String) request.getSession().getAttribute("tipoDeViaje");
             if (tipo != null && tipo.equalsIgnoreCase("0")) {
 
                 String regresoStr = request.getParameter("regreso");

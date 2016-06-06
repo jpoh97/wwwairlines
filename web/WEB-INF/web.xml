@@ -21,8 +21,12 @@
         <servlet-class>com.udea.controller.LoginServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>clientDetailServlet</servlet-name>
-        <servlet-class>com.udea.controller.clientDetailServlet</servlet-class>
+        <servlet-name>PaymentServlet</servlet-name>
+        <servlet-class>com.udea.controller.PaymentServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientDetailServlet</servlet-name>
+        <servlet-class>com.udea.controller.ClientDetailServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
@@ -45,8 +49,12 @@
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>clientDetailServlet</servlet-name>
-        <url-pattern>/clientDetailServlet</url-pattern>
+        <servlet-name>PaymentServlet</servlet-name>
+        <url-pattern>/PaymentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientDetailServlet</servlet-name>
+        <url-pattern>/ClientDetailServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
