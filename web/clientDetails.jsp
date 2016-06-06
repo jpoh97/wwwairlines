@@ -77,7 +77,7 @@
                                                 <option value="${a2.id}">${a2.id}</option>                                                
                                             </c:forEach>
                                         </select>
-                                        <label>* SELECCIONE ASIENTO DE VENIDA</label>
+                                        <label>* SELECCIONE ASIENTO DE REGRESO</label>
                                     </div>
                                 </div>
                                 <% }%>
@@ -139,7 +139,7 @@
                                         <option value="${a2.id}">${a2.id}</option>                                                
                                     </c:forEach>
                                 </select>
-                                <label>* SELECCIONE ASIENTO DE VENIDA</label>
+                                <label>* SELECCIONE ASIENTO DE REGRESO</label>
                             </div>
                         </div>
                         <% }%>

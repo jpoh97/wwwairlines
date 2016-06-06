@@ -70,7 +70,7 @@ public class LoginServlet extends HttpServlet {
             Vuelo vuelo2 = (Vuelo) request.getSession().getAttribute("vuelo2");
 
             String action = request.getParameter("action");
-            if (action.equalsIgnoreCase("Ingresar")) {
+            if (action!=null &&  action.equalsIgnoreCase("Ingresar")) {
                 String tipoIdentifiacion = request.getParameter("tipoIdentificacion");
                 String id = request.getParameter("id");
                 String contrasenia = request.getParameter("contrasenia");
@@ -87,6 +87,11 @@ public class LoginServlet extends HttpServlet {
                     socio = socioDAO.find(socioPk);
 
                     if (socio != null) {
+                        if (!socio.getContrasena().equals(contrasenia)) {
+                            request.setAttribute("message", "ERROR AL INICIAR COMO SOCIO");
+                            request.getRequestDispatcher("/login.jsp").forward(request, response);
+                            return;
+                        }
                         session.setAttribute("socio", socio);
                         switch (Integer.parseInt(socio.getSocioPK().getTipoid())) {
                             case 1:
@@ -117,10 +122,13 @@ public class LoginServlet extends HttpServlet {
                     } else {
                         request.setAttribute("message", "ERROR AL INICIAR COMO SOCIO");
                         request.getRequestDispatcher("/login.jsp").forward(request, response);
+                        return;
                     }
                 } else {
                     request.setAttribute("message", "ERROR AL INICIAR COMO SOCIO");
                     request.getRequestDispatcher("/login.jsp").forward(request, response);
+                    return;
+                    
                 }
                 List<Asiento> asientos1 = getAvailableSeats(cabina1, vuelo1);
                 List<Asiento> asientos2 = getAvailableSeats(cabina2, vuelo2);
@@ -131,7 +139,8 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("tiquetesvenida", asientos2);
                 }
                 request.getRequestDispatcher("/clientDetails.jsp").forward(request, response);
-            } else if (action.equalsIgnoreCase("continuar")) {
+                return;
+            } else if (action!=null &&  action.equalsIgnoreCase("continuar")) {
 
                 String tipoId = request.getParameter("tipoId");
                 String identificacion = request.getParameter("numeroId");

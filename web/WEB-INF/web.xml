@@ -40,6 +40,10 @@
         <servlet-name>CheckIn</servlet-name>
         <servlet-class>com.udea.controller.CheckIn</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EmailSendingServlet</servlet-name>
+        <servlet-class>com.udea.controller.EmailSendingServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>
         <url-pattern>/IndexServlet</url-pattern>
@@ -80,6 +84,31 @@
         <servlet-name>CheckIn</servlet-name>
         <url-pattern>/CheckIn</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EmailSendingServlet</servlet-name>
+        <url-pattern>/EmailSendingServlet</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>host</param-name>
+        <param-value>personalizatucelcom.ipage.com</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>port</param-name>
+        <param-value>587</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>user</param-name>
+        <param-value>pruebasmtp@gsmadvance.co</param-value>
+    </context-param>
+ 
+    <context-param>
+        <param-name>pass</param-name>
+        <param-value>Prueba1234</param-value>
+    </context-param>
+    
     <session-config>
         <session-timeout>
             30

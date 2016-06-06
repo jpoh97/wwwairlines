@@ -17,16 +17,16 @@
         <div class="navbar-fixed blue-grey">
             <nav>
                 <div class="nav-wrapper blue-grey">
-                    <a href="index.jsp" class="brand-logo">WWW Airlines</a>
+                    <a href="./" class="brand-logo">WWW Airlines</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="LoginServlet">Ingresar</a></li>
+                        <li><a href="MiCuenta">Mi Cuenta</a></li>
                         <li><a href="RegisterServlet">Registrarse</a></li>
                         <li><a href="InvoiceServlet">Facturas</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li><a href="ClientServlet">Clientes</a></li>
-                        <li><a href="CarServlet">Vehiculos</a></li>
+                        <li><a href="MiCuenta">MiCuenta</a></li>
+                        <li><a href="RegisterServlet">Registrarse</a></li>
                         <li><a href="InvoiceServlet">Facturas</a></li>
                     </ul>
                 </div>
