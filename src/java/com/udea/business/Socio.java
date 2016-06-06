@@ -76,6 +76,8 @@ public class Socio implements Serializable {
     private String direccion;
     @Column(name = "millas")
     private double millas;
+    @Column(name = "tarjeta_credito")
+    private Double tarjeta_credito;
 
     public double getMillas() {
         return millas;
@@ -83,6 +85,14 @@ public class Socio implements Serializable {
 
     public void setMillas(double millas) {
         this.millas = millas;
+    }
+
+    public Double getTarjeta_credito() {
+        return tarjeta_credito;
+    }
+
+    public void setTarjeta_credito(Double tarjeta_credito) {
+        this.tarjeta_credito = tarjeta_credito;
     }
 
     public Socio() {
@@ -227,10 +237,10 @@ public class Socio implements Serializable {
         this.direccion = direccion;
         this.millas = 0;
     }
-    
+
     @Override
     public String toString() {
         return "com.udea.business.Socio[ socioPK=" + socioPK + " ]";
     }
-    
+
 }

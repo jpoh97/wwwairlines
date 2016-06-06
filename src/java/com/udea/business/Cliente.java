@@ -70,6 +70,8 @@ public class Cliente implements Serializable {
     @Size(max = 50)
     @Column(name = "direccion")
     private String direccion;
+    @Column(name = "tarjeta_credito")
+    private Double tarjeta_credito;
 
     public Cliente() {
     }
@@ -124,6 +126,14 @@ public class Cliente implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Double getTarjeta_credito() {
+        return tarjeta_credito;
+    }
+
+    public void setTarjeta_credito(Double tarjeta_credito) {
+        this.tarjeta_credito = tarjeta_credito;
     }
 
     public String getApellido() {

@@ -13,6 +13,7 @@ import com.udea.business.Tiquete;
 import com.udea.business.TiquetePK;
 import com.udea.business.Vuelo;
 import com.udea.ejb.AsientoFacadeLocal;
+import com.udea.ejb.ClienteFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import com.udea.ejb.TiqueteFacadeLocal;
 import java.io.IOException;
@@ -42,6 +43,9 @@ public class PaymentServlet extends HttpServlet {
 
     @EJB
     private SocioFacadeLocal socioDAO;
+    
+    @EJB
+    private ClienteFacadeLocal clienteDAO;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -62,19 +66,21 @@ public class PaymentServlet extends HttpServlet {
             List<Asiento> asientos1 = (List<Asiento>) session.getAttribute("tiquetesida");
             List<Asiento> asientos2 = (List<Asiento>) session.getAttribute("tiquetesvenida");
             double total = (double) session.getAttribute("totalPagar");
+            String tarjeta = request.getParameter("tarjeta");
             String action = request.getParameter("action");
 
             ArrayList<Tiquete> tiquetesClientes = new ArrayList<>();
             ArrayList<Tiquete> tiquetesClientes2 = new ArrayList<>();
             Tiquete tiquete1 = null;
             Tiquete tiquete2 = null;
-            
+            boolean myFlag = false;
+
             if (action.equalsIgnoreCase("tarjeta")) {
-                String tarjeta = request.getParameter("tarjeta");
-                if(tarjeta == null || tarjeta.trim().equalsIgnoreCase("")) {
+                if (tarjeta == null || tarjeta.trim().equalsIgnoreCase("")) {
                     request.setAttribute("message", "ERROR INGRESANDO EL NÚMERO DE LA TARJETA");
                     request.getRequestDispatcher("/payment.jsp").forward(request, response);
                 }
+                myFlag = true;
             }
 
             if (clientes != null && !clientes.isEmpty()) {
@@ -188,6 +194,9 @@ public class PaymentServlet extends HttpServlet {
                     }
                 }
                 socio.setMillas(socio.getMillas() + total * 0.2);
+                if(myFlag) {
+                    socio.setTarjeta_credito(Double.parseDouble(tarjeta));
+                }
                 socioDAO.edit(socio);
             }
 
@@ -247,6 +256,10 @@ public class PaymentServlet extends HttpServlet {
                             asientos2.remove(0);
                         }
                     }
+                }
+                if(myFlag) {
+                    cliente.setTarjeta_credito(Double.parseDouble(tarjeta));
+                    clienteDAO.edit(cliente);
                 }
             }
 
