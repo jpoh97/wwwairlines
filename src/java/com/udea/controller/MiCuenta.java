@@ -2,6 +2,7 @@ package com.udea.controller;
 
 import com.udea.business.Socio;
 import com.udea.business.SocioPK;
+import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import java.io.IOException;
 import java.text.ParseException;
@@ -23,6 +24,8 @@ public class MiCuenta extends HttpServlet {
 
     @EJB
     private SocioFacadeLocal socioDAO;
+    @EJB
+    private PaisFacadeLocal paisDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,6 +39,7 @@ public class MiCuenta extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        request.setAttribute("paises", paisDAO.findAll());
         String tipoid = request.getParameter("tipoIdentificacion");
         String numid = request.getParameter("id");
         String pass = request.getParameter("contrasenia");
@@ -83,7 +87,7 @@ public class MiCuenta extends HttpServlet {
                         tipoId = "4";
                         break;
                 }
-
+                
                 Socio socio = socioDAO.find(new SocioPK(tipoId, Integer.parseInt(identificacion)));
                 socio.setNombre(nombre);
                 socio.setApellido(apellido);
@@ -184,6 +188,7 @@ public class MiCuenta extends HttpServlet {
             }
             request.setAttribute("message", "Ingresa los datos correctamente");
         }
+        
 
         request.getRequestDispatcher("/micuenta.jsp").forward(request, response);
     }

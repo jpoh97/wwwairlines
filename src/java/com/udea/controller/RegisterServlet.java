@@ -7,6 +7,7 @@ package com.udea.controller;
 
 import com.udea.business.Socio;
 import com.udea.business.SocioPK;
+import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -25,6 +26,8 @@ public class RegisterServlet extends HttpServlet {
 
     @EJB
     private SocioFacadeLocal socioDAO;
+    @EJB
+    private PaisFacadeLocal paisDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,6 +41,8 @@ public class RegisterServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        request.setAttribute("paises", paisDAO.findAll());
         try (PrintWriter out = response.getWriter()) {
             String nombre = request.getParameter("nombre");
             String apellido = request.getParameter("apellido");

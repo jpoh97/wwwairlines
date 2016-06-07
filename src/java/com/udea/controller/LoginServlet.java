@@ -15,6 +15,7 @@ import com.udea.business.TiquetePK;
 import com.udea.business.Vuelo;
 import com.udea.ejb.AsientoFacadeLocal;
 import com.udea.ejb.ClienteFacadeLocal;
+import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import com.udea.ejb.TiqueteFacadeLocal;
 import java.io.IOException;
@@ -46,6 +47,8 @@ public class LoginServlet extends HttpServlet {
 
     @EJB
     private TiqueteFacadeLocal tiqueteDAO;
+    @EJB
+    private PaisFacadeLocal paisDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -59,6 +62,8 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        request.setAttribute("paises", paisDAO.findAll());
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
 

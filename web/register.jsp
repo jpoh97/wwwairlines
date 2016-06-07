@@ -46,13 +46,22 @@
             </select>
             <label>Género</label>
         </div>
-        <div class="input-field col s12 l4">
-            <input type="text" id="paisNacimiento" name="paisNacimiento">
-            <label for="paisNacimiento">Pais de Nacimiento</label>
+        <div class="input-field col s12 l6">
+            <select name="paisNacimiento" value="${socio.paisNacimiento}">
+                <option value="" disabled selected>Pais de Nacimiento</option>
+
+                <c:forEach items="${paises}" var="p">
+                    <option value="${p.id}" <c:if test="${p.id == socio.paisNacimiento}"> selected </c:if>>${p.nombre}</option>
+                </c:forEach>
+            </select>
         </div>
-        <div class="input-field col s12 l4 offset-l2">
-            <input type="text" id="paisResidencia" name="paisResidencia">
-            <label for="paisResidencia">Pais de Residencia</label>
+        <div class="input-field col s12 l6">
+            <select name="paisResidencia" value="${socio.paisResidencia}">
+                <option value="" disabled selected>Pais de Residencia</option>
+                <c:forEach items="${paises}" var="p">
+                    <option value="${p.id}" <c:if test="${p.id == socio.paisResidencia}"> selected </c:if>>${p.nombre}</option>
+                </c:forEach>
+            </select>
         </div>
         <div class="input-field col s12 l4">
             <input type="text" id="departamento" name="departamento">
