@@ -98,6 +98,7 @@
                                 <option value="3">Pasaporte</option>
                                 <option value="4">Registro civil</option>
                             </select>
+                            <label for="tipoId">Tipo de documento</label>
                         </div>
                         <div class="input-field col s12">
                             <input type="text" id="numeroId" name="numeroId">

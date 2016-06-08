@@ -10,7 +10,7 @@
                 <option value="3">Pasaporte</option>
                 <option value="3">Registro civil</option>
             </select>
-            <label>Tipo de Identificación</label>
+            <label for="tipoId">Tipo de Identificación</label>
         </div>
         <div class="input-field col s12 l4 offset-l2">
             <input type="text" id="numeroId" name="numeroId">
@@ -44,32 +44,35 @@
                 <option value="M">Masculino</option>
                 <option value="F">Femenino</option>
             </select>
-            <label>Género</label>
+            <label for="genero">Género</label>
         </div>
         <div class="input-field col s12 l4">
-            <select name="paisNacimiento" value="${socio.paisNacimiento}">
+            <select name="paisNacimiento">
                 <option value="" disabled selected>Pais de Nacimiento</option>
 
                 <c:forEach items="${paises}" var="p">
-                    <option value="${p.id}" <c:if test="${p.id == socio.paisNacimiento}"> selected </c:if>>${p.nombre}</option>
+                    <option value="${p.id}" >${p.nombre}</option>
                 </c:forEach>
             </select>
+            <label for="paisNacimiento">Pais de Nacimiento</label>
         </div>
         <div class="input-field col s12 l4 offset-l2">
-            <select name="paisResidencia" value="${socio.paisResidencia}">
+            <select name="paisResidencia">
                 <option value="" disabled selected>Pais de Residencia</option>
                 <c:forEach items="${paises}" var="p">
-                    <option value="${p.id}" <c:if test="${p.id == socio.paisResidencia}"> selected </c:if>>${p.nombre}</option>
+                    <option value="${p.id}" >${p.nombre}</option>
                 </c:forEach>
             </select>
+            <label for="paisResidencia">Pais de Residencia</label>
         </div>
         <div class="input-field col s12 l4">
-            <select name="ciudad" value="${ciudad.id}">
+            <select name="ciudad" >
                 <option value="" disabled selected>Ciudad</option>
                 <c:forEach items="${ciudades}" var="ci">
-                    <option value="${ci.id}" <c:if test="${ci.id == ciudad.id}"> selected </c:if>>${ci.nombre}</option>
+                    <option value="${ci.id}" >${ci.nombre}</option>
                 </c:forEach>
             </select>
+            <label for="ciudad">Ciudad</label>
         </div>
         <div class="input-field col s12 l4 offset-l2">
             <input type="text" id="direccion" name="direccion">

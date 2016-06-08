@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.2deb2
+-- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 06-06-2016 a las 17:07:45
--- Versión del servidor: 10.1.9-MariaDB
--- Versión de PHP: 5.6.15
+-- Servidor: localhost
+-- Tiempo de generación: 07-06-2016 a las 23:17:36
+-- Versión del servidor: 5.6.30-1
+-- Versión de PHP: 7.0.7-3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -3075,6 +3075,2772 @@ CREATE TABLE `ciudad` (
   `estado` int(4) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `ciudad`
+--
+
+INSERT INTO `ciudad` (`id`, `nombre`, `estado`) VALUES
+(1, 'Aachen', 2),
+(2, 'Aalborg', 1),
+(3, 'Aarhus', 2),
+(4, 'Abadan', 2),
+(5, 'Abakan', 2),
+(6, 'Abbotsford', 2),
+(7, 'Abeche', 2),
+(8, 'Aberdeen', 2),
+(9, 'Abha', 2),
+(10, 'Abidjan', 1),
+(11, 'Abilene', 1),
+(12, 'Abu dhabi', 1),
+(13, 'Abu simbel', 2),
+(14, 'Abuja', 1),
+(15, 'Acapulco', 2),
+(16, 'Acarigua', 2),
+(17, 'Accra', 1),
+(18, 'Adak island', 1),
+(19, 'Adana', 1),
+(20, 'Addis ababa', 1),
+(21, 'Adelaide', 2),
+(22, 'Adrar', 1),
+(23, 'Afyon', 1),
+(24, 'Agadez', 2),
+(25, 'Agadir', 2),
+(26, 'Agana', 1),
+(27, 'Agartala', 2),
+(28, 'Agatti island', 1),
+(29, 'Agen', 2),
+(30, 'Aggeneys', 2),
+(31, 'Agra', 2),
+(32, 'Agrinion', 2),
+(33, 'Aguadilla', 1),
+(34, 'Aguascalientes', 2),
+(35, 'Ahmedabad', 1),
+(36, 'Ahwaz', 1),
+(37, 'Aioun el atrouss', 2),
+(38, 'Aitutaki', 2),
+(39, 'Aix-les-milles', 2),
+(40, 'Aizwal', 2),
+(41, 'Ajaccio', 1),
+(42, 'Akita', 1),
+(43, 'Akola', 1),
+(44, 'Akron', 1),
+(45, 'Akrotiri', 2),
+(46, 'Aktyubinsk', 2),
+(47, 'Akure', 1),
+(48, 'Akureyri', 2),
+(49, 'Al hociema', 2),
+(50, 'Al-ahsa', 1),
+(51, 'Al-jouf', 1),
+(52, 'Alamogordo', 2),
+(53, 'Albany', 2),
+(54, 'Albenga', 1),
+(55, 'Albi', 2),
+(56, 'Albury', 2),
+(57, 'Aldan', 1),
+(58, 'Aleppo', 2),
+(59, 'Alert', 1),
+(60, 'Alesund', 1),
+(61, 'Alexander bay', 1),
+(62, 'Alexandra', 1),
+(63, 'Alexandria', 2),
+(64, 'Alexandroupolis', 1),
+(65, 'Alghero', 1),
+(66, 'Algier', 2),
+(67, 'Alicante', 2),
+(68, 'Alice', 1),
+(69, 'Alice springs', 1),
+(70, 'Alice town', 2),
+(71, 'Allahabad', 1),
+(72, 'Alma-ata', 2),
+(73, 'Almeria', 1),
+(74, 'Alofi', 1),
+(75, 'Alor setar', 2),
+(76, 'Alta', 2),
+(77, 'Alta floresta', 1),
+(78, 'Altamira', 2),
+(79, 'Altenburg', 1),
+(80, 'Altenrhein', 2),
+(81, 'Alto palena', 1),
+(82, 'Altoona', 1),
+(83, 'Altus', 1),
+(84, 'Amami', 1),
+(85, 'Amarillo', 2),
+(86, 'Ambato', 2),
+(87, 'Amberley', 2),
+(88, 'Ambilobe', 2),
+(89, 'Ambon', 1),
+(90, 'Amilcar cabral', 2),
+(91, 'Amman', 1),
+(92, 'Amritsar', 2),
+(93, 'Amsterdam', 1),
+(94, 'Anaa', 2),
+(95, 'Anaco', 1),
+(96, 'Analalava', 1),
+(97, 'Anchorage', 1),
+(98, 'Ancud', 1),
+(99, 'Andahuaylas', 1),
+(100, 'Andapa', 2),
+(101, 'Andersen', 2),
+(102, 'Andoya', 2),
+(103, 'Andravida', 1),
+(104, 'Andros town', 1),
+(105, 'Angelholm', 1),
+(106, 'Angouleme', 1),
+(107, 'Anjouan', 1),
+(108, 'Ankara', 2),
+(109, 'Annaba', 2),
+(110, 'Annecy', 2),
+(111, 'Annemasse', 1),
+(112, 'Annette island', 2),
+(113, 'Anniston', 2),
+(114, 'Anta', 2),
+(115, 'Antalaha', 2),
+(116, 'Antalya', 1),
+(117, 'Antananarivo', 2),
+(118, 'Antigua', 1),
+(119, 'Antofagasta', 1),
+(120, 'Antsiranana', 1),
+(121, 'Antsohihy', 1),
+(122, 'Antwerp', 1),
+(123, 'Aomori', 2),
+(124, 'Apolo', 1),
+(125, 'Aqaba', 1),
+(126, 'Aracaju', 1),
+(127, 'Aracatuba', 1),
+(128, 'Arad', 2),
+(129, 'Arar', 2),
+(130, 'Araracuara', 2),
+(131, 'Arauca', 2),
+(132, 'Arcachon', 2),
+(133, 'Ardmore', 1),
+(134, 'Arequipa', 2),
+(135, 'Arica', 1),
+(136, 'Armenia', 1),
+(137, 'Armstrong', 1),
+(138, 'Arnsberg', 2),
+(139, 'Artigas', 1),
+(140, 'Arusha', 2),
+(141, 'Arutua', 2),
+(142, 'Arvidsjaur', 2),
+(143, 'Asahikawa', 1),
+(144, 'Ashkhabad', 1),
+(145, 'Astrakhan', 1),
+(146, 'Asuncion', 2),
+(147, 'Aswan', 1),
+(148, 'Atar', 2),
+(149, 'Athens', 2),
+(150, 'Atikokan', 2),
+(151, 'Atlanta', 1),
+(152, 'Atlantic city', 1),
+(153, 'Aubenas-vals-lanas', 2),
+(154, 'Auckland', 2),
+(155, 'Augsburg', 2),
+(156, 'Augusta', 1),
+(157, 'Aurangabad', 2),
+(158, 'Aurillac', 2),
+(159, 'Austin', 2),
+(160, 'Auxerre', 1),
+(161, 'Avalon', 2),
+(162, 'Avarua', 2),
+(163, 'Aviano', 2),
+(164, 'Avignon', 1),
+(165, 'Aviles', 2),
+(166, 'Ayacucho', 2),
+(167, 'Babelthuap', 2),
+(168, 'Bacau', 1),
+(169, 'Bacolod', 1),
+(170, 'Badajoz', 1),
+(171, 'Baden-baden', 1),
+(172, 'Bafoussam', 1),
+(173, 'Bage', 2),
+(174, 'Baghdad', 1),
+(175, 'Baghdogra', 1),
+(176, 'Bagotville', 2),
+(177, 'Baguio', 2),
+(178, 'Bahar dar', 1),
+(179, 'Bahia blanca', 2),
+(180, 'Bahia solano', 2),
+(181, 'Bahias dehuatulco', 1),
+(182, 'Bahrain', 1),
+(183, 'Baia mare', 1),
+(184, 'Baie comeau', 1),
+(185, 'Bakel', 1),
+(186, 'Baker lake', 2),
+(187, 'Bakersfield', 1),
+(188, 'Bakhtaran', 1),
+(189, 'Baku', 2),
+(190, 'Balikesir', 1),
+(191, 'Balikpapan', 2),
+(192, 'Balmaceda', 1),
+(193, 'Baltimore', 1),
+(194, 'Balurghat', 1),
+(195, 'Bamako', 2),
+(196, 'Bambari', 1),
+(197, 'Bamenda', 1),
+(198, 'Banak', 1),
+(199, 'Banda aceh', 2),
+(200, 'Bandar abbas', 2),
+(201, 'Bandar lengeh', 1),
+(202, 'Bandar mahshahr', 1),
+(203, 'Bandirma', 2),
+(204, 'Bandoundu', 1),
+(205, 'Bandung', 1),
+(206, 'Bangalore', 1),
+(207, 'Bangassou', 1),
+(208, 'Bangkok', 1),
+(209, 'Bangor', 2),
+(210, 'Bangui', 2),
+(211, 'Banjarmasin', 1),
+(212, 'Banjul', 2),
+(213, 'Baracoa playa', 1),
+(214, 'Barahona', 2),
+(215, 'Barcelona', 1),
+(216, 'Bardufoss', 1),
+(217, 'Bari', 2),
+(218, 'Barinas', 1),
+(219, 'Barking sands', 1),
+(220, 'Barnaul', 1),
+(221, 'Baroda', 2),
+(222, 'Barquisimeto', 2),
+(223, 'Barrancabermeja', 1),
+(224, 'Barranquilla', 2),
+(225, 'Barrow', 2),
+(226, 'Barrow island', 1),
+(227, 'Barter island', 1),
+(228, 'Basrah', 2),
+(229, 'Basse terre', 1),
+(230, 'Bastia', 2),
+(231, 'Bata', 2),
+(232, 'Batam', 1),
+(233, 'Batman', 2),
+(234, 'Baton rouge', 1),
+(235, 'Batouri', 1),
+(236, 'Batsfjord', 1),
+(237, 'Baudette', 2),
+(238, 'Bauru', 1),
+(239, 'Bautzen', 1),
+(240, 'Bayamo', 2),
+(241, 'Bayreuth', 2),
+(242, 'Beaufort', 2),
+(243, 'Beaumont', 2),
+(244, 'Beauvais', 2),
+(245, 'Bedford', 1),
+(246, 'Beer-sheba', 2),
+(247, 'Beijing', 1),
+(248, 'Beira', 1),
+(249, 'Beirut', 2),
+(250, 'Bejaja', 2),
+(251, 'Belem', 1),
+(252, 'Belfast', 1),
+(253, 'Belgaum', 1),
+(254, 'Belize city', 1),
+(255, 'Belleville', 2),
+(256, 'Bellingham', 2),
+(257, 'Belo horizonte', 2),
+(258, 'Benbecula', 1),
+(259, 'Benghazi', 2),
+(260, 'Bengkulu', 2),
+(261, 'Benguela', 2),
+(262, 'Benin', 1),
+(263, 'Beograd', 1),
+(264, 'Berbera', 1),
+(265, 'Berberati', 1),
+(266, 'Bergamo', 1),
+(267, 'Bergen', 2),
+(268, 'Bergerac', 2),
+(269, 'Berlin', 2),
+(270, 'Bermejo', 1),
+(271, 'Bern', 2),
+(272, 'Besalampy', 1),
+(273, 'Bethel', 2),
+(274, 'Bettles', 1),
+(275, 'Beziers', 1),
+(276, 'Bhairawa', 2),
+(277, 'Bhaunagar', 1),
+(278, 'Bhopal', 2),
+(279, 'Bhubaneswar', 1),
+(280, 'Bhuj', 2),
+(281, 'Biak', 2),
+(282, 'Biarritz-bayonne', 2),
+(283, 'Biggin hill', 1),
+(284, 'Bilaspur', 2),
+(285, 'Bilbao', 2),
+(286, 'Billund', 1),
+(287, 'Biloxi', 2),
+(288, 'Bima', 2),
+(289, 'Bintulu', 1),
+(290, 'Birao', 1),
+(291, 'Biratnagar', 2),
+(292, 'Birjand', 1),
+(293, 'Birmingham', 2),
+(294, 'Bisha', 1),
+(295, 'Bishkek', 1),
+(296, 'Bisho', 1),
+(297, 'Biskra', 2),
+(298, 'Bissau', 2),
+(299, 'Bitam', 1),
+(300, 'Blackbushe', 2),
+(301, 'Blackpool', 1),
+(302, 'Blagoveschensk', 2),
+(303, 'Blantyre', 2),
+(304, 'Bloemfontein', 2),
+(305, 'Bluefields', 2),
+(306, 'Blytheville', 1),
+(307, 'Boa vista', 1),
+(308, 'Bobo-dioulasso', 2),
+(309, 'Boca raton', 2),
+(310, 'Bocas del toro', 2),
+(311, 'Bodoe', 1),
+(312, 'Bogota', 2),
+(313, 'Boise', 1),
+(314, 'Bologna', 1),
+(315, 'Bolzano', 1),
+(316, 'Bom jesus da lapa', 1),
+(317, 'Bombay', 2),
+(318, 'Bora bora', 1),
+(319, 'Bordeaux', 2),
+(320, 'Borkum', 2),
+(321, 'Borlange', 2),
+(322, 'Boston', 2),
+(323, 'Bouake', 2),
+(324, 'Bouar', 1),
+(325, 'Bourg', 1),
+(326, 'Bourgas', 1),
+(327, 'Bourges', 1),
+(328, 'Bournemouth', 1),
+(329, 'Bradshaw field', 2),
+(330, 'Braganca', 2),
+(331, 'Brandon', 1),
+(332, 'Brasilia', 2),
+(333, 'Bratislava', 2),
+(334, 'Bratsk', 2),
+(335, 'Braunschweig', 2),
+(336, 'Brazzaville', 1),
+(337, 'Bremen', 2),
+(338, 'Bremerhaven', 1),
+(339, 'Brest', 1),
+(340, 'Bria', 2),
+(341, 'Bridgetown', 2),
+(342, 'Brindisi', 2),
+(343, 'Brisbane', 2),
+(344, 'Bristol', 1),
+(345, 'Brive', 1),
+(346, 'Brize norton', 2),
+(347, 'Bronnoysund', 1),
+(348, 'Broughton island', 2),
+(349, 'Brownsville', 1),
+(350, 'Brueggen', 2),
+(351, 'Brunei', 2),
+(352, 'Brussels', 2),
+(353, 'Bryan', 1),
+(354, 'Bryansk', 1),
+(355, 'Bucaramanga', 1),
+(356, 'Bucharest', 1),
+(357, 'Buckley', 1),
+(358, 'Budapest', 2),
+(359, 'Buenaventura', 2),
+(360, 'Buenos aires', 2),
+(361, 'Buffalo', 1),
+(362, 'Buffalo narrows', 1),
+(363, 'Bujumbura', 1),
+(364, 'Bukavu/kavumu', 1),
+(365, 'Bukhara', 1),
+(366, 'Bulawayo', 2),
+(367, 'Bunia', 1),
+(368, 'Burbank', 1),
+(369, 'Burlington', 2),
+(370, 'Bursa', 1),
+(371, 'Burwash', 1),
+(372, 'Bush field', 2),
+(373, 'Bushehr', 1),
+(374, 'Cabinda', 1),
+(375, 'Caen', 2),
+(376, 'Cagliari', 2),
+(377, 'Cairns', 2),
+(378, 'Cairo', 1),
+(379, 'Calabar', 1),
+(380, 'Calais', 2),
+(381, 'Calama', 2),
+(382, 'Calcutta', 2),
+(383, 'Calexico', 2),
+(384, 'Calgary', 1),
+(385, 'Cali', 2),
+(386, 'Calicut', 1),
+(387, 'Calvi', 1),
+(388, 'Camaguey', 2),
+(389, 'Cambridge', 1),
+(390, 'Cambridge bay', 1),
+(391, 'Camden', 2),
+(392, 'Camiri', 2),
+(393, 'Camp springs', 2),
+(394, 'Campbell river', 2),
+(395, 'Campeche', 2),
+(396, 'Campinas', 2),
+(397, 'Campo grande', 2),
+(398, 'Campos', 2),
+(399, 'Canaima', 1),
+(400, 'Canberra', 2),
+(401, 'Cancun', 2),
+(402, 'Canefield', 1),
+(403, 'Cannes', 2),
+(404, 'Canouan island', 2),
+(405, 'Canton island', 1),
+(406, 'Cap haitien', 1),
+(407, 'Cap skiring', 1),
+(408, 'Cape dorset', 1),
+(409, 'Cape lisburne', 1),
+(410, 'Cape newenham', 1),
+(411, 'Cape town', 1),
+(412, 'Caracas', 1),
+(413, 'Caransebes', 2),
+(414, 'Caravelas', 1),
+(415, 'Carcassonne', 1),
+(416, 'Cardiff', 1),
+(417, 'Caribou', 1),
+(418, 'Carlisle', 2),
+(419, 'Carlsbad', 2),
+(420, 'Carolina', 2),
+(421, 'Cartagena', 1),
+(422, 'Carupano', 2),
+(423, 'Casablanca', 2),
+(424, 'Cascavel', 2),
+(425, 'Casper', 2),
+(426, 'Castlegar', 1),
+(427, 'Castres', 1),
+(428, 'Castries', 2),
+(429, 'Catamarca', 1),
+(430, 'Catania', 1),
+(431, 'Caxias do sul', 1),
+(432, 'Cayenne', 1),
+(433, 'Cayman barac', 2),
+(434, 'Cayo', 2),
+(435, 'Cazombo', 1),
+(436, 'Cebu', 2),
+(437, 'Cedar city', 2),
+(438, 'Celle', 1),
+(439, 'Chachapoyas', 1),
+(440, 'Chah bahar', 2),
+(441, 'Chaiten', 1),
+(442, 'Chalon', 2),
+(443, 'Chambery', 2),
+(444, 'Chandigarh', 2),
+(445, 'Changcha', 2),
+(446, 'Changuinola', 1),
+(447, 'Chania', 2),
+(448, 'Chapeco', 1),
+(449, 'Chapleau', 2),
+(450, 'Charleroi', 1),
+(451, 'Charleston', 2),
+(452, 'Charlieville', 2),
+(453, 'Charlo', 2),
+(454, 'Charlotte', 1),
+(455, 'Charlottetown', 1),
+(456, 'Chateauroux', 1),
+(457, 'Chatham', 1),
+(458, 'Chatham island', 2),
+(459, 'Chattanooga', 1),
+(460, 'Cheju', 1),
+(461, 'Chelyabinsk', 1),
+(462, 'Chengdu', 1),
+(463, 'Cherbourg', 1),
+(464, 'Cherry point', 2),
+(465, 'Chetumal', 2),
+(466, 'Cheyenne', 2),
+(467, 'Chiayi', 2),
+(468, 'Chicago', 1),
+(469, 'Chiclayo', 2),
+(470, 'Chico', 1),
+(471, 'Chicopee falls', 2),
+(472, 'Chihuahua', 1),
+(473, 'Childress', 1),
+(474, 'Chile chico', 1),
+(475, 'Chilliwack', 2),
+(476, 'Chimbote', 2),
+(477, 'Chimkent', 2),
+(478, 'China', 1),
+(479, 'Chinmen', 1),
+(480, 'Chios', 1),
+(481, 'Chiredzi', 2),
+(482, 'Chita', 1),
+(483, 'Chitato', 1),
+(484, 'Chitose', 1),
+(485, 'Chittagong', 2),
+(486, 'Cholet', 2),
+(487, 'Chongqing', 1),
+(488, 'Christchurch', 2),
+(489, 'Chub cay', 2),
+(490, 'Chung', 1),
+(491, 'Churchill', 1),
+(492, 'Chuuk', 1),
+(493, 'Ciego de avila', 2),
+(494, 'Cienfuegos', 2),
+(495, 'Cilacap', 1),
+(496, 'Cincinnati', 2),
+(497, 'Cirebon', 1),
+(498, 'Ciudad bolivar', 2),
+(499, 'Ciudad del carmen', 1),
+(500, 'Ciudad juarez', 1),
+(501, 'Ciudad mante', 2),
+(502, 'Ciudad obregon', 2),
+(503, 'Ciudad victoria', 1),
+(504, 'Clermont ferrand', 2),
+(505, 'Cleveland', 1),
+(506, 'Clovis', 2),
+(507, 'Cluj-napoca', 1),
+(508, 'Clyde river', 1),
+(509, 'Coban', 1),
+(510, 'Cobija', 2),
+(511, 'Coca', 2),
+(512, 'Cochabamba', 2),
+(513, 'Cockburn town', 1),
+(514, 'Coco beach', 2),
+(515, 'Coffs harbour', 1),
+(516, 'Cognac', 2),
+(517, 'Coimbatore', 2),
+(518, 'Cold bay', 2),
+(519, 'Cold lake', 1),
+(520, 'Colima', 2),
+(521, 'College station', 1),
+(522, 'Colmar', 2),
+(523, 'Cologne', 1),
+(524, 'Colombia', 2),
+(525, 'Colombo', 1),
+(526, 'Colombus', 2),
+(527, 'Colonia', 1),
+(528, 'Colorado springs', 2),
+(529, 'Coltishall', 2),
+(530, 'Columbia', 2),
+(531, 'Columbus', 2),
+(532, 'Comodoro rivadavia', 2),
+(533, 'Comox', 1),
+(534, 'Conceicao do araguaia', 1),
+(535, 'Concepcion', 2),
+(536, 'Conception', 2),
+(537, 'Concordia', 1),
+(538, 'Condoto', 1),
+(539, 'Coningsby', 1),
+(540, 'Connaught', 1),
+(541, 'Conroe', 2),
+(542, 'Constanta', 1),
+(543, 'Constantine', 1),
+(544, 'Cooch-behar', 1),
+(545, 'Coolangatta', 1),
+(546, 'Copenhagen', 2),
+(547, 'Copiapo', 1),
+(548, 'Coppermine', 2),
+(549, 'Coral harbour', 1),
+(550, 'Cordoba', 1),
+(551, 'Cordova', 1),
+(552, 'Cork', 2),
+(553, 'Coro', 2),
+(554, 'Coronation', 2),
+(555, 'Corozal', 1),
+(556, 'Corpus christi', 2),
+(557, 'Corrientes', 2),
+(558, 'Corumba', 1),
+(559, 'Coto 47', 1),
+(560, 'Cotonou', 1),
+(561, 'Cotulla', 1),
+(562, 'Coventry', 2),
+(563, 'Coxs bazar', 2),
+(564, 'Coyhaique', 1),
+(565, 'Cozumel', 1),
+(566, 'Craiova', 1),
+(567, 'Cranbrook', 1),
+(568, 'Creil', 1),
+(569, 'Crestview', 1),
+(570, 'Crotone', 1),
+(571, 'Cruiziro do sul', 1),
+(572, 'Cuamba', 2),
+(573, 'Cucuta', 2),
+(574, 'Cuddapah', 2),
+(575, 'Cuenca', 2),
+(576, 'Cuernavaca', 2),
+(577, 'Cuiaba', 2),
+(578, 'Culiacan', 2),
+(579, 'Cumana', 2),
+(580, 'Curitiba', 2),
+(581, 'Cutbank', 1),
+(582, 'Cuzco', 1),
+(583, 'Dakar', 1),
+(584, 'Dalaman', 1),
+(585, 'Dalhart', 1),
+(586, 'Dalian', 2),
+(587, 'Dallas', 2),
+(588, 'Dallas-fort worth', 1),
+(589, 'Daloa', 1),
+(590, 'Daman', 1),
+(591, 'Damascus', 2),
+(592, 'Dammam', 2),
+(593, 'Danang', 2),
+(594, 'Dar es salaam', 1),
+(595, 'Dauphin', 1),
+(596, 'David', 1),
+(597, 'Dawson', 2),
+(598, 'Dawson creek', 2),
+(599, 'Dayton', 2),
+(600, 'De kooy', 1),
+(601, 'Dead mans cay', 1),
+(602, 'Deadhorse', 1),
+(603, 'Dease lake', 2),
+(604, 'Deauville', 1),
+(605, 'Debrecen', 2),
+(606, 'Decimomannu', 1),
+(607, 'Deer lake', 1),
+(608, 'Dehra dun', 1),
+(609, 'Deire zor', 1),
+(610, 'Del bajio', 1),
+(611, 'Del rio', 1),
+(612, 'Delhi', 1),
+(613, 'Delta junction', 2),
+(614, 'Denizli', 1),
+(615, 'Denpasar', 2),
+(616, 'Denver', 2),
+(617, 'Deridder', 2),
+(618, 'Des moines', 2),
+(619, 'Desroches', 1),
+(620, 'Detroit', 1),
+(621, 'Dhahran', 1),
+(622, 'Dhaka', 1),
+(623, 'Dhanbad', 1),
+(624, 'Dijon', 1),
+(625, 'Dili', 2),
+(626, 'Dillingham', 2),
+(627, 'Dinard', 2),
+(628, 'Dire dawa', 1),
+(629, 'Diyabakir', 1),
+(630, 'Djanet', 2),
+(631, 'Djerba', 2),
+(632, 'Dnepropetrovsk', 2),
+(633, 'Dodoma', 2),
+(634, 'Doha', 2),
+(635, 'Dole', 2),
+(636, 'Dominica', 2),
+(637, 'Donaueschingen', 2),
+(638, 'Donetsk', 1),
+(639, 'Dongola', 1),
+(640, 'Dortmund', 2),
+(641, 'Dothan', 2),
+(642, 'Douala', 2),
+(643, 'Douglas', 1),
+(644, 'Dover', 1),
+(645, 'Dresden', 1),
+(646, 'Dryden', 2),
+(647, 'Dubai', 1),
+(648, 'Dubbo', 1),
+(649, 'Dublin', 2),
+(650, 'Dubrovnik', 1),
+(651, 'Duesseldorf', 1),
+(652, 'Duluth', 2),
+(653, 'Dumaguete', 1),
+(654, 'Dumai', 1),
+(655, 'Dundee', 2),
+(656, 'Dunedin', 1),
+(657, 'Dunhuang', 2),
+(658, 'Durango', 1),
+(659, 'Durban', 2),
+(660, 'Dushanbe', 2),
+(661, 'Dzaoudzi', 2),
+(662, 'Dzhezkazgan', 1),
+(663, 'Eagle pass', 2),
+(664, 'Earlton', 1),
+(665, 'East london', 1),
+(666, 'East midlands', 1),
+(667, 'Easter island', 1),
+(668, 'Ech-cheliff', 1),
+(669, 'Edinburgh', 1),
+(670, 'Edmonton', 2),
+(671, 'Edson', 1),
+(672, 'Edwards afb', 1),
+(673, 'Egilsstadir', 1),
+(674, 'Eindhoven', 1),
+(675, 'El bolson', 1),
+(676, 'El borma', 2),
+(677, 'El centro', 1),
+(678, 'El dorado', 1),
+(679, 'El fasher', 1),
+(680, 'El golea', 2),
+(681, 'El maiten', 1),
+(682, 'El obeid', 2),
+(683, 'El paso', 1),
+(684, 'El-baha', 1),
+(685, 'El-tor', 2),
+(686, 'Elat', 2),
+(687, 'Elazig', 2),
+(688, 'Eldoret', 1),
+(689, 'Elizabeth city', 2),
+(690, 'Elkins', 2),
+(691, 'Ellisras', 2),
+(692, 'Emden', 1),
+(693, 'Ende', 2),
+(694, 'Enid', 2),
+(695, 'Eniwetok island', 1),
+(696, 'Enniskillen', 1),
+(697, 'Enontekio', 1),
+(698, 'Enschede', 2),
+(699, 'Ensenada', 2),
+(700, 'Entebbe', 1),
+(701, 'Enugu', 1),
+(702, 'Epinal', 2),
+(703, 'Er-rachidia', 1),
+(704, 'Erfurt', 2),
+(705, 'Erzincan', 2),
+(706, 'Erzurum', 1),
+(707, 'Esbjerg', 1),
+(708, 'Eskimo point', 2),
+(709, 'Eskisehir', 1),
+(710, 'Esquel', 2),
+(711, 'Essen', 1),
+(712, 'Estevan', 1),
+(713, 'Eureka', 2),
+(714, 'Evenes', 2),
+(715, 'Everett', 1),
+(716, 'Exeter', 2),
+(717, 'Fagernes', 2),
+(718, 'Fairbanks', 1),
+(719, 'Fairfield', 1),
+(720, 'Fairford', 2),
+(721, 'Faisalabad', 2),
+(722, 'Fajardo', 1),
+(723, 'Fakarava', 2),
+(724, 'Faleolo', 1),
+(725, 'Fallon', 2),
+(726, 'Falmouth', 2),
+(727, 'Farafangana', 1),
+(728, 'Faranah', 1),
+(729, 'Farmington', 2),
+(730, 'Farnborough', 1),
+(731, 'Faro', 2),
+(732, 'Faya-largeau', 2),
+(733, 'Fayetteville', 2),
+(734, 'Fengnin', 1),
+(735, 'Fernando do noronha', 1),
+(736, 'Fez', 1),
+(737, 'Fianarantsoa', 2),
+(738, 'Figari', 2),
+(739, 'Fira', 2),
+(740, 'Firenze', 1),
+(741, 'Flin flon', 1),
+(742, 'Florence', 2),
+(743, 'Florencia', 1),
+(744, 'Flores (flores isl.)', 2),
+(745, 'Florianopolis', 1),
+(746, 'Floro', 1),
+(747, 'Foggia', 2),
+(748, 'Forli', 1),
+(749, 'Formosa', 1),
+(750, 'Fort benning', 2),
+(751, 'Fort carson', 1),
+(752, 'Fort chipewyan', 2),
+(753, 'Fort dodge', 2),
+(754, 'Fort drum', 1),
+(755, 'Fort eustis', 1),
+(756, 'Fort hood', 1),
+(757, 'Fort huachuca', 1),
+(758, 'Fort irwin', 2),
+(759, 'Fort knox', 1),
+(760, 'Fort lauderdale', 1),
+(761, 'Fort leavenworth', 2),
+(762, 'Fort leonardwood', 2),
+(763, 'Fort lewis', 2),
+(764, 'Fort mcmurray', 1),
+(765, 'Fort mcpherson', 2),
+(766, 'Fort myers', 2),
+(767, 'Fort nelson', 1),
+(768, 'Fort polk', 1),
+(769, 'Fort resolution', 1),
+(770, 'Fort riley', 2),
+(771, 'Fort saint john', 1),
+(772, 'Fort sill', 1),
+(773, 'Fort simpson', 2),
+(774, 'Fort smith', 2),
+(775, 'Fort wainwright', 1),
+(776, 'Fort worth', 2),
+(777, 'Fort yukon', 2),
+(778, 'Fort-de-france', 2),
+(779, 'Fortaleza', 1),
+(780, 'Foumban', 1),
+(781, 'Foz do iguacu', 1),
+(782, 'Franca', 2),
+(783, 'Franceville', 1),
+(784, 'Francisco mendez', 2),
+(785, 'Francistown', 1),
+(786, 'Frankfurt', 1),
+(787, 'Fredericton', 1),
+(788, 'Freeport', 2),
+(789, 'Freetown', 2),
+(790, 'Fresno', 2),
+(791, 'Friedrichshafen', 1),
+(792, 'Fuerstenfeldbruck', 1),
+(793, 'Fuerteventura', 1),
+(794, 'Fujeirah', 2),
+(795, 'Fukue', 1),
+(796, 'Fukuoka', 1),
+(797, 'Funafuti', 2),
+(798, 'Fuzhou', 2),
+(799, 'Gaberone', 2),
+(800, 'Gabes', 1),
+(801, 'Gafsa', 1),
+(802, 'Gage', 2),
+(803, 'Gainesville', 1),
+(804, 'Galapagos', 1),
+(805, 'Galena', 2),
+(806, 'Gallivare', 1),
+(807, 'Galoya', 2),
+(808, 'Galveston', 1),
+(809, 'Galway', 2),
+(810, 'Gambella', 2),
+(811, 'Gander', 2),
+(812, 'Gao', 1),
+(813, 'Garden city', 1),
+(814, 'Garissa', 1),
+(815, 'Garoua', 2),
+(816, 'Gaspe', 1),
+(817, 'Gassim', 2),
+(818, 'Gatineau', 2),
+(819, 'Gavle', 1),
+(820, 'Gaya', 2),
+(821, 'Gaziantep', 1),
+(822, 'Gbadolite', 1),
+(823, 'Gdansk', 2),
+(824, 'Geilenkirchen', 1),
+(825, 'Gemena', 2),
+(826, 'Geneva', 2),
+(827, 'Genoa', 1),
+(828, 'George', 2),
+(829, 'Georgetown', 2),
+(830, 'Geraldton', 1),
+(831, 'Gerona', 2),
+(832, 'Ghadames', 2),
+(833, 'Ghardaia', 2),
+(834, 'Ghat', 2),
+(835, 'Ghriss', 2),
+(836, 'Gibraltar', 1),
+(837, 'Giebelstadt', 1),
+(838, 'Gilgit', 2),
+(839, 'Gillam', 2),
+(840, 'Gisborne', 2),
+(841, 'Gisenyi', 1),
+(842, 'Gizan', 1),
+(843, 'Gjoa haven', 2),
+(844, 'Glasgow', 1),
+(845, 'Glentanner', 2),
+(846, 'Goa', 1),
+(847, 'Godthaab', 2),
+(848, 'Goiania', 1),
+(849, 'Goldsboro', 1),
+(850, 'Golfito', 1),
+(851, 'Golouchestershire', 1),
+(852, 'Goma', 2),
+(853, 'Gomel', 1),
+(854, 'Gondar', 2),
+(855, 'Goose bay', 1),
+(856, 'Gorakhpur', 1),
+(857, 'Gore bay', 2),
+(858, 'Gorna orechovica', 2),
+(859, 'Goroka', 2),
+(860, 'Gorontalo', 1),
+(861, 'Gotha ost', 1),
+(862, 'Gothenborg', 2),
+(863, 'Governors harbor', 2),
+(864, 'Graciosa island', 1),
+(865, 'Gran canaria', 2),
+(866, 'Granada', 1),
+(867, 'Grand forks', 1),
+(868, 'Grand rapids', 2),
+(869, 'Grande prairie', 2),
+(870, 'Grandview', 1),
+(871, 'Grant county airport', 2),
+(872, 'Grants', 2),
+(873, 'Graz', 2),
+(874, 'Great exuma', 1),
+(875, 'Great falls', 1),
+(876, 'Green bay', 1),
+(877, 'Green island', 2),
+(878, 'Greenvile', 1),
+(879, 'Greenwood', 1),
+(880, 'Grenoble', 2),
+(881, 'Groningen', 1),
+(882, 'Grosseto', 2),
+(883, 'Grottaglie', 2),
+(884, 'Guadalajara', 1),
+(885, 'Gualeguaychu', 2),
+(886, 'Guanaja', 1),
+(887, 'Guanare', 1),
+(888, 'Guangzhou', 1),
+(889, 'Guantanamo', 2),
+(890, 'Guapi', 1),
+(891, 'Guatemala city', 2),
+(892, 'Guayana', 1),
+(893, 'Guayaquil', 1),
+(894, 'Guayaramerin', 2),
+(895, 'Guaymas', 1),
+(896, 'Guernsey', 2),
+(897, 'Guetersloh', 2),
+(898, 'Guilin', 2),
+(899, 'Guiria', 2),
+(900, 'Gulkana', 1),
+(901, 'Gunung sitoli', 1),
+(902, 'Guriat', 2),
+(903, 'Gusau', 1),
+(904, 'Gwadar', 2),
+(905, 'Gwalior', 1),
+(906, 'Gwert', 1),
+(907, 'Haapai', 2),
+(908, 'Hachijojima', 1),
+(909, 'Hafr al-batin', 1),
+(910, 'Hahn', 2),
+(911, 'Haifa', 1),
+(912, 'Hail', 2),
+(913, 'Hailar', 2),
+(914, 'Hakodate', 2),
+(915, 'Halifax', 1),
+(916, 'Hall beach', 2),
+(917, 'Halli', 1),
+(918, 'Halmstad', 2),
+(919, 'Hamar', 1),
+(920, 'Hamburg', 1),
+(921, 'Hamilton', 2),
+(922, 'Hampton', 1),
+(923, 'Hana', 2),
+(924, 'Hanamaki', 2),
+(925, 'Hanau', 1),
+(926, 'Hangzhou', 2),
+(927, 'Hannover', 2),
+(928, 'Hanoi', 1),
+(929, 'Hao island', 2),
+(930, 'Harare', 2),
+(931, 'Harbin', 2),
+(932, 'Hargeisa', 2),
+(933, 'Harlingen', 1),
+(934, 'Harrisburg', 2),
+(935, 'Harrison', 2),
+(936, 'Hartford', 2),
+(937, 'Hassi-messaoud', 2),
+(938, 'Hastings', 2),
+(939, 'Hasvik', 2),
+(940, 'Hatfield', 2),
+(941, 'Haugesund', 1),
+(942, 'Havana', 2),
+(943, 'Havre', 1),
+(944, 'Hawarden', 2),
+(945, 'Hawthorne', 1),
+(946, 'Hay river', 1),
+(947, 'Hefei', 1),
+(948, 'Heho', 2),
+(949, 'Heidelberg', 2),
+(950, 'Helena', 2),
+(951, 'Helsinki', 2),
+(952, 'Heraklion', 1),
+(953, 'Herat', 1),
+(954, 'Hermosillo', 2),
+(955, 'Hewandorra', 2),
+(956, 'Hibbing', 1),
+(957, 'Hickory', 1),
+(958, 'Hierro', 2),
+(959, 'High level', 2),
+(960, 'Hilo', 2),
+(961, 'Hiroshima', 1),
+(962, 'Ho chi minh city', 2),
+(963, 'Hobart', 2),
+(964, 'Hobbs', 1),
+(965, 'Hoedspruit', 2),
+(966, 'Hof', 1),
+(967, 'Hofn', 2),
+(968, 'Hokitika', 2),
+(969, 'Holguin', 1),
+(970, 'Hollywood', 1),
+(971, 'Holman island', 1),
+(972, 'Homer', 1),
+(973, 'Homestead', 1),
+(974, 'Hong kong', 1),
+(975, 'Honington', 1),
+(976, 'Honolulu', 2),
+(977, 'Hopkinsville', 2),
+(978, 'Horta', 1),
+(979, 'Hotan', 1),
+(980, 'Houghton lake', 1),
+(981, 'Houlton', 1),
+(982, 'Houston', 1),
+(983, 'Howard', 2),
+(984, 'Huahine island', 2),
+(985, 'Hualien', 1),
+(986, 'Huambo', 2),
+(987, 'Hudiksvall', 2),
+(988, 'Hudson bay', 2),
+(989, 'Hultsfred', 1),
+(990, 'Humberside', 2),
+(991, 'Hunter aaf', 2),
+(992, 'Hurghada', 2),
+(993, 'Huron', 1),
+(994, 'Husavik', 1),
+(995, 'Hwange national park', 2),
+(996, 'Hyderabad', 1),
+(997, 'Hyeres', 2),
+(998, 'Iasi', 2),
+(999, 'Ibadan', 2),
+(1000, 'Ibague', 2),
+(1001, 'Ibiza', 1),
+(1002, 'Iguazu falls', 2),
+(1003, 'Iki', 1),
+(1004, 'Iles de la madeleine', 2),
+(1005, 'Ilheus', 2),
+(1006, 'Iliamna', 1),
+(1007, 'Illizi', 2),
+(1008, 'Iloilo', 2),
+(1009, 'Ilorin', 2),
+(1010, 'Imperatriz', 2),
+(1011, 'Imperial', 2),
+(1012, 'Impfondo', 2),
+(1013, 'Imphal', 2),
+(1014, 'In salah', 2),
+(1015, 'Indian mountains', 2),
+(1016, 'Indian springs', 2),
+(1017, 'Indianapolis', 2),
+(1018, 'Indore', 2),
+(1019, 'Inhambane', 1),
+(1020, 'Innsbruck', 1),
+(1021, 'International falls', 1),
+(1022, 'Inuvik', 2),
+(1023, 'Invercargill', 2),
+(1024, 'Inverness', 1),
+(1025, 'Ioannina', 2),
+(1026, 'Ipatinga', 2),
+(1027, 'Ipiales', 1),
+(1028, 'Ipoh', 2),
+(1029, 'Iqaluit', 1),
+(1030, 'Iquique', 1),
+(1031, 'Iquitos', 1),
+(1032, 'Iringa', 2),
+(1033, 'Irkutsk', 1),
+(1034, 'Isafjordur', 2),
+(1035, 'Ishigaki', 2),
+(1036, 'Ishurdi', 1),
+(1037, 'Isiro', 1),
+(1038, 'Isla mujeres', 2),
+(1039, 'Islamabad', 1),
+(1040, 'Islay', 1),
+(1041, 'Isle of man', 1),
+(1042, 'Islip', 1),
+(1043, 'Istanbul', 2),
+(1044, 'Ivalo', 1),
+(1045, 'Iwojima', 1),
+(1046, 'Izmir', 1),
+(1047, 'Izumo', 1),
+(1048, 'Jabalpur', 2),
+(1049, 'Jackson', 1),
+(1050, 'Jacksonville', 2),
+(1051, 'Jaffna', 2),
+(1052, 'Jaipur', 2),
+(1053, 'Jaisalmer', 1),
+(1054, 'Jakarta', 1),
+(1055, 'Jakobshavn', 2),
+(1056, 'Jalalabad', 1),
+(1057, 'Jambi', 1),
+(1058, 'Jammu', 1),
+(1059, 'Jamnagar', 2),
+(1060, 'Jamshedpur', 2),
+(1061, 'Jayapura', 2),
+(1062, 'Jeddah', 2),
+(1063, 'Jerez', 1),
+(1064, 'Jersey', 2),
+(1065, 'Jerusalem', 1),
+(1066, 'Jessore', 1),
+(1067, 'Jijel', 1),
+(1068, 'Jimma', 1),
+(1069, 'Jingdezhen', 2),
+(1070, 'Joao pessoa', 1),
+(1071, 'Jodhpur', 1),
+(1072, 'Joenkoeping', 1),
+(1073, 'Joensuu', 1),
+(1074, 'Johannesburg', 2),
+(1075, 'Johnston island', 1),
+(1076, 'Johor bahru', 1),
+(1077, 'Joinville', 1),
+(1078, 'Jonesboro', 1),
+(1079, 'Jorhat', 2),
+(1080, 'Jos', 1),
+(1081, 'Jose de san martin', 2),
+(1082, 'Juanjui', 1),
+(1083, 'Juba', 2),
+(1084, 'Juiz de fora', 2),
+(1085, 'Jujuy', 1),
+(1086, 'Juliaca', 1),
+(1087, 'Juneau', 2),
+(1088, 'Jwaneng', 1),
+(1089, 'Jyvaskyla', 1),
+(1090, 'Kabul', 1),
+(1091, 'Kadena', 2),
+(1092, 'Kaduna', 2),
+(1093, 'Kaedi', 1),
+(1094, 'Kagoshima', 1),
+(1095, 'Kahului', 1),
+(1096, 'Kailashahar', 1),
+(1097, 'Kaimana', 1),
+(1098, 'Kaitaia', 1),
+(1099, 'Kajaani', 1),
+(1100, 'Kalamata', 2),
+(1101, 'Kalemie', 1),
+(1102, 'Kalgoorlie', 2),
+(1103, 'Kalibo', 2),
+(1104, 'Kaliningrad', 1),
+(1105, 'Kalkmar', 1),
+(1106, 'Kamarang', 2),
+(1107, 'Kamembe', 1),
+(1108, 'Kamina base', 1),
+(1109, 'Kamloops', 2),
+(1110, 'Kamuela', 1),
+(1111, 'Kananga', 1),
+(1112, 'Kanazawa', 2),
+(1113, 'Kandahar', 2),
+(1114, 'Kandla', 2),
+(1115, 'Kaneohe bay', 1),
+(1116, 'Kangnung', 2),
+(1117, 'Kankakee', 2),
+(1118, 'Kano', 2),
+(1119, 'Kanpur', 2),
+(1120, 'Kansas city', 1),
+(1121, 'Kaohsiung', 1),
+(1122, 'Kaolack', 1),
+(1123, 'Kapuskasing', 1),
+(1124, 'Karachi', 1),
+(1125, 'Kariba', 2),
+(1126, 'Karlovy vary', 2),
+(1127, 'Karlskoga', 1),
+(1128, 'Karonga', 1),
+(1129, 'Karpathos', 1),
+(1130, 'Karratha', 2),
+(1131, 'Karup', 1),
+(1132, 'Kasane', 2),
+(1133, 'Kashi', 1),
+(1134, 'Kasos', 1),
+(1135, 'Kassala', 1),
+(1136, 'Kassel', 2),
+(1137, 'Kastoria', 2),
+(1138, 'Kathmandu', 1),
+(1139, 'Katowice', 2),
+(1140, 'Kauhava', 1),
+(1141, 'Kaukura atoll', 1),
+(1142, 'Kavala', 2),
+(1143, 'Kayes', 1),
+(1144, 'Kayseri', 1),
+(1145, 'Kazan', 1),
+(1146, 'Kedougou', 2),
+(1147, 'Keffallinia', 1),
+(1148, 'Keflavik', 2),
+(1149, 'Kelowna', 1),
+(1150, 'Kemi', 2),
+(1151, 'Kemorovo', 2),
+(1152, 'Kenai', 1),
+(1153, 'Kendall-tamiami', 1),
+(1154, 'Kendari', 1),
+(1155, 'Kengtung', 2),
+(1156, 'Kenora', 2),
+(1157, 'Kentira', 1),
+(1158, 'Kerikeri', 2),
+(1159, 'Kerkyra/corfu', 1),
+(1160, 'Kerman', 2),
+(1161, 'Kerry', 1),
+(1162, 'Kerteh', 2),
+(1163, 'Keshod', 2),
+(1164, 'Ketapang', 2),
+(1165, 'Ketchikan', 1),
+(1166, 'Key west', 2),
+(1167, 'Khabarovsk', 2),
+(1168, 'Khajuraho', 1),
+(1169, 'Khartoum', 2),
+(1170, 'Khasab', 2),
+(1171, 'Kichinau fir/acc/com', 2),
+(1172, 'Kiel', 2),
+(1173, 'Kiev', 2),
+(1174, 'Kiffa', 1),
+(1175, 'Kigali', 2),
+(1176, 'Kikwit', 2),
+(1177, 'Kilimanjaro', 1),
+(1178, 'Killeen', 1),
+(1179, 'Kimberley', 1),
+(1180, 'Kimhae', 2),
+(1181, 'Kindersley', 2),
+(1182, 'Kindu', 1),
+(1183, 'King khalid mil.city', 2),
+(1184, 'King salmon', 1),
+(1185, 'Kingston', 2),
+(1186, 'Kingstown', 1),
+(1187, 'Kingsville', 2),
+(1188, 'Kinshasa', 2),
+(1189, 'Kiritimati', 2),
+(1190, 'Kirkenes', 2),
+(1191, 'Kirkwall', 2),
+(1192, 'Kirovograd', 2),
+(1193, 'Kirtland a.f.b.', 1),
+(1194, 'Kiruna', 2),
+(1195, 'Kisangani', 1),
+(1196, 'Kish island', 1),
+(1197, 'Kismayu', 1),
+(1198, 'Kisumu', 2),
+(1199, 'Kitadaito', 1),
+(1200, 'Kitakyushu', 2),
+(1201, 'Kitale', 2),
+(1202, 'Kithira', 1),
+(1203, 'Kittila', 1),
+(1204, 'Klagenfurt', 2),
+(1205, 'Kleinsee', 2),
+(1206, 'Knobnoster', 2),
+(1207, 'Knoxville', 1),
+(1208, 'Koblenz', 1),
+(1209, 'Kochi', 1),
+(1210, 'Kodiak', 2),
+(1211, 'Kolda', 1),
+(1212, 'Kolhapur', 2),
+(1213, 'Kolwezi', 1),
+(1214, 'Kona', 2),
+(1215, 'Kone', 2),
+(1216, 'Konya', 1),
+(1217, 'Kopasker', 2),
+(1218, 'Korhogo', 1),
+(1219, 'Kortrijk-vevelgem', 1),
+(1220, 'Kos', 1),
+(1221, 'Kosice', 2),
+(1222, 'Kosrae', 2),
+(1223, 'Kota', 2),
+(1224, 'Kota bahru', 2),
+(1225, 'Kota kinabalu', 1),
+(1226, 'Kotzebue', 2),
+(1227, 'Koumac', 2),
+(1228, 'Kozani', 2),
+(1229, 'Krakow', 2),
+(1230, 'Kralendijk', 2),
+(1231, 'Kramfors', 2),
+(1232, 'Krasnodar', 1),
+(1233, 'Krasnovodsk', 1),
+(1234, 'Kristiansand', 2),
+(1235, 'Kristianstad', 2),
+(1236, 'Kristiansund', 2),
+(1237, 'Kruunupyy', 1),
+(1238, 'Kuala lumpur', 2),
+(1239, 'Kuala terengganu', 2),
+(1240, 'Kuantan', 1),
+(1241, 'Kuching', 1),
+(1242, 'Kufra', 1),
+(1243, 'Kuito', 1),
+(1244, 'Kulu', 2),
+(1245, 'Kulusuk', 1),
+(1246, 'Kumamoto', 2),
+(1247, 'Kumejima', 2),
+(1248, 'Kunduz', 2),
+(1249, 'Kunming', 1),
+(1250, 'Kunsan', 2),
+(1251, 'Kununurra', 1),
+(1252, 'Kuopio', 2),
+(1253, 'Kupang', 2),
+(1254, 'Kurgan', 2),
+(1255, 'Kustanay', 2),
+(1256, 'Kuujjuararapik', 2),
+(1257, 'Kuusamo', 1),
+(1258, 'Kuwait', 2),
+(1259, 'Kwajalein', 1),
+(1260, 'Kwangju', 1),
+(1261, 'Kyaukpyu', 2),
+(1262, 'La ceiba', 2),
+(1263, 'La coloma', 1),
+(1264, 'La coruna', 1),
+(1265, 'La fria', 1),
+(1266, 'La grande riviere', 1),
+(1267, 'La paz', 2),
+(1268, 'La plata', 2),
+(1269, 'La rioja', 2),
+(1270, 'La roche-sur-yon', 2),
+(1271, 'La rochelle', 1),
+(1272, 'La romana', 1),
+(1273, 'La ronge', 2),
+(1274, 'La serena', 1),
+(1275, 'Laage', 1),
+(1276, 'Laarbruch', 1),
+(1277, 'Labe', 2),
+(1278, 'Labuan', 2),
+(1279, 'Labuhan bajo', 2),
+(1280, 'Ladag', 1),
+(1281, 'Ladysmith', 1),
+(1282, 'Lafayette', 1),
+(1283, 'Laghouat', 2),
+(1284, 'Lago agrio', 2),
+(1285, 'Lago argentino', 2),
+(1286, 'Lagos', 1),
+(1287, 'Lahad datu', 2),
+(1288, 'Lahania-kapalua', 1),
+(1289, 'Lahore', 2),
+(1290, 'Lajes (terceira island)', 1),
+(1291, 'Lake charles', 2),
+(1292, 'Lakehurst', 1),
+(1293, 'Lalibella', 1),
+(1294, 'Lambarene', 1),
+(1295, 'Lambasa', 1),
+(1296, 'Lamezia', 1),
+(1297, 'Lampang', 1),
+(1298, 'Lampedusa', 1),
+(1299, 'Lamu', 2),
+(1300, 'Lanai', 1),
+(1301, 'Landskrona', 2),
+(1302, 'Lannion', 1),
+(1303, 'Lansing', 1),
+(1304, 'Lanyu', 1),
+(1305, 'Lanzerote', 1),
+(1306, 'Lanzhou', 1),
+(1307, 'Lappeenranta', 2),
+(1308, 'Laredo', 2),
+(1309, 'Larissa', 1),
+(1310, 'Larnaca', 1),
+(1311, 'Las tunas', 1),
+(1312, 'Las vegas', 1),
+(1313, 'Lasham', 2),
+(1314, 'Lashio', 2),
+(1315, 'Lastourville', 2),
+(1316, 'Latakia', 1),
+(1317, 'Latina', 2),
+(1318, 'Launceston', 2),
+(1319, 'Laval', 1),
+(1320, 'Lazard cardenas', 1),
+(1321, 'Le castellet', 2),
+(1322, 'Le havre', 2),
+(1323, 'Le mans', 1),
+(1324, 'Le puy', 2),
+(1325, 'Le tourquet', 1),
+(1326, 'Learmonth', 1),
+(1327, 'Lecce', 1),
+(1328, 'Leeds', 1),
+(1329, 'Leeuwarden', 2),
+(1330, 'Legazpi', 1),
+(1331, 'Leh', 1),
+(1332, 'Leipzig', 1),
+(1333, 'Lemoore', 1),
+(1334, 'Lemwerder', 1),
+(1335, 'Leros', 1),
+(1336, 'Lethbridge', 2),
+(1337, 'Lethem', 2),
+(1338, 'Leticia', 1),
+(1339, 'Leuchars', 2),
+(1340, 'Levaldigi', 1),
+(1341, 'Lhasa', 1),
+(1342, 'Liberia', 1),
+(1343, 'Libreville', 2),
+(1344, 'Lichinga', 2),
+(1345, 'Lidkoping', 1),
+(1346, 'Liege', 1),
+(1347, 'Lifou', 1),
+(1348, 'Lihue', 1),
+(1349, 'Lilabari', 2),
+(1350, 'Lille', 1),
+(1351, 'Lima', 2),
+(1352, 'Limnos', 2),
+(1353, 'Limoges', 1),
+(1354, 'Limon', 1),
+(1355, 'Lincoln', 1),
+(1356, 'Linkoeping', 2),
+(1357, 'Lins', 2),
+(1358, 'Linz', 2),
+(1359, 'Lisala', 2),
+(1360, 'Lisbon', 2),
+(1361, 'Lista', 1),
+(1362, 'Little rock', 1),
+(1363, 'Liverpool', 1),
+(1364, 'Livingstone', 1),
+(1365, 'Ljubliana', 1),
+(1366, 'Lloydminster', 2),
+(1367, 'Lodwar', 2),
+(1368, 'Loei', 2),
+(1369, 'Lome', 2),
+(1370, 'Lompoc', 2),
+(1371, 'London', 2),
+(1372, 'Londonderry', 1),
+(1373, 'Londrina', 2),
+(1374, 'Long beach', 2),
+(1375, 'Longview', 2),
+(1376, 'Loreto', 2),
+(1377, 'Lorient', 1),
+(1378, 'Los angeles', 1),
+(1379, 'Los mochis', 2),
+(1380, 'Lossiemouth', 1),
+(1381, 'Loudima', 1),
+(1382, 'Louis trichardt', 1),
+(1383, 'Louisiana', 1),
+(1384, 'Louisville', 2),
+(1385, 'Loyangalani', 1),
+(1386, 'Luanda', 2),
+(1387, 'Luang prabang', 1),
+(1388, 'Lubbock', 1),
+(1389, 'Lubumashi', 1),
+(1390, 'Lucknow', 1),
+(1391, 'Ludhiaha', 2),
+(1392, 'Luebeck', 1),
+(1393, 'Luena', 1),
+(1394, 'Lufkin', 2),
+(1395, 'Lugano', 2),
+(1396, 'Lulea', 1),
+(1397, 'Lusaka', 2),
+(1398, 'Luwuk', 1),
+(1399, 'Luxemburg', 1),
+(1400, 'Luxor', 1),
+(1401, 'Lvov', 2),
+(1402, 'Lycksele', 2),
+(1403, 'Lydd', 2),
+(1404, 'Lyneham', 1),
+(1405, 'Lynn lake', 1),
+(1406, 'Lyon', 2),
+(1407, 'Maastricht', 2),
+(1408, 'Macapa', 2),
+(1409, 'Macas', 1),
+(1410, 'Macau', 1),
+(1411, 'Maceio', 2),
+(1412, 'Macenta', 1),
+(1413, 'Machala', 1),
+(1414, 'Mackay', 2),
+(1415, 'Mackminnville', 1),
+(1416, 'Macon', 1),
+(1417, 'Madang', 2),
+(1418, 'Madinah', 1),
+(1419, 'Madison', 1),
+(1420, 'Madras', 2),
+(1421, 'Madrid', 2),
+(1422, 'Madurai', 1),
+(1423, 'Mafikeng', 2),
+(1424, 'Mafraq', 2),
+(1425, 'Magadan', 1),
+(1426, 'Magangue', 2),
+(1427, 'Magdalena', 1),
+(1428, 'Magnetiogorsk', 1),
+(1429, 'Mahajanga', 1),
+(1430, 'Mahe', 2),
+(1431, 'Maiduguri', 1),
+(1432, 'Maimama', 1),
+(1433, 'Maio', 2),
+(1434, 'Majuro', 2),
+(1435, 'Makabana', 2),
+(1436, 'Makale', 2),
+(1437, 'Makemo', 2),
+(1438, 'Makhachkala', 1),
+(1439, 'Makokou', 1),
+(1440, 'Makoua', 2),
+(1441, 'Makung', 2),
+(1442, 'Makurdi', 1),
+(1443, 'Malabo', 2),
+(1444, 'Malacca', 1),
+(1445, 'Malaga', 2),
+(1446, 'Malakal', 1),
+(1447, 'Malang', 2),
+(1448, 'Malanje', 1),
+(1449, 'Malargue', 2),
+(1450, 'Malatya', 1),
+(1451, 'Male', 2),
+(1452, 'Malindi', 1),
+(1453, 'Malmoe', 2),
+(1454, 'Malta', 1),
+(1455, 'Man', 1),
+(1456, 'Manado', 2),
+(1457, 'Managua', 1),
+(1458, 'Manakara', 2),
+(1459, 'Mananara', 2),
+(1460, 'Mananjary', 1),
+(1461, 'Manapouri', 1),
+(1462, 'Manaus', 2),
+(1463, 'Manchester', 2),
+(1464, 'Mandalay', 2),
+(1465, 'Mandera', 1),
+(1466, 'Mangalore', 1),
+(1467, 'Manihi', 2),
+(1468, 'Manila', 2),
+(1469, 'Maniwaki', 2),
+(1470, 'Manizales', 1),
+(1471, 'Mannheim', 2),
+(1472, 'Manokwari', 1),
+(1473, 'Manston', 1),
+(1474, 'Manta', 1),
+(1475, 'Manzanillo', 2),
+(1476, 'Manzini', 1),
+(1477, 'Maputo', 2),
+(1478, 'Mar del plata', 1),
+(1479, 'Maraba', 2),
+(1480, 'Maracaibo', 1),
+(1481, 'Maradi', 2),
+(1482, 'Mare', 2),
+(1483, 'Margate', 1),
+(1484, 'Marham', 2),
+(1485, 'Maribor', 1),
+(1486, 'Mariehamn', 1),
+(1487, 'Marietta', 2),
+(1488, 'Marina di campo', 1),
+(1489, 'Maringa', 1),
+(1490, 'Maroantsetra', 2),
+(1491, 'Maroochydore', 2),
+(1492, 'Maroua', 2),
+(1493, 'Marquette', 1),
+(1494, 'Marrakech', 1),
+(1495, 'Marsabit', 2),
+(1496, 'Marseille', 1),
+(1497, 'Marsh harbor', 2),
+(1498, 'Marudi', 2),
+(1499, 'Mary esther', 1),
+(1500, 'Marysville', 2),
+(1501, 'Masbate', 1),
+(1502, 'Maseru', 2),
+(1503, 'Masirah', 1),
+(1504, 'Masjed soleiman', 1),
+(1505, 'Massena', 1),
+(1506, 'Masterton', 1),
+(1507, 'Masvingo', 2),
+(1508, 'Matadi', 2),
+(1509, 'Matagami', 2),
+(1510, 'Mataiva', 1),
+(1511, 'Matamoros', 1),
+(1512, 'Mataram', 1),
+(1513, 'Matsu', 1),
+(1514, 'Matsumoto', 1),
+(1515, 'Matsuyama', 1),
+(1516, 'Matthew town', 2),
+(1517, 'Maturin', 1),
+(1518, 'Maumere', 1),
+(1519, 'Maun', 2),
+(1520, 'Maupiti', 1),
+(1521, 'Mayaguana', 1),
+(1522, 'Mayaguez', 2),
+(1523, 'Mayo', 2),
+(1524, 'Mazar-i-sharif', 2),
+(1525, 'Mazatlan', 2),
+(1526, 'Mbandaka', 2),
+(1527, 'Mbanza-congo', 2),
+(1528, 'Mbuji-mayi', 2),
+(1529, 'Mcalester', 1),
+(1530, 'Mcallen', 1),
+(1531, 'Mcgrath', 1),
+(1532, 'Meadow lake', 1),
+(1533, 'Medan', 1),
+(1534, 'Medellin', 1),
+(1535, 'Medicine hat', 2),
+(1536, 'Meknes', 2),
+(1537, 'Melbourne', 1),
+(1538, 'Melilla', 1),
+(1539, 'Melo', 2),
+(1540, 'Memanbetsu', 2),
+(1541, 'Memphis', 1),
+(1542, 'Mende', 1),
+(1543, 'Mendoza', 1),
+(1544, 'Menongue', 2),
+(1545, 'Menorca', 1),
+(1546, 'Merauke', 1),
+(1547, 'Merced', 2),
+(1548, 'Merida', 2),
+(1549, 'Meridian', 2),
+(1550, 'Mersa-matruh', 2),
+(1551, 'Merzifon', 2),
+(1552, 'Messina', 1),
+(1553, 'Metz', 2),
+(1554, 'Mexicali', 2),
+(1555, 'Mexico city', 1),
+(1556, 'Mfuwe', 1),
+(1557, 'Miami', 1),
+(1558, 'Miandrivazo', 1),
+(1559, 'Midland', 1),
+(1560, 'Midway', 2),
+(1561, 'Miho', 2),
+(1562, 'Mikkeli', 1),
+(1563, 'Milan', 1),
+(1564, 'Milano', 2),
+(1565, 'Mildenhall', 2),
+(1566, 'Millington', 2),
+(1567, 'Millinocket', 1),
+(1568, 'Millville', 1),
+(1569, 'Milton', 2),
+(1570, 'Milwaukee', 1),
+(1571, 'Minami daito', 2),
+(1572, 'Minatitlan', 2),
+(1573, 'Mineral wells', 1),
+(1574, 'Mineralnye vody', 1),
+(1575, 'Minna', 1),
+(1576, 'Minneapolis', 1),
+(1577, 'Minot', 1),
+(1578, 'Minsk', 1),
+(1579, 'Minsk 2', 1),
+(1580, 'Miramar', 1),
+(1581, 'Miri', 2),
+(1582, 'Misawa', 2),
+(1583, 'Mitu', 2),
+(1584, 'Mitzic', 2),
+(1585, 'Miyake jima', 1),
+(1586, 'Miyako', 2),
+(1587, 'Miyazaki', 2),
+(1588, 'Mmabatho', 2),
+(1589, 'Moa', 1),
+(1590, 'Moanda', 2),
+(1591, 'Mobile', 2),
+(1592, 'Mocimboa da praia', 1),
+(1593, 'Modesto', 1),
+(1594, 'Moenchengladbach', 2),
+(1595, 'Moenjodaro', 2),
+(1596, 'Mogadishu', 1),
+(1597, 'Mohanbari', 1),
+(1598, 'Moheli', 2),
+(1599, 'Molde', 1),
+(1600, 'Molokai', 1),
+(1601, 'Mombasa', 1),
+(1602, 'Monastir', 2),
+(1603, 'Monbetsu', 2),
+(1604, 'Monclova', 2),
+(1605, 'Moncton', 1),
+(1606, 'Mong hsat', 1),
+(1607, 'Monroe', 2),
+(1608, 'Monrovia', 2),
+(1609, 'Mont joli', 1),
+(1610, 'Montego bay', 1),
+(1611, 'Monteria', 2),
+(1612, 'Monterrey', 1),
+(1613, 'Montes claros', 1),
+(1614, 'Montevideo', 2),
+(1615, 'Montgomery', 2),
+(1616, 'Montichiari', 1),
+(1617, 'Montlucon', 1),
+(1618, 'Montlucon-gueret', 2),
+(1619, 'Montpelier', 2),
+(1620, 'Montpellier', 1),
+(1621, 'Montreal', 2),
+(1622, 'Moorea', 2),
+(1623, 'Moose jaw', 1),
+(1624, 'Moosonee', 2),
+(1625, 'Mopti', 1),
+(1626, 'Mora', 2),
+(1627, 'Morelia', 1),
+(1628, 'Morlaix', 1),
+(1629, 'Morombe', 1),
+(1630, 'Morondava', 1),
+(1631, 'Moroni', 2),
+(1632, 'Moscow', 2),
+(1633, 'Moshi', 1),
+(1634, 'Mosjoen', 1),
+(1635, 'Mostar', 2),
+(1636, 'Moulins', 1),
+(1637, 'Moundou', 1),
+(1638, 'Mount clemens', 1),
+(1639, 'Mount cook', 2),
+(1640, 'Mount hagen', 1),
+(1641, 'Mount isa', 1),
+(1642, 'Mount pleasant', 2),
+(1643, 'Mountain home', 1),
+(1644, 'Mountain view', 1),
+(1645, 'Moyale lower', 2),
+(1646, 'Mtwara', 2),
+(1647, 'Muanda', 2),
+(1648, 'Muenster/osnabrueck', 1),
+(1649, 'Muir', 2),
+(1650, 'Mulhouse', 2),
+(1651, 'Multan', 2),
+(1652, 'Munich', 2),
+(1653, 'Murcia', 2),
+(1654, 'Murmansk', 2),
+(1655, 'Muscat', 2),
+(1656, 'Muskogee', 2),
+(1657, 'Muskoka', 1),
+(1658, 'Mustique', 2),
+(1659, 'Mutare', 2),
+(1660, 'Muzaffarabad', 2),
+(1661, 'Mwanza', 2),
+(1662, 'Myeik', 1),
+(1663, 'Myitkyina', 1),
+(1664, 'Mykonos', 1),
+(1665, 'Myrtle beach', 2),
+(1666, 'Mytilini', 2),
+(1667, 'Mzuzu', 1),
+(1668, 'Nabire', 2),
+(1669, 'Nacala', 2),
+(1670, 'Nadzab', 2),
+(1671, 'Nagasaki', 2),
+(1672, 'Nagoya', 2),
+(1673, 'Nagpur', 2),
+(1674, 'Naha', 2),
+(1675, 'Nainital', 2),
+(1676, 'Nairobi', 1),
+(1677, 'Nakashibetsu', 2),
+(1678, 'Nakhon phanom', 1),
+(1679, 'Nakhon ratchasima', 1),
+(1680, 'Nakhon si thammarat', 1),
+(1681, 'Nampula', 1),
+(1682, 'Nanaimo', 1),
+(1683, 'Nanchang', 2),
+(1684, 'Nancy', 1),
+(1685, 'Nandi', 1),
+(1686, 'Nanisivik', 1),
+(1687, 'Nanjing', 1),
+(1688, 'Nanki-shirahama', 1),
+(1689, 'Nanning', 1),
+(1690, 'Nantes', 2),
+(1691, 'Nantucket', 1),
+(1692, 'Nanyuki', 1),
+(1693, 'Naples', 2),
+(1694, 'Napuka island', 1),
+(1695, 'Narathiwat', 2),
+(1696, 'Narssarssuaq', 2),
+(1697, 'Nashville', 1),
+(1698, 'Nasik road', 2),
+(1699, 'Nassau', 2),
+(1700, 'Natal', 1),
+(1701, 'Natashquan', 2),
+(1702, 'Nausori', 1),
+(1703, 'Navegantes', 2),
+(1704, 'Nawabshah', 1),
+(1705, 'Ndele', 1),
+(1706, 'Ndjamena', 2),
+(1707, 'Ndola', 1),
+(1708, 'Nea anghialos', 1),
+(1709, 'Negage', 2),
+(1710, 'Neiva', 1),
+(1711, 'Nejran', 2),
+(1712, 'Nelson', 2),
+(1713, 'Nelspruit', 1),
+(1714, 'Nema', 2),
+(1715, 'Neuquen', 1),
+(1716, 'Nevers', 2),
+(1717, 'New bern', 2),
+(1718, 'New orleans', 1),
+(1719, 'New plymouth', 2),
+(1720, 'New york', 2),
+(1721, 'Newark', 2),
+(1722, 'Newburgh', 2),
+(1723, 'Newcastle', 1),
+(1724, 'Newport news', 2),
+(1725, 'Newquai', 1),
+(1726, 'Ngaoundere', 2),
+(1727, 'Ngiva', 1),
+(1728, 'Nhatrang', 2),
+(1729, 'Niagara falls', 1),
+(1730, 'Niamey', 2),
+(1731, 'Niatougou', 1),
+(1732, 'Nice', 2),
+(1733, 'Nimes', 1),
+(1734, 'Ninbo', 1),
+(1735, 'Nioro', 1),
+(1736, 'Niort', 1),
+(1737, 'Nizhnevartovsk', 2),
+(1738, 'Nogales', 1),
+(1739, 'Nome', 2),
+(1740, 'Norderney', 1),
+(1741, 'Norfolk', 1),
+(1742, 'Norfolk island', 2),
+(1743, 'Norman wells', 2),
+(1744, 'Norrkoeping', 1),
+(1745, 'North battleford', 2),
+(1746, 'North bay', 1),
+(1747, 'North caicos', 2),
+(1748, 'North eleuthera', 1),
+(1749, 'Northolt', 2),
+(1750, 'Northway', 2),
+(1751, 'Norwich', 1),
+(1752, 'Nosara beach', 2),
+(1753, 'Nosy-be', 1),
+(1754, 'Nouadhibou', 2),
+(1755, 'Nouakschott', 1),
+(1756, 'Noumea', 2),
+(1757, 'Nuernberg', 1),
+(1758, 'Nueva gerona', 2),
+(1759, 'Nuevo laredo', 2),
+(1760, 'Nuku hiva', 1),
+(1761, 'Nukus', 1),
+(1762, 'Nyala', 1),
+(1763, 'Nyeri', 1),
+(1764, 'Nzerekore', 1),
+(1765, 'Oakland', 1),
+(1766, 'Oamaru', 2),
+(1767, 'Oaxaca', 2),
+(1768, 'Oberpfaffenhofen', 2),
+(1769, 'Obihiro', 1),
+(1770, 'Ocana', 1),
+(1771, 'Oceana', 2),
+(1772, 'Ocho rios', 1),
+(1773, 'Odense', 2),
+(1774, 'Odessa', 2),
+(1775, 'Odiham', 2),
+(1776, 'Ogden', 1),
+(1777, 'Ogdensburg', 2),
+(1778, 'Ohrid', 1),
+(1779, 'Oita', 2),
+(1780, 'Okayama', 1),
+(1781, 'Oki island', 2),
+(1782, 'Oklahoma city', 1),
+(1783, 'Okondja', 1),
+(1784, 'Olbia', 1),
+(1785, 'Old crow', 2),
+(1786, 'Oliktok point', 1),
+(1787, 'Omaha', 1),
+(1788, 'Omboue hospial', 2),
+(1789, 'Omsk', 2),
+(1790, 'Ontario', 1),
+(1791, 'Opolu', 1),
+(1792, 'Oradea', 2),
+(1793, 'Oran', 2),
+(1794, 'Oranjestad', 2),
+(1795, 'Orapa', 1),
+(1796, 'Orebro', 2),
+(1797, 'Orenburg', 2),
+(1798, 'Orland', 2),
+(1799, 'Orlando', 1),
+(1800, 'Orleans', 1),
+(1801, 'Ormara', 2),
+(1802, 'Ornskoldsvik', 2),
+(1803, 'Osaka', 1),
+(1804, 'Osan', 2),
+(1805, 'Osh', 1),
+(1806, 'Oshima', 2),
+(1807, 'Osijek', 2),
+(1808, 'Oskarshamn', 2),
+(1809, 'Oslo', 2),
+(1810, 'Osorno', 2),
+(1811, 'Ostend', 2),
+(1812, 'Ostersund', 1),
+(1813, 'Ostrava', 1),
+(1814, 'Ottawa', 2),
+(1815, 'Otu', 1),
+(1816, 'Ouagadougou', 1),
+(1817, 'Ouargla', 1),
+(1818, 'Ouarzazate', 2),
+(1819, 'Oudtshoorn', 2),
+(1820, 'Ouesso', 2),
+(1821, 'Oujda', 1),
+(1822, 'Oulu', 2),
+(1823, 'Ouvea', 1),
+(1824, 'Ovda', 2),
+(1825, 'Owando', 2),
+(1826, 'Oxford', 2),
+(1827, 'Oyem', 2),
+(1828, 'Pachuca', 1),
+(1829, 'Padang', 2),
+(1830, 'Paderborn', 1),
+(1831, 'Padova', 2),
+(1832, 'Pago pago', 1),
+(1833, 'Pakse', 1),
+(1834, 'Pala', 2),
+(1835, 'Palacios', 2),
+(1836, 'Palangkaraya', 2),
+(1837, 'Palembang', 1),
+(1838, 'Palermo', 1),
+(1839, 'Palm springs', 2),
+(1840, 'Palma de mallorca', 1),
+(1841, 'Palmar sur', 2),
+(1842, 'Palmdale', 2),
+(1843, 'Palmer', 2),
+(1844, 'Palmerston north', 2),
+(1845, 'Palmyra', 1),
+(1846, 'Palu', 2),
+(1847, 'Pamplona', 2),
+(1848, 'Panama', 2),
+(1849, 'Panama city', 1),
+(1850, 'Pangkal pinang', 2),
+(1851, 'Pangkalan bun', 1),
+(1852, 'Pangnirtung', 1),
+(1853, 'Panjgur', 1),
+(1854, 'Pantelleria', 1),
+(1855, 'Paphos', 2),
+(1856, 'Paraguana', 1),
+(1857, 'Parakou', 1),
+(1858, 'Paramaribo', 2),
+(1859, 'Parana', 2),
+(1860, 'Paraparaumu', 1),
+(1861, 'Parchim', 1),
+(1862, 'Pardubice', 1),
+(1863, 'Paris', 1),
+(1864, 'Parma', 1),
+(1865, 'Paro', 2),
+(1866, 'Pasighat', 2),
+(1867, 'Pasni', 1),
+(1868, 'Paso de los libres', 2),
+(1869, 'Passo fundo', 1),
+(1870, 'Pasto', 1),
+(1871, 'Pathankot', 1),
+(1872, 'Patina', 2),
+(1873, 'Patras', 2),
+(1874, 'Patreksfjordur', 2),
+(1875, 'Pattani', 1),
+(1876, 'Patuxent river', 2),
+(1877, 'Pau', 1),
+(1878, 'Paulo alfonso', 1),
+(1879, 'Paya lebar', 2),
+(1880, 'Paysandu', 2),
+(1881, 'Peace river', 1),
+(1882, 'Pekanbaru', 1),
+(1883, 'Pelly bay', 1),
+(1884, 'Pelotas', 1),
+(1885, 'Pemba', 1),
+(1886, 'Penang', 2),
+(1887, 'Pensacola', 1),
+(1888, 'Penticton', 1),
+(1889, 'Penza', 1),
+(1890, 'Pereira', 1),
+(1891, 'Perigueux', 1),
+(1892, 'Perm', 2),
+(1893, 'Perpignan', 1),
+(1894, 'Perth', 1),
+(1895, 'Peru', 2),
+(1896, 'Perugia', 1),
+(1897, 'Pescara', 1),
+(1898, 'Peshawar', 2),
+(1899, 'Petawawa', 2),
+(1900, 'Peterborough', 2),
+(1901, 'Petrolina', 1),
+(1902, 'Petropavlovsk', 1),
+(1903, 'Phalaborwa', 2),
+(1904, 'Philadelphia', 2),
+(1905, 'Philipsburg', 1),
+(1906, 'Phitsanulok', 1),
+(1907, 'Phnom-penh', 2),
+(1908, 'Phoenix', 1),
+(1909, 'Phrae', 1),
+(1910, 'Phuket', 2),
+(1911, 'Piacenza', 2),
+(1912, 'Pickle lake', 1),
+(1913, 'Pico', 2),
+(1914, 'Piedras negras', 2),
+(1915, 'Piestany', 2),
+(1916, 'Pietermaritzburg', 2),
+(1917, 'Pietersburg', 1),
+(1918, 'Pilanesberg', 1),
+(1919, 'Pine bluff', 2),
+(1920, 'Pingtung', 2),
+(1921, 'Piracununga', 1),
+(1922, 'Pisa', 2),
+(1923, 'Pisco', 1),
+(1924, 'Pittsburgh (pennsylva)', 2),
+(1925, 'Piura', 1),
+(1926, 'Plaisance', 1),
+(1927, 'Plattsburgh', 1),
+(1928, 'Plovdiv', 1),
+(1929, 'Plymouth', 2),
+(1930, 'Pocos de caldas', 1),
+(1931, 'Podgorica', 1),
+(1932, 'Pohang', 2),
+(1933, 'Pohnpei', 1),
+(1934, 'Point lay', 1),
+(1935, 'Point mugu', 2),
+(1936, 'Point salines', 1),
+(1937, 'Pointe-a-pitre', 2),
+(1938, 'Pointe-noire', 2),
+(1939, 'Poitiers', 2),
+(1940, 'Pokhara', 1),
+(1941, 'Ponca city', 2),
+(1942, 'Ponce', 1),
+(1943, 'Pond inlet', 2),
+(1944, 'Ponta delgada', 1),
+(1945, 'Ponta pora', 2),
+(1946, 'Pontianak', 1),
+(1947, 'Pontoise', 2),
+(1948, 'Popayan', 1),
+(1949, 'Poprad', 2),
+(1950, 'Porbandar', 1),
+(1951, 'Pori', 2),
+(1952, 'Porlamar', 2),
+(1953, 'Port angeles', 2),
+(1954, 'Port antonio', 2),
+(1955, 'Port blair', 2),
+(1956, 'Port elizabeth', 2),
+(1957, 'Port gentil', 1),
+(1958, 'Port hardy', 2),
+(1959, 'Port hartcourt', 2),
+(1960, 'Port hedland', 2),
+(1961, 'Port huron', 2),
+(1962, 'Port menier', 1),
+(1963, 'Port moller', 1),
+(1964, 'Port moresby', 2),
+(1965, 'Port said', 1),
+(1966, 'Port sudan', 2),
+(1967, 'Port-au-prince', 2),
+(1968, 'Port-of-spain', 1),
+(1969, 'Port-vila', 1),
+(1970, 'Portage-la-prairie', 2),
+(1971, 'Portland', 2),
+(1972, 'Porto', 1),
+(1973, 'Porto alegre', 2),
+(1974, 'Porto amboim', 2),
+(1975, 'Porto nacional', 2),
+(1976, 'Porto santo', 1),
+(1977, 'Porto velho', 1),
+(1978, 'Portoroz', 2),
+(1979, 'Portoviejo', 2),
+(1980, 'Posadas', 1),
+(1981, 'Poso', 2),
+(1982, 'Potosi', 2),
+(1983, 'Poza rico', 1),
+(1984, 'Poznan', 2),
+(1985, 'Prachuap khiri khan', 1),
+(1986, 'Prague', 2),
+(1987, 'Praslin', 1),
+(1988, 'Prerov', 2),
+(1989, 'Prescott', 2),
+(1990, 'President prudente', 2),
+(1991, 'Presque isle', 2),
+(1992, 'Prestwick', 1),
+(1993, 'Pretoria', 2),
+(1994, 'Preveza', 1),
+(1995, 'Prince albert', 1),
+(1996, 'Prince george', 1),
+(1997, 'Prince pupert', 1),
+(1998, 'Princeton', 1),
+(1999, 'Principe', 2),
+(2000, 'Pristina', 2),
+(2001, 'Prosserpine', 1),
+(2002, 'Providence', 2),
+(2003, 'Providencia', 1),
+(2004, 'Providenciales', 2),
+(2005, 'Provideniya bay', 1),
+(2006, 'Pucallpa', 2),
+(2007, 'Puebla', 2),
+(2008, 'Pueblo memorial', 1),
+(2009, 'Puerto asis', 1),
+(2010, 'Puerto ayacucho', 1),
+(2011, 'Puerto cabello', 2),
+(2012, 'Puerto cabezas', 2),
+(2013, 'Puerto carreno', 2),
+(2014, 'Puerto deseado', 2),
+(2015, 'Puerto escondido', 2),
+(2016, 'Puerto lempira', 2),
+(2017, 'Puerto madryn', 1),
+(2018, 'Puerto maldonado', 2),
+(2019, 'Puerto montt', 2),
+(2020, 'Puerto plata', 2),
+(2021, 'Puerto princesa', 1),
+(2022, 'Puerto suarez', 1),
+(2023, 'Puerto vallarta', 1),
+(2024, 'Puka puka', 1),
+(2025, 'Pula', 2),
+(2026, 'Pulau', 1),
+(2027, 'Pune', 2),
+(2028, 'Punta arenas', 2),
+(2029, 'Punta cana', 2),
+(2030, 'Punta del este', 2),
+(2031, 'Punta penasco', 1),
+(2032, 'Putao', 1),
+(2033, 'Pyongyang', 1),
+(2034, 'Qingdao', 1),
+(2035, 'Quantico', 2),
+(2036, 'Quebec', 2),
+(2037, 'Queenstown', 2),
+(2038, 'Queenstown international', 2),
+(2039, 'Quelimane', 1),
+(2040, 'Quepos', 2),
+(2041, 'Queretaro', 1),
+(2042, 'Quesnel', 1),
+(2043, 'Quetta', 2),
+(2044, 'Quibdo', 2),
+(2045, 'Quimper', 1),
+(2046, 'Quito', 1),
+(2047, 'Quujjuaq', 2),
+(2048, 'Rabat', 1),
+(2049, 'Rafha', 1),
+(2050, 'Rahim yar khan', 2),
+(2051, 'Raiatea island', 2),
+(2052, 'Raipur', 2),
+(2053, 'Rajahmundry', 1),
+(2054, 'Rajkot', 2),
+(2055, 'Rajshahi', 2),
+(2056, 'Raleigh-durham', 2),
+(2057, 'Ramsar', 2),
+(2058, 'Ramstein', 2),
+(2059, 'Ranchi', 2),
+(2060, 'Rancho murieta', 2),
+(2061, 'Rangiroa', 2),
+(2062, 'Rankin inlet', 2),
+(2063, 'Rapid city', 2),
+(2064, 'Ras al khaimah', 2),
+(2065, 'Rasht', 1),
+(2066, 'Rawala kot', 2),
+(2067, 'Rayong', 2),
+(2068, 'Reao', 2),
+(2069, 'Recife', 2),
+(2070, 'Red deer industrial', 1),
+(2071, 'Red river', 1),
+(2072, 'Redstone', 2),
+(2073, 'Reggio calabria', 1),
+(2074, 'Regina', 2),
+(2075, 'Reims', 1),
+(2076, 'Rengat', 2),
+(2077, 'Rennes', 2),
+(2078, 'Reno', 2),
+(2079, 'Repulse bay', 1),
+(2080, 'Resistencia', 1),
+(2081, 'Resolute', 2),
+(2082, 'Reus', 2),
+(2083, 'Reykjavik', 1),
+(2084, 'Reynosa', 1),
+(2085, 'Rhodos', 2),
+(2086, 'Ribeirao preto', 2),
+(2087, 'Riberalta', 1),
+(2088, 'Richards bay', 2),
+(2089, 'Richmond', 2),
+(2090, 'Rijeka', 2),
+(2091, 'Rimini', 2),
+(2092, 'Rio branco', 2),
+(2093, 'Rio cuarto', 2),
+(2094, 'Rio de janeiro', 2),
+(2095, 'Rio gallegos', 2),
+(2096, 'Rio grande', 2),
+(2097, 'Rio turbio', 2),
+(2098, 'Riohacha', 2),
+(2099, 'Rishiri island', 2),
+(2100, 'Rivera', 2),
+(2101, 'Riverside', 1),
+(2102, 'Riviere du loup', 1),
+(2103, 'Riyadh', 2),
+(2104, 'Roadtown/beef island', 2),
+(2105, 'Roanne', 2),
+(2106, 'Roatan', 2),
+(2107, 'Roberval', 2),
+(2108, 'Robinson', 2),
+(2109, 'Rochefort', 1),
+(2110, 'Rochester', 1),
+(2111, 'Rock sound', 2),
+(2112, 'Rockhampton', 1),
+(2113, 'Rocky mountain house', 2),
+(2114, 'Rodez', 1),
+(2115, 'Rodriguez island', 2),
+(2116, 'Rome', 2),
+(2117, 'Ronchi de legionari', 1),
+(2118, 'Ronne', 1),
+(2119, 'Ronneby', 1),
+(2120, 'Roosevelt roads', 1),
+(2121, 'Roros', 1),
+(2122, 'Rosario', 1),
+(2123, 'Rosh pina', 1),
+(2124, 'Rostov', 2),
+(2125, 'Roswell', 1),
+(2126, 'Rota', 2),
+(2127, 'Rotorua', 1),
+(2128, 'Rotterdam', 1),
+(2129, 'Rouen', 1),
+(2130, 'Rourkela', 2),
+(2131, 'Rouyn', 1),
+(2132, 'Rovaniemi', 1),
+(2133, 'Royan', 1),
+(2134, 'Rurrenabaque', 2),
+(2135, 'Rurutu', 2),
+(2136, 'Ruteng', 2),
+(2137, 'Rzeszow', 1),
+(2138, 'Saarbruecken', 2),
+(2139, 'Sabang', 2),
+(2140, 'Sachs harbour', 1),
+(2141, 'Sacramento', 2),
+(2142, 'Saidpur', 1),
+(2143, 'Saidu sharif', 2),
+(2144, 'Sainte marie', 2),
+(2145, 'Saipan', 2),
+(2146, 'Sakon nakhon', 2),
+(2147, 'Salalah', 1),
+(2148, 'Salamanca', 1),
+(2149, 'Salinas', 1),
+(2150, 'Salisbury', 1),
+(2151, 'Salt lake city', 2),
+(2152, 'Salta', 1),
+(2153, 'Saltillo', 2),
+(2154, 'Salto', 1),
+(2155, 'Salvador', 2),
+(2156, 'Salzburg', 2),
+(2157, 'Samara', 2),
+(2158, 'Samarinda', 1),
+(2159, 'Samarkand', 1),
+(2160, 'Sambava', 1),
+(2161, 'Samedan', 1),
+(2162, 'Samos', 1),
+(2163, 'Samsun', 2),
+(2164, 'San andres island', 1),
+(2165, 'San andros', 2),
+(2166, 'San angelo', 2),
+(2167, 'San antonio', 1),
+(2168, 'San borja', 1),
+(2169, 'San carlos de bariloch', 2),
+(2170, 'San diego', 1),
+(2171, 'San felipe', 2),
+(2172, 'San fernando de apure', 1),
+(2173, 'San francisco', 1),
+(2174, 'San joaquin', 1),
+(2175, 'San jose', 2),
+(2176, 'San jose del cabo', 1),
+(2177, 'San jose del guaviare', 1),
+(2178, 'San juan', 2),
+(2179, 'San julian', 2),
+(2180, 'San luis', 2),
+(2181, 'San luis potosi', 1),
+(2182, 'San martin des andes', 2),
+(2183, 'San pedro', 1),
+(2184, 'San pedro sula', 2),
+(2185, 'San rafael', 2),
+(2186, 'San salvador', 2),
+(2187, 'San sebastian', 1),
+(2188, 'San tome', 2),
+(2189, 'San vincente de caguan', 2),
+(2190, 'Sanandaj', 2),
+(2191, 'Sandnessjoen', 2),
+(2192, 'Sandspit', 2),
+(2193, 'Sandusky', 2),
+(2194, 'Santa ana', 1),
+(2195, 'Santa barbara', 1),
+(2196, 'Santa clara', 1),
+(2197, 'Santa cruz', 2),
+(2198, 'Santa cruz de la palma', 2),
+(2199, 'Santa fe', 2),
+(2200, 'Santa maria (island)', 2),
+(2201, 'Santa marta', 1),
+(2202, 'Santa rosa', 2),
+(2203, 'Santander', 1),
+(2204, 'Santarem', 2),
+(2205, 'Santiago', 2),
+(2206, 'Santiago de cuba', 2),
+(2207, 'Santiago del estero', 1),
+(2208, 'Santo angelo', 2),
+(2209, 'Santo domingo', 1),
+(2210, 'Santorini', 1),
+(2211, 'Santos', 2),
+(2212, 'Sao jorge island', 2),
+(2213, 'Sao jose do rio preto', 1),
+(2214, 'Sao jose dos campos', 1),
+(2215, 'Sao luis', 2),
+(2216, 'Sao nocolau island', 2),
+(2217, 'Sao paulo', 1),
+(2218, 'Sao tome', 2),
+(2219, 'Sao vicente island', 2),
+(2220, 'Sapporo', 1),
+(2221, 'Sarajevo', 2),
+(2222, 'Saravena', 2),
+(2223, 'Sarh', 2),
+(2224, 'Sarnia', 2),
+(2225, 'Saskatoon', 1),
+(2226, 'Satu mare', 1),
+(2227, 'Sault sainte marie', 2),
+(2228, 'Saurimo', 1),
+(2229, 'Savannah', 2),
+(2230, 'Savannakhet', 1),
+(2231, 'Savonlinna', 2),
+(2232, 'Scarborough', 1),
+(2233, 'Scatsta', 1),
+(2234, 'Schefferville', 1),
+(2235, 'Seattle', 1),
+(2236, 'Sebha', 1),
+(2237, 'Selebi-phikwe', 1),
+(2238, 'Selibabi', 2),
+(2239, 'Selma', 1),
+(2240, 'Semarang', 2),
+(2241, 'Semiplatinsk', 2),
+(2242, 'Sendai', 2),
+(2243, 'Seo de urgel', 2),
+(2244, 'Seoul', 1),
+(2245, 'Seoul east', 2),
+(2246, 'Sept-iles', 1),
+(2247, 'Setif', 1),
+(2248, 'Sevilla', 1),
+(2249, 'Sfax', 2),
+(2250, 'Shanghai', 2),
+(2251, 'Shannon', 1),
+(2252, 'Shantou', 1),
+(2253, 'Sharjah', 1),
+(2254, 'Sharurah', 2),
+(2255, 'Shemya', 2),
+(2256, 'Shenzhen', 2),
+(2257, 'Sherbrooke', 2),
+(2258, 'Shimojishima', 2),
+(2259, 'Shiraz', 2),
+(2260, 'Sholapur', 2),
+(2261, 'Shoreham by sea', 1),
+(2262, 'Shreveport', 2),
+(2263, 'Sibiu', 1),
+(2264, 'Sibu', 2),
+(2265, 'Sidi ifini', 2),
+(2266, 'Siem-reap', 1),
+(2267, 'Siena', 1),
+(2268, 'Siglufjordur', 2),
+(2269, 'Sigonella', 1),
+(2270, 'Silchar', 1),
+(2271, 'Simara', 2),
+(2272, 'Simferopol', 2),
+(2273, 'Singapore', 1),
+(2274, 'Singkep', 1),
+(2275, 'Sintang', 1),
+(2276, 'Sion', 2),
+(2277, 'Sioux city', 2),
+(2278, 'Sioux lookout', 1),
+(2279, 'Sishen', 2),
+(2280, 'Sitia', 1),
+(2281, 'Sitka', 1),
+(2282, 'Sittwe', 2),
+(2283, 'Sivas', 1),
+(2284, 'Skagway', 1),
+(2285, 'Skelleftea', 2),
+(2286, 'Skiathos', 2),
+(2287, 'Skien', 1),
+(2288, 'Skiros', 2),
+(2289, 'Skopje', 2),
+(2290, 'Skovde', 2),
+(2291, 'Skrydstrup', 2),
+(2292, 'Skukuza', 1),
+(2293, 'Slave lake', 2),
+(2294, 'Sliac', 1),
+(2295, 'Sligo', 1),
+(2296, 'Slupsk', 2),
+(2297, 'Smithers', 2),
+(2298, 'Smithfield', 2),
+(2299, 'Sochi', 1),
+(2300, 'Sodankyla', 1),
+(2301, 'Soenderborg', 1),
+(2302, 'Soesterberg', 1),
+(2303, 'Sofia', 1),
+(2304, 'Sogndal', 1),
+(2305, 'Sokcho', 2),
+(2306, 'Sokoto', 2),
+(2307, 'Solenzara', 1),
+(2308, 'Solo city', 1),
+(2309, 'Sondrestrom', 1),
+(2310, 'Songkhla', 2),
+(2311, 'Sorkjosen', 1),
+(2312, 'Sorong', 2),
+(2313, 'Soroti', 2),
+(2314, 'South caicos', 2),
+(2315, 'Southampton', 1),
+(2316, 'Southdowns', 2),
+(2317, 'Southend', 2),
+(2318, 'Soyo', 2),
+(2319, 'Spangdahlem', 1),
+(2320, 'Sparrevohn', 2),
+(2321, 'Spence bay', 2),
+(2322, 'Speyer', 2),
+(2323, 'Split', 1),
+(2324, 'Spokane', 1),
+(2325, 'Spring point', 2),
+(2326, 'Springbok', 1),
+(2327, 'Srinagar', 2),
+(2328, 'St. anthony', 1),
+(2329, 'St. catherine', 1),
+(2330, 'St. criox island', 2),
+(2331, 'St. jean', 2),
+(2332, 'St. john', 2),
+(2333, 'St. johns', 1),
+(2334, 'St. louis', 1),
+(2335, 'St. martin', 2),
+(2336, 'St. paul island', 1),
+(2337, 'St. petersburg', 2),
+(2338, 'St. thomas', 2),
+(2339, 'St.-barthelemy', 2),
+(2340, 'St.-brieuc armor', 2),
+(2341, 'St.-denis', 1),
+(2342, 'St.-etienne', 1),
+(2343, 'St.-nazaire', 1),
+(2344, 'St.-pierre', 2),
+(2345, 'Stauning', 2),
+(2346, 'Stavanger', 1),
+(2347, 'Stavropol', 1),
+(2348, 'Stella maris', 2),
+(2349, 'Stephenville', 2),
+(2350, 'Stockholm', 1),
+(2351, 'Stockton', 2),
+(2352, 'Stord', 1),
+(2353, 'Stornoway', 1),
+(2354, 'Strassbourg', 1),
+(2355, 'Stratford', 1),
+(2356, 'Stuttgart', 1),
+(2357, 'Suceava', 1),
+(2358, 'Sucre', 1),
+(2359, 'Sudbury', 1),
+(2360, 'Sui', 1),
+(2361, 'Sukhumi', 1),
+(2362, 'Sukkur', 2),
+(2363, 'Sulayel', 1),
+(2364, 'Sumbawa', 1),
+(2365, 'Sumburgh', 2),
+(2366, 'Summerside', 2),
+(2367, 'Sumter', 2),
+(2368, 'Sundsvall', 1),
+(2369, 'Sunyani', 1),
+(2370, 'Surabaya', 2),
+(2371, 'Surat', 1),
+(2372, 'Surgut', 2),
+(2373, 'Svalbard', 2),
+(2374, 'Sveg', 2),
+(2375, 'Sverdlovsk', 2),
+(2376, 'Swansea', 1),
+(2377, 'Swift current', 1),
+(2378, 'Sydney', 2),
+(2379, 'Syktyvkar', 1),
+(2380, 'Sylhet osmani', 1),
+(2381, 'Syracuse', 2),
+(2382, 'Szczechin', 1),
+(2383, 'Tabatinga', 1);
+INSERT INTO `ciudad` (`id`, `nombre`, `estado`) VALUES
+(2384, 'Tabiteuea north', 1),
+(2385, 'Tabriz', 2),
+(2386, 'Tabuk', 1),
+(2387, 'Tachilek', 2),
+(2388, 'Tacloban', 2),
+(2389, 'Tacna', 1),
+(2390, 'Tacoma', 2),
+(2391, 'Tacuarembo', 2),
+(2392, 'Taegu', 1),
+(2393, 'Tahoua', 2),
+(2394, 'Taif', 2),
+(2395, 'Tainan', 2),
+(2396, 'Taipei', 2),
+(2397, 'Taiyuan', 1),
+(2398, 'Takamatsu', 1),
+(2399, 'Takapoto', 2),
+(2400, 'Takaroa', 1),
+(2401, 'Takoradi', 2),
+(2402, 'Talara', 2),
+(2403, 'Talhar', 2),
+(2404, 'Talkeetna', 1),
+(2405, 'Tallahassee', 1),
+(2406, 'Tallinn-ulemiste international', 2),
+(2407, 'Tamale', 2),
+(2408, 'Tamanrasset', 1),
+(2409, 'Tambacounda', 1),
+(2410, 'Tame', 2),
+(2411, 'Tampa', 1),
+(2412, 'Tampere', 1),
+(2413, 'Tampico', 1),
+(2414, 'Tamuin', 2),
+(2415, 'Tamworth', 2),
+(2416, 'Tan tan', 1),
+(2417, 'Tanana', 2),
+(2418, 'Tandil', 2),
+(2419, 'Tanegashima', 1),
+(2420, 'Tanga', 1),
+(2421, 'Tanger', 2),
+(2422, 'Tanjung pandan', 2),
+(2423, 'Tanjung pinang', 2),
+(2424, 'Tapachula', 1),
+(2425, 'Taraken', 1),
+(2426, 'Tarapoa', 1),
+(2427, 'Tarapoto', 2),
+(2428, 'Tarawa', 2),
+(2429, 'Tarbes', 2),
+(2430, 'Tarija', 2),
+(2431, 'Tashkent', 2),
+(2432, 'Tatalina', 2),
+(2433, 'Taupo', 1),
+(2434, 'Tauranga', 2),
+(2435, 'Tawau', 1),
+(2436, 'Tbilisi', 1),
+(2437, 'Tchibanga', 1),
+(2438, 'Tebessa', 1),
+(2439, 'Teesside', 2),
+(2440, 'Tefe', 2),
+(2441, 'Tegucigalpa', 1),
+(2442, 'Teheran', 1),
+(2443, 'Tehuacan', 2),
+(2444, 'Tel-aviv', 2),
+(2445, 'Tela', 2),
+(2446, 'Temuco', 2),
+(2447, 'Tenerife', 2),
+(2448, 'Tepic', 1),
+(2449, 'Teresina', 2),
+(2450, 'Ternate', 1),
+(2451, 'Terrace', 1),
+(2452, 'Terre haute', 1),
+(2453, 'Teslin', 2),
+(2454, 'Tete', 2),
+(2455, 'Teterboro', 1),
+(2456, 'Tetouan', 1),
+(2457, 'Texarkana', 1),
+(2458, 'Thaba nchu', 2),
+(2459, 'Thandwe', 1),
+(2460, 'The valley', 2),
+(2461, 'Thessaloniki', 2),
+(2462, 'Thisted', 1),
+(2463, 'Thohoyandou', 1),
+(2464, 'Thompson', 2),
+(2465, 'Thule', 1),
+(2466, 'Thumrait', 2),
+(2467, 'Thunder bay', 1),
+(2468, 'Tianjin', 1),
+(2469, 'Tiaret', 2),
+(2470, 'Tidjikja', 2),
+(2471, 'Tijuana', 1),
+(2472, 'Tikehau', 1),
+(2473, 'Tiko', 2),
+(2474, 'Tilrempt', 2),
+(2475, 'Timaru', 2),
+(2476, 'Timika', 2),
+(2477, 'Timimoun', 2),
+(2478, 'Timisoara', 1),
+(2479, 'Timmins', 1),
+(2480, 'Tin city', 2),
+(2481, 'Tindouf', 1),
+(2482, 'Tingo maria', 1),
+(2483, 'Tirana', 2),
+(2484, 'Tiree', 1),
+(2485, 'Tirgu mures', 1),
+(2486, 'Tiruchchirappalli', 1),
+(2487, 'Tirupeti', 2),
+(2488, 'Tivat', 1),
+(2489, 'Tlaxcala', 2),
+(2490, 'Tlemcen', 1),
+(2491, 'Toamasina', 1),
+(2492, 'Tobolsk', 1),
+(2493, 'Tofino', 2),
+(2494, 'Tokunoshima', 1),
+(2495, 'Tokushima', 1),
+(2496, 'Tokyo', 1),
+(2497, 'Tolagnaro', 1),
+(2498, 'Toliara', 1),
+(2499, 'Toluca', 2),
+(2500, 'Tombouctou', 2),
+(2501, 'Tongatapu', 1),
+(2502, 'Topeka', 2),
+(2503, 'Torino', 2),
+(2504, 'Toronto', 1),
+(2505, 'Torp', 2),
+(2506, 'Torreon', 1),
+(2507, 'Tortoli', 1),
+(2508, 'Totegegie', 1),
+(2509, 'Tottori', 1),
+(2510, 'Touggourt', 1),
+(2511, 'Touho', 1),
+(2512, 'Toulouse', 2),
+(2513, 'Tours', 1),
+(2514, 'Toussous-le-noble', 1),
+(2515, 'Townsville', 2),
+(2516, 'Toyama', 2),
+(2517, 'Tozeur', 2),
+(2518, 'Trabzon', 1),
+(2519, 'Trang', 1),
+(2520, 'Trapani', 1),
+(2521, 'Treasure cay', 2),
+(2522, 'Trelew', 2),
+(2523, 'Trenton', 1),
+(2524, 'Treviso', 1),
+(2525, 'Trier', 1),
+(2526, 'Trinciomalee', 2),
+(2527, 'Trinidad', 2),
+(2528, 'Tripoli', 1),
+(2529, 'Trivandrum', 2),
+(2530, 'Trollhattan', 1),
+(2531, 'Tromso', 2),
+(2532, 'Trondheim', 1),
+(2533, 'Troyes', 2),
+(2534, 'Trujillo', 2),
+(2535, 'Truth or consequences', 1),
+(2536, 'Tselinograd', 1),
+(2537, 'Tsushima', 2),
+(2538, 'Tubuai', 2),
+(2539, 'Tucson', 2),
+(2540, 'Tucuman', 1),
+(2541, 'Tucumcari', 1),
+(2542, 'Tucupita', 2),
+(2543, 'Tucurui', 1),
+(2544, 'Tuktoyaktuk', 1),
+(2545, 'Tulcan', 2),
+(2546, 'Tulcea', 2),
+(2547, 'Tulsa', 1),
+(2548, 'Tulua', 1),
+(2549, 'Tumaco', 2),
+(2550, 'Tumbes', 2),
+(2551, 'Tunis', 1),
+(2552, 'Turaif', 2),
+(2553, 'Turany', 2),
+(2554, 'Turbo', 1),
+(2555, 'Turku', 1),
+(2556, 'Tustin', 2),
+(2557, 'Tuxtla gutierrez', 2),
+(2558, 'Tver', 2),
+(2559, 'Twenty nine palms', 1),
+(2560, 'Tyler', 1),
+(2561, 'Tzaneen', 1),
+(2562, 'Uberaba', 1),
+(2563, 'Uberlandia', 2),
+(2564, 'Udaipur', 1),
+(2565, 'Udon thani', 2),
+(2566, 'Ufa', 1),
+(2567, 'Uige', 2),
+(2568, 'Ujung pandang', 1),
+(2569, 'Ulan bator', 2),
+(2570, 'Ulan-ude', 2),
+(2571, 'Ulsan', 1),
+(2572, 'Ulundi', 2),
+(2573, 'Umea', 2),
+(2574, 'Umtata', 2),
+(2575, 'Unalakleet', 2),
+(2576, 'Unalaska', 2),
+(2577, 'Upington', 2),
+(2578, 'Uralsk', 2),
+(2579, 'Uruapan', 1),
+(2580, 'Uruguaiana', 2),
+(2581, 'Urumqi', 2),
+(2582, 'Ushuaia', 1),
+(2583, 'Utti', 2),
+(2584, 'Vaasa', 1),
+(2585, 'Vagar', 1),
+(2586, 'Val d or', 2),
+(2587, 'Valdez', 2),
+(2588, 'Valdivia', 2),
+(2589, 'Valdosta', 2),
+(2590, 'Valence', 1),
+(2591, 'Valencia', 2),
+(2592, 'Valera', 2),
+(2593, 'Valkenburg', 2),
+(2594, 'Valladolid', 2),
+(2595, 'Valle de la pascua', 2),
+(2596, 'Valledupar', 2),
+(2597, 'Valparaiso', 2),
+(2598, 'Van', 1),
+(2599, 'Vancouver', 1),
+(2600, 'Vannes', 2),
+(2601, 'Varadero', 2),
+(2602, 'Varanasi', 2),
+(2603, 'Varginha', 2),
+(2604, 'Varkaus', 1),
+(2605, 'Varna', 1),
+(2606, 'Vasteras', 2),
+(2607, 'Vavau', 1),
+(2608, 'Vaxjo', 1),
+(2609, 'Venice', 2),
+(2610, 'Vera cruz', 1),
+(2611, 'Vermillion', 2),
+(2612, 'Vero beach', 2),
+(2613, 'Vestmannaeyjar', 2),
+(2614, 'Vicenza', 1),
+(2615, 'Vichy', 1),
+(2616, 'Victoria', 2),
+(2617, 'Victoria falls', 2),
+(2618, 'Victorville', 1),
+(2619, 'Viedma', 2),
+(2620, 'Vienna', 2),
+(2621, 'Vientiane', 1),
+(2622, 'Vigo', 2),
+(2623, 'Vijayawada', 2),
+(2624, 'Vila real', 1),
+(2625, 'Vilankulu', 1),
+(2626, 'Vilefrance', 2),
+(2627, 'Vilhelmina', 2),
+(2628, 'Vilhena', 1),
+(2629, 'Villa dolores', 1),
+(2630, 'Villa gesell', 2),
+(2631, 'Villafranca', 1),
+(2632, 'Villahermosa', 2),
+(2633, 'Villavicencio', 1),
+(2634, 'Visby', 1),
+(2635, 'Vishakhapatnam', 2),
+(2636, 'Vitebsk', 1),
+(2637, 'Vitoria', 1),
+(2638, 'Vladivostok', 1),
+(2639, 'Vohemar', 1),
+(2640, 'Volgograd', 1),
+(2641, 'Voronezh', 2),
+(2642, 'Vryburg', 1),
+(2643, 'Vryheid', 1),
+(2644, 'Wabush', 2),
+(2645, 'Waco', 2),
+(2646, 'Waddington', 2),
+(2647, 'Wagga wagga', 1),
+(2648, 'Waingapu', 2),
+(2649, 'Wajir', 1),
+(2650, 'Wakkanai', 2),
+(2651, 'Wallis', 2),
+(2652, 'Wallops island', 2),
+(2653, 'Wamena', 2),
+(2654, 'Wanaka', 2),
+(2655, 'Wang an', 1),
+(2656, 'Wanganui', 2),
+(2657, 'Warsaw', 2),
+(2658, 'Washington', 2),
+(2659, 'Waterford', 1),
+(2660, 'Waterloo', 2),
+(2661, 'Watertown', 1),
+(2662, 'Watson lake', 1),
+(2663, 'Wau', 1),
+(2664, 'Weipa', 1),
+(2665, 'Wejh', 2),
+(2666, 'Welkom', 2),
+(2667, 'Wellington', 2),
+(2668, 'Wendover', 2),
+(2669, 'West chicago', 2),
+(2670, 'West end', 2),
+(2671, 'West hampton beach', 2),
+(2672, 'West palm beach', 1),
+(2673, 'West tinian', 1),
+(2674, 'Westerland', 2),
+(2675, 'Westport', 2),
+(2676, 'Wewak', 1),
+(2677, 'Whakatane', 1),
+(2678, 'Whangarei', 1),
+(2679, 'Whidbey island', 2),
+(2680, 'White plains', 2),
+(2681, 'White sands', 1),
+(2682, 'Whitecourt', 2),
+(2683, 'Whitehorse', 2),
+(2684, 'Wiarton', 1),
+(2685, 'Wichita', 1),
+(2686, 'Wichita falls', 1),
+(2687, 'Wick', 2),
+(2688, 'Wildwood', 2),
+(2689, 'Wilhelmshaven', 1),
+(2690, 'Willemstad', 2),
+(2691, 'Williams lake', 1),
+(2692, 'Williamsport', 2),
+(2693, 'Williston', 1),
+(2694, 'Willow grove', 2),
+(2695, 'Wilmington', 2),
+(2696, 'Windsor', 1),
+(2697, 'Windsor locks', 1),
+(2698, 'Wink', 2),
+(2699, 'Winnipeg', 2),
+(2700, 'Winston-salem', 1),
+(2701, 'Woensdrecht', 1),
+(2702, 'Woodbourne', 2),
+(2703, 'Woomera', 1),
+(2704, 'Wright', 2),
+(2705, 'Wrightstown', 1),
+(2706, 'Wrigley', 1),
+(2707, 'Wroclaw', 1),
+(2708, 'Wuhan', 1),
+(2709, 'Xangongo', 2),
+(2710, 'Xi an', 1),
+(2711, 'Xiamen', 2),
+(2712, 'Xichang', 1),
+(2713, 'Yakushima', 1),
+(2714, 'Yakutat', 1),
+(2715, 'Yakutsk', 1),
+(2716, 'Yalinga', 1),
+(2717, 'Yamagata', 2),
+(2718, 'Yamaguchi', 1),
+(2719, 'Yamoussoukro', 2),
+(2720, 'Yangon', 2),
+(2721, 'Yantai', 2),
+(2722, 'Yaounde', 1),
+(2723, 'Yap', 1),
+(2724, 'Yazd', 2),
+(2725, 'Yechon', 2),
+(2726, 'Yellowknife', 1),
+(2727, 'Yenbo', 1),
+(2728, 'Yeosu', 1),
+(2729, 'Yeovilton', 1),
+(2730, 'Yerevan', 1),
+(2731, 'Yogyakarta', 2),
+(2732, 'Yokota', 2),
+(2733, 'Yola', 2),
+(2734, 'Yonaguni jima', 1),
+(2735, 'Yorkton', 1),
+(2736, 'Yoron', 1),
+(2737, 'Youngstown', 2),
+(2738, 'Yuma', 2),
+(2739, 'Yurimaguas', 2),
+(2740, 'Yuzhno-sakhalinsk', 1),
+(2741, 'Zacatecas', 1),
+(2742, 'Zadar', 1),
+(2743, 'Zagreb', 2),
+(2744, 'Zahedan', 1),
+(2745, 'Zakynthos', 1),
+(2746, 'Zamboanga', 1),
+(2747, 'Zamora', 2),
+(2748, 'Zandery', 1),
+(2749, 'Zanzibar', 2),
+(2750, 'Zaragoza', 2),
+(2751, 'Zaria', 1),
+(2752, 'Zarzaitine', 2),
+(2753, 'Zhengzhou', 1),
+(2754, 'Zhob', 2),
+(2755, 'Zielona gora', 2),
+(2756, 'Ziguinchor', 2),
+(2757, 'Zihuatanejo', 1),
+(2758, 'Zinder', 2),
+(2759, 'Zuni pueblo', 1),
+(2760, 'Zurich', 2);
 
 -- --------------------------------------------------------
 
@@ -3171,7 +5937,226 @@ CREATE TABLE `pais` (
 -- Volcado de datos para la tabla `pais`
 --
 
-
+INSERT INTO `pais` (`id`, `nombre`) VALUES
+(1, 'Afghanistan'),
+(2, 'Albania'),
+(3, 'Algeria'),
+(4, 'Angola'),
+(5, 'Anguilla isl.'),
+(6, 'Antilles'),
+(7, 'Argentina'),
+(8, 'Aruba'),
+(9, 'Australia'),
+(10, 'Austria'),
+(11, 'Bahamas'),
+(12, 'Bahrain'),
+(13, 'Bangladesh'),
+(14, 'Barbados'),
+(15, 'Belgium'),
+(16, 'Belize'),
+(17, 'Benin'),
+(18, 'Bhutan'),
+(19, 'Bolivia'),
+(20, 'Bophuthatswana'),
+(21, 'Bosnia-hercegovina'),
+(22, 'Botswana'),
+(23, 'Brazil'),
+(24, 'Brunei'),
+(25, 'Bulgaria'),
+(26, 'Burkina faso'),
+(27, 'Burundi'),
+(28, 'Cambodia'),
+(29, 'Cameroon'),
+(30, 'Canada'),
+(31, 'Canary islands'),
+(32, 'Cape verde islands'),
+(33, 'Cayman islands'),
+(34, 'Central african rep.'),
+(35, 'Chad'),
+(36, 'Chile'),
+(37, 'China'),
+(38, 'Colombia'),
+(39, 'Comoros islands'),
+(40, 'Congo'),
+(41, 'Cook islands'),
+(42, 'Corse isl.'),
+(43, 'Costa rica'),
+(44, 'Croatia'),
+(45, 'Cuba'),
+(46, 'Cyprus'),
+(47, 'Czech republic'),
+(48, 'Denmark'),
+(49, 'Dominica'),
+(50, 'Dominican republic'),
+(51, 'East timor'),
+(52, 'Ecuador'),
+(53, 'Egypt'),
+(54, 'El salvador'),
+(55, 'Engalnd'),
+(56, 'England'),
+(57, 'Equatorial guinea'),
+(58, 'Estonia'),
+(59, 'Ethiopia'),
+(60, 'Falkland islands'),
+(61, 'Faroe isl.'),
+(62, 'Fiji'),
+(63, 'Finland'),
+(64, 'Former macedonia'),
+(65, 'France'),
+(66, 'French guyana'),
+(67, 'French polynesia'),
+(68, 'Gabon'),
+(69, 'Galapagos i. (ecuador'),
+(70, 'Gambia'),
+(71, 'Georgia'),
+(72, 'Germany'),
+(73, 'Ghana'),
+(74, 'Gibraltar'),
+(75, 'Greece'),
+(76, 'Greenland'),
+(77, 'Grenada'),
+(78, 'Guatemala'),
+(79, 'Guernsey isld.'),
+(80, 'Guinea'),
+(81, 'Guinea bissau'),
+(82, 'Guyana'),
+(83, 'Haiti'),
+(84, 'Honduras'),
+(85, 'Hong kong'),
+(86, 'Hungary'),
+(87, 'Iceland'),
+(88, 'India'),
+(89, 'Indonesia'),
+(90, 'Iran'),
+(91, 'Iraq'),
+(92, 'Ireland'),
+(93, 'Israel'),
+(94, 'Italy'),
+(95, 'Ivory coast'),
+(96, 'Jamaica'),
+(97, 'Japan'),
+(98, 'Johnston atoll'),
+(99, 'Jordan'),
+(100, 'Kazakhstan'),
+(101, 'Kenya'),
+(102, 'Kiribati'),
+(103, 'Korea'),
+(104, 'Kuwait'),
+(105, 'Laos'),
+(106, 'Lebanon'),
+(107, 'Leeward islands'),
+(108, 'Lesotho'),
+(109, 'Liberia'),
+(110, 'Libya'),
+(111, 'Luxemburg'),
+(112, 'Macau'),
+(113, 'Madagascar'),
+(114, 'Madeira'),
+(115, 'Malawi'),
+(116, 'Malaysia'),
+(117, 'Maldives'),
+(118, 'Mali'),
+(119, 'Malta'),
+(120, 'Mariana islands'),
+(121, 'Marshall islands'),
+(122, 'Mauritania'),
+(123, 'Mauritius'),
+(124, 'Mayotte island'),
+(125, 'Mexico'),
+(126, 'Micronesia'),
+(127, 'Midway island'),
+(128, 'Moldova'),
+(129, 'Mongolia'),
+(130, 'Montserrat island'),
+(131, 'Morocco'),
+(132, 'Mozambique'),
+(133, 'Myanmar'),
+(134, 'Nepal'),
+(135, 'Netherlands'),
+(136, 'New caledonia'),
+(137, 'New zealand'),
+(138, 'Nicaragua'),
+(139, 'Niger'),
+(140, 'Nigeria'),
+(141, 'North ireland'),
+(142, 'Norway'),
+(143, 'Oman'),
+(144, 'Pakistan'),
+(145, 'Palau island'),
+(146, 'Panama'),
+(147, 'Papua new guinea'),
+(148, 'Paraguay'),
+(149, 'Peru'),
+(150, 'Philippines'),
+(151, 'Phoenix isl.'),
+(152, 'Poland'),
+(153, 'Portugal'),
+(154, 'Puerto rico'),
+(155, 'Qatar'),
+(156, 'Reunion island'),
+(157, 'Romania'),
+(158, 'Russia'),
+(159, 'Rwanda'),
+(160, 'Samoa'),
+(161, 'Sao tome & principe'),
+(162, 'Saudi arabia'),
+(163, 'Scotland'),
+(164, 'Senegal'),
+(165, 'Seychelles'),
+(166, 'Sierra leone'),
+(167, 'Singapore'),
+(168, 'Slovakia'),
+(169, 'Slovenia'),
+(170, 'Somalia'),
+(171, 'South africa'),
+(172, 'Spain'),
+(173, 'Spanish north africa'),
+(174, 'Sri lanka'),
+(175, 'St. kitts & nevis'),
+(176, 'St. lucia island'),
+(177, 'St. pierre & miquelon'),
+(178, 'St.vincent/grenadines'),
+(179, 'Sudan'),
+(180, 'Surinam'),
+(181, 'Swaziland'),
+(182, 'Sweden'),
+(183, 'Switzerland'),
+(184, 'Syria'),
+(185, 'Taiwan'),
+(186, 'Tanzania'),
+(187, 'Thailand'),
+(188, 'Togo'),
+(189, 'Tonga'),
+(190, 'Trinidad & tobago'),
+(191, 'Tuamotu islands'),
+(192, 'Tunisia'),
+(193, 'Turkey'),
+(194, 'Turks & caicos i.'),
+(195, 'Tuvalu island'),
+(196, 'U.k'),
+(197, 'U.k.'),
+(198, 'Uganda'),
+(199, 'United arab emirates'),
+(200, 'Uruguay'),
+(201, 'Usa'),
+(202, 'Usa  hawaii isl.'),
+(203, 'Usa  kauai isl.'),
+(204, 'Usa  lanai isl.'),
+(205, 'Usa  maui isl.'),
+(206, 'Usa  molokai isl.'),
+(207, 'Usa  oahu isl.'),
+(208, 'Usa (florida'),
+(209, 'Uzbekistan'),
+(210, 'Vanuatu'),
+(211, 'Venezuela'),
+(212, 'Viet nam'),
+(213, 'Virgin isl.'),
+(214, 'Wales'),
+(215, 'Wallis & futuna'),
+(216, 'Yugoslavia'),
+(217, 'Zaire'),
+(218, 'Zambia'),
+(219, 'Zimbabwe');
 
 -- --------------------------------------------------------
 
@@ -3202,7 +6187,9 @@ CREATE TABLE `socio` (
 --
 
 INSERT INTO `socio` (`tipoid`, `numeroid`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `contrasena`, `genero`, `pais_nacimiento`, `pais_residencia`, `departamento`, `ciudad`, `direccion`, `millas`, `tarjeta_credito`) VALUES
-('2', 1152707477, 'juan pablo', 'ospina herrera', '1997-02-09', 'jpoh97@gmail.com', 'jpoh97', 'M', 12, 234, 1, 1, 'carrera 72', 5368000, 1.234567890123456e15);
+('1', 809, 'William', 'Hincapie', '2016-06-03', 'daemonsoft@gmail.com', 'holis', 'M', 1, 3, 1, 1534, 'Calle 38 Sur 43 58', 0, NULL),
+('1', 809809, 'William', 'Hincapie', '2016-06-01', 'daemonsoft@gmail.com', 'holis', NULL, 1, 2, 2, 2650, 'Calle 38 Sur 43 58', 0, NULL),
+('2', 1152707477, 'juan pablo', 'ospina herrera', '2016-06-09', 'daemonsoft@gmail.com', 'holis', 'M', 43, 38, 1, 206, 'carrera 72', 9228000, 9.87987987987988e15);
 
 -- --------------------------------------------------------
 
@@ -3245,7 +6232,9 @@ CREATE TABLE `tiquete` (
 --
 
 INSERT INTO `tiquete` (`vuelo`, `asiento`, `precio`, `tipoid`, `numeroid`, `tipo`, `codigo`, `checkedin`) VALUES
-(1, 1, 360000, '3', 111222, 2, 'D4BF3E', 0);
+(1, 1, 360000, '2', 1152707477, 1, '00827B', 0),
+(1, 2, 180000, '2', 1152707477, 1, '436484', 0),
+(2, 8, 4500000, '2', 1152707477, 1, '0BA656', 0);
 
 -- --------------------------------------------------------
 
@@ -3265,8 +6254,8 @@ CREATE TABLE `vuelo` (
 --
 
 INSERT INTO `vuelo` (`id`, `aeropuerto_salida`, `aeropuerto_llegada`, `fecha`) VALUES
-(1, 2423, 2394, '2016-06-13 00:00:00'),
-(2, 2394, 2423, '2016-06-14 00:00:00');
+(1, 2423, 2394, '2016-06-09 00:00:00'),
+(2, 2394, 2423, '2016-06-10 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -3465,2991 +6454,3 @@ ALTER TABLE `vueloxcabina`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-INSERT INTO pais(id,nombre) values( '1', 'Afghanistan');
-INSERT INTO pais(id,nombre) values( '2', 'Albania');
-INSERT INTO pais(id,nombre) values( '3', 'Algeria');
-INSERT INTO pais(id,nombre) values( '4', 'Angola');
-INSERT INTO pais(id,nombre) values( '5', 'Anguilla isl.');
-INSERT INTO pais(id,nombre) values( '6', 'Antilles');
-INSERT INTO pais(id,nombre) values( '7', 'Argentina');
-INSERT INTO pais(id,nombre) values( '8', 'Aruba');
-INSERT INTO pais(id,nombre) values( '9', 'Australia');
-INSERT INTO pais(id,nombre) values( '10', 'Austria');
-INSERT INTO pais(id,nombre) values( '11', 'Bahamas');
-INSERT INTO pais(id,nombre) values( '12', 'Bahrain');
-INSERT INTO pais(id,nombre) values( '13', 'Bangladesh');
-INSERT INTO pais(id,nombre) values( '14', 'Barbados');
-INSERT INTO pais(id,nombre) values( '15', 'Belgium');
-INSERT INTO pais(id,nombre) values( '16', 'Belize');
-INSERT INTO pais(id,nombre) values( '17', 'Benin');
-INSERT INTO pais(id,nombre) values( '18', 'Bhutan');
-INSERT INTO pais(id,nombre) values( '19', 'Bolivia');
-INSERT INTO pais(id,nombre) values( '20', 'Bophuthatswana');
-INSERT INTO pais(id,nombre) values( '21', 'Bosnia-hercegovina');
-INSERT INTO pais(id,nombre) values( '22', 'Botswana');
-INSERT INTO pais(id,nombre) values( '23', 'Brazil');
-INSERT INTO pais(id,nombre) values( '24', 'Brunei');
-INSERT INTO pais(id,nombre) values( '25', 'Bulgaria');
-INSERT INTO pais(id,nombre) values( '26', 'Burkina faso');
-INSERT INTO pais(id,nombre) values( '27', 'Burundi');
-INSERT INTO pais(id,nombre) values( '28', 'Cambodia');
-INSERT INTO pais(id,nombre) values( '29', 'Cameroon');
-INSERT INTO pais(id,nombre) values( '30', 'Canada');
-INSERT INTO pais(id,nombre) values( '31', 'Canary islands');
-INSERT INTO pais(id,nombre) values( '32', 'Cape verde islands');
-INSERT INTO pais(id,nombre) values( '33', 'Cayman islands');
-INSERT INTO pais(id,nombre) values( '34', 'Central african rep.');
-INSERT INTO pais(id,nombre) values( '35', 'Chad');
-INSERT INTO pais(id,nombre) values( '36', 'Chile');
-INSERT INTO pais(id,nombre) values( '37', 'China');
-INSERT INTO pais(id,nombre) values( '38', 'Colombia');
-INSERT INTO pais(id,nombre) values( '39', 'Comoros islands');
-INSERT INTO pais(id,nombre) values( '40', 'Congo');
-INSERT INTO pais(id,nombre) values( '41', 'Cook islands');
-INSERT INTO pais(id,nombre) values( '42', 'Corse isl.');
-INSERT INTO pais(id,nombre) values( '43', 'Costa rica');
-INSERT INTO pais(id,nombre) values( '44', 'Croatia');
-INSERT INTO pais(id,nombre) values( '45', 'Cuba');
-INSERT INTO pais(id,nombre) values( '46', 'Cyprus');
-INSERT INTO pais(id,nombre) values( '47', 'Czech republic');
-INSERT INTO pais(id,nombre) values( '48', 'Denmark');
-INSERT INTO pais(id,nombre) values( '49', 'Dominica');
-INSERT INTO pais(id,nombre) values( '50', 'Dominican republic');
-INSERT INTO pais(id,nombre) values( '51', 'East timor');
-INSERT INTO pais(id,nombre) values( '52', 'Ecuador');
-INSERT INTO pais(id,nombre) values( '53', 'Egypt');
-INSERT INTO pais(id,nombre) values( '54', 'El salvador');
-INSERT INTO pais(id,nombre) values( '55', 'Engalnd');
-INSERT INTO pais(id,nombre) values( '56', 'England');
-INSERT INTO pais(id,nombre) values( '57', 'Equatorial guinea');
-INSERT INTO pais(id,nombre) values( '58', 'Estonia');
-INSERT INTO pais(id,nombre) values( '59', 'Ethiopia');
-INSERT INTO pais(id,nombre) values( '60', 'Falkland islands');
-INSERT INTO pais(id,nombre) values( '61', 'Faroe isl.');
-INSERT INTO pais(id,nombre) values( '62', 'Fiji');
-INSERT INTO pais(id,nombre) values( '63', 'Finland');
-INSERT INTO pais(id,nombre) values( '64', 'Former macedonia');
-INSERT INTO pais(id,nombre) values( '65', 'France');
-INSERT INTO pais(id,nombre) values( '66', 'French guyana');
-INSERT INTO pais(id,nombre) values( '67', 'French polynesia');
-INSERT INTO pais(id,nombre) values( '68', 'Gabon');
-INSERT INTO pais(id,nombre) values( '69', 'Galapagos i. (ecuador');
-INSERT INTO pais(id,nombre) values( '70', 'Gambia');
-INSERT INTO pais(id,nombre) values( '71', 'Georgia');
-INSERT INTO pais(id,nombre) values( '72', 'Germany');
-INSERT INTO pais(id,nombre) values( '73', 'Ghana');
-INSERT INTO pais(id,nombre) values( '74', 'Gibraltar');
-INSERT INTO pais(id,nombre) values( '75', 'Greece');
-INSERT INTO pais(id,nombre) values( '76', 'Greenland');
-INSERT INTO pais(id,nombre) values( '77', 'Grenada');
-INSERT INTO pais(id,nombre) values( '78', 'Guatemala');
-INSERT INTO pais(id,nombre) values( '79', 'Guernsey isld.');
-INSERT INTO pais(id,nombre) values( '80', 'Guinea');
-INSERT INTO pais(id,nombre) values( '81', 'Guinea bissau');
-INSERT INTO pais(id,nombre) values( '82', 'Guyana');
-INSERT INTO pais(id,nombre) values( '83', 'Haiti');
-INSERT INTO pais(id,nombre) values( '84', 'Honduras');
-INSERT INTO pais(id,nombre) values( '85', 'Hong kong');
-INSERT INTO pais(id,nombre) values( '86', 'Hungary');
-INSERT INTO pais(id,nombre) values( '87', 'Iceland');
-INSERT INTO pais(id,nombre) values( '88', 'India');
-INSERT INTO pais(id,nombre) values( '89', 'Indonesia');
-INSERT INTO pais(id,nombre) values( '90', 'Iran');
-INSERT INTO pais(id,nombre) values( '91', 'Iraq');
-INSERT INTO pais(id,nombre) values( '92', 'Ireland');
-INSERT INTO pais(id,nombre) values( '93', 'Israel');
-INSERT INTO pais(id,nombre) values( '94', 'Italy');
-INSERT INTO pais(id,nombre) values( '95', 'Ivory coast');
-INSERT INTO pais(id,nombre) values( '96', 'Jamaica');
-INSERT INTO pais(id,nombre) values( '97', 'Japan');
-INSERT INTO pais(id,nombre) values( '98', 'Johnston atoll');
-INSERT INTO pais(id,nombre) values( '99', 'Jordan');
-INSERT INTO pais(id,nombre) values( '100', 'Kazakhstan');
-INSERT INTO pais(id,nombre) values( '101', 'Kenya');
-INSERT INTO pais(id,nombre) values( '102', 'Kiribati');
-INSERT INTO pais(id,nombre) values( '103', 'Korea');
-INSERT INTO pais(id,nombre) values( '104', 'Kuwait');
-INSERT INTO pais(id,nombre) values( '105', 'Laos');
-INSERT INTO pais(id,nombre) values( '106', 'Lebanon');
-INSERT INTO pais(id,nombre) values( '107', 'Leeward islands');
-INSERT INTO pais(id,nombre) values( '108', 'Lesotho');
-INSERT INTO pais(id,nombre) values( '109', 'Liberia');
-INSERT INTO pais(id,nombre) values( '110', 'Libya');
-INSERT INTO pais(id,nombre) values( '111', 'Luxemburg');
-INSERT INTO pais(id,nombre) values( '112', 'Macau');
-INSERT INTO pais(id,nombre) values( '113', 'Madagascar');
-INSERT INTO pais(id,nombre) values( '114', 'Madeira');
-INSERT INTO pais(id,nombre) values( '115', 'Malawi');
-INSERT INTO pais(id,nombre) values( '116', 'Malaysia');
-INSERT INTO pais(id,nombre) values( '117', 'Maldives');
-INSERT INTO pais(id,nombre) values( '118', 'Mali');
-INSERT INTO pais(id,nombre) values( '119', 'Malta');
-INSERT INTO pais(id,nombre) values( '120', 'Mariana islands');
-INSERT INTO pais(id,nombre) values( '121', 'Marshall islands');
-INSERT INTO pais(id,nombre) values( '122', 'Mauritania');
-INSERT INTO pais(id,nombre) values( '123', 'Mauritius');
-INSERT INTO pais(id,nombre) values( '124', 'Mayotte island');
-INSERT INTO pais(id,nombre) values( '125', 'Mexico');
-INSERT INTO pais(id,nombre) values( '126', 'Micronesia');
-INSERT INTO pais(id,nombre) values( '127', 'Midway island');
-INSERT INTO pais(id,nombre) values( '128', 'Moldova');
-INSERT INTO pais(id,nombre) values( '129', 'Mongolia');
-INSERT INTO pais(id,nombre) values( '130', 'Montserrat island');
-INSERT INTO pais(id,nombre) values( '131', 'Morocco');
-INSERT INTO pais(id,nombre) values( '132', 'Mozambique');
-INSERT INTO pais(id,nombre) values( '133', 'Myanmar');
-INSERT INTO pais(id,nombre) values( '134', 'Nepal');
-INSERT INTO pais(id,nombre) values( '135', 'Netherlands');
-INSERT INTO pais(id,nombre) values( '136', 'New caledonia');
-INSERT INTO pais(id,nombre) values( '137', 'New zealand');
-INSERT INTO pais(id,nombre) values( '138', 'Nicaragua');
-INSERT INTO pais(id,nombre) values( '139', 'Niger');
-INSERT INTO pais(id,nombre) values( '140', 'Nigeria');
-INSERT INTO pais(id,nombre) values( '141', 'North ireland');
-INSERT INTO pais(id,nombre) values( '142', 'Norway');
-INSERT INTO pais(id,nombre) values( '143', 'Oman');
-INSERT INTO pais(id,nombre) values( '144', 'Pakistan');
-INSERT INTO pais(id,nombre) values( '145', 'Palau island');
-INSERT INTO pais(id,nombre) values( '146', 'Panama');
-INSERT INTO pais(id,nombre) values( '147', 'Papua new guinea');
-INSERT INTO pais(id,nombre) values( '148', 'Paraguay');
-INSERT INTO pais(id,nombre) values( '149', 'Peru');
-INSERT INTO pais(id,nombre) values( '150', 'Philippines');
-INSERT INTO pais(id,nombre) values( '151', 'Phoenix isl.');
-INSERT INTO pais(id,nombre) values( '152', 'Poland');
-INSERT INTO pais(id,nombre) values( '153', 'Portugal');
-INSERT INTO pais(id,nombre) values( '154', 'Puerto rico');
-INSERT INTO pais(id,nombre) values( '155', 'Qatar');
-INSERT INTO pais(id,nombre) values( '156', 'Reunion island');
-INSERT INTO pais(id,nombre) values( '157', 'Romania');
-INSERT INTO pais(id,nombre) values( '158', 'Russia');
-INSERT INTO pais(id,nombre) values( '159', 'Rwanda');
-INSERT INTO pais(id,nombre) values( '160', 'Samoa');
-INSERT INTO pais(id,nombre) values( '161', 'Sao tome & principe');
-INSERT INTO pais(id,nombre) values( '162', 'Saudi arabia');
-INSERT INTO pais(id,nombre) values( '163', 'Scotland');
-INSERT INTO pais(id,nombre) values( '164', 'Senegal');
-INSERT INTO pais(id,nombre) values( '165', 'Seychelles');
-INSERT INTO pais(id,nombre) values( '166', 'Sierra leone');
-INSERT INTO pais(id,nombre) values( '167', 'Singapore');
-INSERT INTO pais(id,nombre) values( '168', 'Slovakia');
-INSERT INTO pais(id,nombre) values( '169', 'Slovenia');
-INSERT INTO pais(id,nombre) values( '170', 'Somalia');
-INSERT INTO pais(id,nombre) values( '171', 'South africa');
-INSERT INTO pais(id,nombre) values( '172', 'Spain');
-INSERT INTO pais(id,nombre) values( '173', 'Spanish north africa');
-INSERT INTO pais(id,nombre) values( '174', 'Sri lanka');
-INSERT INTO pais(id,nombre) values( '175', 'St. kitts & nevis');
-INSERT INTO pais(id,nombre) values( '176', 'St. lucia island');
-INSERT INTO pais(id,nombre) values( '177', 'St. pierre & miquelon');
-INSERT INTO pais(id,nombre) values( '178', 'St.vincent/grenadines');
-INSERT INTO pais(id,nombre) values( '179', 'Sudan');
-INSERT INTO pais(id,nombre) values( '180', 'Surinam');
-INSERT INTO pais(id,nombre) values( '181', 'Swaziland');
-INSERT INTO pais(id,nombre) values( '182', 'Sweden');
-INSERT INTO pais(id,nombre) values( '183', 'Switzerland');
-INSERT INTO pais(id,nombre) values( '184', 'Syria');
-INSERT INTO pais(id,nombre) values( '185', 'Taiwan');
-INSERT INTO pais(id,nombre) values( '186', 'Tanzania');
-INSERT INTO pais(id,nombre) values( '187', 'Thailand');
-INSERT INTO pais(id,nombre) values( '188', 'Togo');
-INSERT INTO pais(id,nombre) values( '189', 'Tonga');
-INSERT INTO pais(id,nombre) values( '190', 'Trinidad & tobago');
-INSERT INTO pais(id,nombre) values( '191', 'Tuamotu islands');
-INSERT INTO pais(id,nombre) values( '192', 'Tunisia');
-INSERT INTO pais(id,nombre) values( '193', 'Turkey');
-INSERT INTO pais(id,nombre) values( '194', 'Turks & caicos i.');
-INSERT INTO pais(id,nombre) values( '195', 'Tuvalu island');
-INSERT INTO pais(id,nombre) values( '196', 'U.k');
-INSERT INTO pais(id,nombre) values( '197', 'U.k.');
-INSERT INTO pais(id,nombre) values( '198', 'Uganda');
-INSERT INTO pais(id,nombre) values( '199', 'United arab emirates');
-INSERT INTO pais(id,nombre) values( '200', 'Uruguay');
-INSERT INTO pais(id,nombre) values( '201', 'Usa');
-INSERT INTO pais(id,nombre) values( '202', 'Usa  hawaii isl.');
-INSERT INTO pais(id,nombre) values( '203', 'Usa  kauai isl.');
-INSERT INTO pais(id,nombre) values( '204', 'Usa  lanai isl.');
-INSERT INTO pais(id,nombre) values( '205', 'Usa  maui isl.');
-INSERT INTO pais(id,nombre) values( '206', 'Usa  molokai isl.');
-INSERT INTO pais(id,nombre) values( '207', 'Usa  oahu isl.');
-INSERT INTO pais(id,nombre) values( '208', 'Usa (florida');
-INSERT INTO pais(id,nombre) values( '209', 'Uzbekistan');
-INSERT INTO pais(id,nombre) values( '210', 'Vanuatu');
-INSERT INTO pais(id,nombre) values( '211', 'Venezuela');
-INSERT INTO pais(id,nombre) values( '212', 'Viet nam');
-INSERT INTO pais(id,nombre) values( '213', 'Virgin isl.');
-INSERT INTO pais(id,nombre) values( '214', 'Wales');
-INSERT INTO pais(id,nombre) values( '215', 'Wallis & futuna');
-INSERT INTO pais(id,nombre) values( '216', 'Yugoslavia');
-INSERT INTO pais(id,nombre) values( '217', 'Zaire');
-INSERT INTO pais(id,nombre) values( '218', 'Zambia');
-INSERT INTO pais(id,nombre) values( '219', 'Zimbabwe');
-
-
-
-
-
-
-INSERT INTO ciudad(id,nombre,estado) values( '1', 'Aachen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2', 'Aalborg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '3', 'Aarhus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '4', 'Abadan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '5', 'Abakan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '6', 'Abbotsford', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '7', 'Abeche', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '8', 'Aberdeen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '9', 'Abha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '10', 'Abidjan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '11', 'Abilene', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '12', 'Abu dhabi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '13', 'Abu simbel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '14', 'Abuja', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '15', 'Acapulco', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '16', 'Acarigua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '17', 'Accra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '18', 'Adak island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '19', 'Adana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '20', 'Addis ababa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '21', 'Adelaide', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '22', 'Adrar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '23', 'Afyon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '24', 'Agadez', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '25', 'Agadir', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '26', 'Agana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '27', 'Agartala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '28', 'Agatti island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '29', 'Agen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '30', 'Aggeneys', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '31', 'Agra', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '32', 'Agrinion', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '33', 'Aguadilla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '34', 'Aguascalientes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '35', 'Ahmedabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '36', 'Ahwaz', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '37', 'Aioun el atrouss', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '38', 'Aitutaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '39', 'Aix-les-milles', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '40', 'Aizwal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '41', 'Ajaccio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '42', 'Akita', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '43', 'Akola', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '44', 'Akron', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '45', 'Akrotiri', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '46', 'Aktyubinsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '47', 'Akure', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '48', 'Akureyri', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '49', 'Al hociema', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '50', 'Al-ahsa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '51', 'Al-jouf', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '52', 'Alamogordo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '53', 'Albany', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '54', 'Albenga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '55', 'Albi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '56', 'Albury', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '57', 'Aldan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '58', 'Aleppo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '59', 'Alert', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '60', 'Alesund', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '61', 'Alexander bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '62', 'Alexandra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '63', 'Alexandria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '64', 'Alexandroupolis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '65', 'Alghero', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '66', 'Algier', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '67', 'Alicante', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '68', 'Alice', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '69', 'Alice springs', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '70', 'Alice town', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '71', 'Allahabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '72', 'Alma-ata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '73', 'Almeria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '74', 'Alofi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '75', 'Alor setar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '76', 'Alta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '77', 'Alta floresta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '78', 'Altamira', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '79', 'Altenburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '80', 'Altenrhein', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '81', 'Alto palena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '82', 'Altoona', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '83', 'Altus', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '84', 'Amami', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '85', 'Amarillo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '86', 'Ambato', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '87', 'Amberley', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '88', 'Ambilobe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '89', 'Ambon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '90', 'Amilcar cabral', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '91', 'Amman', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '92', 'Amritsar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '93', 'Amsterdam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '94', 'Anaa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '95', 'Anaco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '96', 'Analalava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '97', 'Anchorage', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '98', 'Ancud', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '99', 'Andahuaylas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '100', 'Andapa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '101', 'Andersen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '102', 'Andoya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '103', 'Andravida', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '104', 'Andros town', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '105', 'Angelholm', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '106', 'Angouleme', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '107', 'Anjouan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '108', 'Ankara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '109', 'Annaba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '110', 'Annecy', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '111', 'Annemasse', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '112', 'Annette island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '113', 'Anniston', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '114', 'Anta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '115', 'Antalaha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '116', 'Antalya', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '117', 'Antananarivo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '118', 'Antigua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '119', 'Antofagasta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '120', 'Antsiranana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '121', 'Antsohihy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '122', 'Antwerp', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '123', 'Aomori', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '124', 'Apolo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '125', 'Aqaba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '126', 'Aracaju', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '127', 'Aracatuba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '128', 'Arad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '129', 'Arar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '130', 'Araracuara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '131', 'Arauca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '132', 'Arcachon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '133', 'Ardmore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '134', 'Arequipa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '135', 'Arica', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '136', 'Armenia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '137', 'Armstrong', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '138', 'Arnsberg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '139', 'Artigas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '140', 'Arusha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '141', 'Arutua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '142', 'Arvidsjaur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '143', 'Asahikawa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '144', 'Ashkhabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '145', 'Astrakhan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '146', 'Asuncion', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '147', 'Aswan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '148', 'Atar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '149', 'Athens', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '150', 'Atikokan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '151', 'Atlanta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '152', 'Atlantic city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '153', 'Aubenas-vals-lanas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '154', 'Auckland', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '155', 'Augsburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '156', 'Augusta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '157', 'Aurangabad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '158', 'Aurillac', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '159', 'Austin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '160', 'Auxerre', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '161', 'Avalon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '162', 'Avarua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '163', 'Aviano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '164', 'Avignon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '165', 'Aviles', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '166', 'Ayacucho', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '167', 'Babelthuap', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '168', 'Bacau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '169', 'Bacolod', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '170', 'Badajoz', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '171', 'Baden-baden', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '172', 'Bafoussam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '173', 'Bage', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '174', 'Baghdad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '175', 'Baghdogra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '176', 'Bagotville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '177', 'Baguio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '178', 'Bahar dar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '179', 'Bahia blanca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '180', 'Bahia solano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '181', 'Bahias dehuatulco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '182', 'Bahrain', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '183', 'Baia mare', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '184', 'Baie comeau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '185', 'Bakel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '186', 'Baker lake', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '187', 'Bakersfield', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '188', 'Bakhtaran', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '189', 'Baku', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '190', 'Balikesir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '191', 'Balikpapan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '192', 'Balmaceda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '193', 'Baltimore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '194', 'Balurghat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '195', 'Bamako', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '196', 'Bambari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '197', 'Bamenda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '198', 'Banak', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '199', 'Banda aceh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '200', 'Bandar abbas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '201', 'Bandar lengeh', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '202', 'Bandar mahshahr', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '203', 'Bandirma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '204', 'Bandoundu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '205', 'Bandung', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '206', 'Bangalore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '207', 'Bangassou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '208', 'Bangkok', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '209', 'Bangor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '210', 'Bangui', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '211', 'Banjarmasin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '212', 'Banjul', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '213', 'Baracoa playa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '214', 'Barahona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '215', 'Barcelona', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '216', 'Bardufoss', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '217', 'Bari', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '218', 'Barinas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '219', 'Barking sands', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '220', 'Barnaul', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '221', 'Baroda', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '222', 'Barquisimeto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '223', 'Barrancabermeja', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '224', 'Barranquilla', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '225', 'Barrow', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '226', 'Barrow island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '227', 'Barter island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '228', 'Basrah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '229', 'Basse terre', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '230', 'Bastia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '231', 'Bata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '232', 'Batam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '233', 'Batman', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '234', 'Baton rouge', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '235', 'Batouri', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '236', 'Batsfjord', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '237', 'Baudette', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '238', 'Bauru', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '239', 'Bautzen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '240', 'Bayamo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '241', 'Bayreuth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '242', 'Beaufort', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '243', 'Beaumont', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '244', 'Beauvais', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '245', 'Bedford', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '246', 'Beer-sheba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '247', 'Beijing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '248', 'Beira', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '249', 'Beirut', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '250', 'Bejaja', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '251', 'Belem', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '252', 'Belfast', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '253', 'Belgaum', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '254', 'Belize city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '255', 'Belleville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '256', 'Bellingham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '257', 'Belo horizonte', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '258', 'Benbecula', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '259', 'Benghazi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '260', 'Bengkulu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '261', 'Benguela', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '262', 'Benin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '263', 'Beograd', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '264', 'Berbera', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '265', 'Berberati', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '266', 'Bergamo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '267', 'Bergen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '268', 'Bergerac', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '269', 'Berlin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '270', 'Bermejo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '271', 'Bern', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '272', 'Besalampy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '273', 'Bethel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '274', 'Bettles', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '275', 'Beziers', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '276', 'Bhairawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '277', 'Bhaunagar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '278', 'Bhopal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '279', 'Bhubaneswar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '280', 'Bhuj', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '281', 'Biak', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '282', 'Biarritz-bayonne', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '283', 'Biggin hill', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '284', 'Bilaspur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '285', 'Bilbao', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '286', 'Billund', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '287', 'Biloxi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '288', 'Bima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '289', 'Bintulu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '290', 'Birao', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '291', 'Biratnagar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '292', 'Birjand', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '293', 'Birmingham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '294', 'Bisha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '295', 'Bishkek', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '296', 'Bisho', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '297', 'Biskra', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '298', 'Bissau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '299', 'Bitam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '300', 'Blackbushe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '301', 'Blackpool', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '302', 'Blagoveschensk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '303', 'Blantyre', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '304', 'Bloemfontein', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '305', 'Bluefields', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '306', 'Blytheville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '307', 'Boa vista', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '308', 'Bobo-dioulasso', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '309', 'Boca raton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '310', 'Bocas del toro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '311', 'Bodoe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '312', 'Bogota', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '313', 'Boise', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '314', 'Bologna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '315', 'Bolzano', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '316', 'Bom jesus da lapa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '317', 'Bombay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '318', 'Bora bora', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '319', 'Bordeaux', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '320', 'Borkum', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '321', 'Borlange', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '322', 'Boston', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '323', 'Bouake', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '324', 'Bouar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '325', 'Bourg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '326', 'Bourgas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '327', 'Bourges', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '328', 'Bournemouth', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '329', 'Bradshaw field', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '330', 'Braganca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '331', 'Brandon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '332', 'Brasilia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '333', 'Bratislava', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '334', 'Bratsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '335', 'Braunschweig', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '336', 'Brazzaville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '337', 'Bremen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '338', 'Bremerhaven', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '339', 'Brest', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '340', 'Bria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '341', 'Bridgetown', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '342', 'Brindisi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '343', 'Brisbane', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '344', 'Bristol', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '345', 'Brive', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '346', 'Brize norton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '347', 'Bronnoysund', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '348', 'Broughton island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '349', 'Brownsville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '350', 'Brueggen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '351', 'Brunei', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '352', 'Brussels', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '353', 'Bryan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '354', 'Bryansk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '355', 'Bucaramanga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '356', 'Bucharest', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '357', 'Buckley', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '358', 'Budapest', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '359', 'Buenaventura', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '360', 'Buenos aires', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '361', 'Buffalo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '362', 'Buffalo narrows', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '363', 'Bujumbura', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '364', 'Bukavu/kavumu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '365', 'Bukhara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '366', 'Bulawayo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '367', 'Bunia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '368', 'Burbank', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '369', 'Burlington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '370', 'Bursa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '371', 'Burwash', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '372', 'Bush field', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '373', 'Bushehr', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '374', 'Cabinda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '375', 'Caen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '376', 'Cagliari', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '377', 'Cairns', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '378', 'Cairo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '379', 'Calabar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '380', 'Calais', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '381', 'Calama', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '382', 'Calcutta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '383', 'Calexico', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '384', 'Calgary', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '385', 'Cali', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '386', 'Calicut', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '387', 'Calvi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '388', 'Camaguey', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '389', 'Cambridge', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '390', 'Cambridge bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '391', 'Camden', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '392', 'Camiri', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '393', 'Camp springs', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '394', 'Campbell river', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '395', 'Campeche', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '396', 'Campinas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '397', 'Campo grande', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '398', 'Campos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '399', 'Canaima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '400', 'Canberra', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '401', 'Cancun', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '402', 'Canefield', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '403', 'Cannes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '404', 'Canouan island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '405', 'Canton island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '406', 'Cap haitien', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '407', 'Cap skiring', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '408', 'Cape dorset', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '409', 'Cape lisburne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '410', 'Cape newenham', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '411', 'Cape town', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '412', 'Caracas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '413', 'Caransebes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '414', 'Caravelas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '415', 'Carcassonne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '416', 'Cardiff', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '417', 'Caribou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '418', 'Carlisle', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '419', 'Carlsbad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '420', 'Carolina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '421', 'Cartagena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '422', 'Carupano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '423', 'Casablanca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '424', 'Cascavel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '425', 'Casper', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '426', 'Castlegar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '427', 'Castres', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '428', 'Castries', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '429', 'Catamarca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '430', 'Catania', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '431', 'Caxias do sul', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '432', 'Cayenne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '433', 'Cayman barac', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '434', 'Cayo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '435', 'Cazombo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '436', 'Cebu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '437', 'Cedar city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '438', 'Celle', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '439', 'Chachapoyas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '440', 'Chah bahar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '441', 'Chaiten', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '442', 'Chalon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '443', 'Chambery', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '444', 'Chandigarh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '445', 'Changcha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '446', 'Changuinola', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '447', 'Chania', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '448', 'Chapeco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '449', 'Chapleau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '450', 'Charleroi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '451', 'Charleston', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '452', 'Charlieville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '453', 'Charlo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '454', 'Charlotte', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '455', 'Charlottetown', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '456', 'Chateauroux', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '457', 'Chatham', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '458', 'Chatham island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '459', 'Chattanooga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '460', 'Cheju', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '461', 'Chelyabinsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '462', 'Chengdu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '463', 'Cherbourg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '464', 'Cherry point', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '465', 'Chetumal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '466', 'Cheyenne', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '467', 'Chiayi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '468', 'Chicago', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '469', 'Chiclayo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '470', 'Chico', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '471', 'Chicopee falls', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '472', 'Chihuahua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '473', 'Childress', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '474', 'Chile chico', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '475', 'Chilliwack', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '476', 'Chimbote', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '477', 'Chimkent', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '478', 'China', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '479', 'Chinmen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '480', 'Chios', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '481', 'Chiredzi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '482', 'Chita', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '483', 'Chitato', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '484', 'Chitose', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '485', 'Chittagong', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '486', 'Cholet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '487', 'Chongqing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '488', 'Christchurch', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '489', 'Chub cay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '490', 'Chung', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '491', 'Churchill', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '492', 'Chuuk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '493', 'Ciego de avila', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '494', 'Cienfuegos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '495', 'Cilacap', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '496', 'Cincinnati', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '497', 'Cirebon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '498', 'Ciudad bolivar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '499', 'Ciudad del carmen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '500', 'Ciudad juarez', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '501', 'Ciudad mante', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '502', 'Ciudad obregon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '503', 'Ciudad victoria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '504', 'Clermont ferrand', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '505', 'Cleveland', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '506', 'Clovis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '507', 'Cluj-napoca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '508', 'Clyde river', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '509', 'Coban', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '510', 'Cobija', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '511', 'Coca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '512', 'Cochabamba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '513', 'Cockburn town', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '514', 'Coco beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '515', 'Coffs harbour', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '516', 'Cognac', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '517', 'Coimbatore', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '518', 'Cold bay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '519', 'Cold lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '520', 'Colima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '521', 'College station', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '522', 'Colmar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '523', 'Cologne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '524', 'Colombia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '525', 'Colombo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '526', 'Colombus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '527', 'Colonia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '528', 'Colorado springs', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '529', 'Coltishall', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '530', 'Columbia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '531', 'Columbus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '532', 'Comodoro rivadavia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '533', 'Comox', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '534', 'Conceicao do araguaia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '535', 'Concepcion', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '536', 'Conception', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '537', 'Concordia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '538', 'Condoto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '539', 'Coningsby', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '540', 'Connaught', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '541', 'Conroe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '542', 'Constanta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '543', 'Constantine', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '544', 'Cooch-behar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '545', 'Coolangatta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '546', 'Copenhagen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '547', 'Copiapo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '548', 'Coppermine', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '549', 'Coral harbour', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '550', 'Cordoba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '551', 'Cordova', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '552', 'Cork', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '553', 'Coro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '554', 'Coronation', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '555', 'Corozal', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '556', 'Corpus christi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '557', 'Corrientes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '558', 'Corumba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '559', 'Coto 47', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '560', 'Cotonou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '561', 'Cotulla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '562', 'Coventry', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '563', 'Coxs bazar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '564', 'Coyhaique', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '565', 'Cozumel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '566', 'Craiova', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '567', 'Cranbrook', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '568', 'Creil', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '569', 'Crestview', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '570', 'Crotone', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '571', 'Cruiziro do sul', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '572', 'Cuamba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '573', 'Cucuta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '574', 'Cuddapah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '575', 'Cuenca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '576', 'Cuernavaca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '577', 'Cuiaba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '578', 'Culiacan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '579', 'Cumana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '580', 'Curitiba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '581', 'Cutbank', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '582', 'Cuzco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '583', 'Dakar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '584', 'Dalaman', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '585', 'Dalhart', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '586', 'Dalian', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '587', 'Dallas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '588', 'Dallas-fort worth', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '589', 'Daloa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '590', 'Daman', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '591', 'Damascus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '592', 'Dammam', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '593', 'Danang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '594', 'Dar es salaam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '595', 'Dauphin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '596', 'David', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '597', 'Dawson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '598', 'Dawson creek', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '599', 'Dayton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '600', 'De kooy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '601', 'Dead mans cay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '602', 'Deadhorse', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '603', 'Dease lake', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '604', 'Deauville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '605', 'Debrecen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '606', 'Decimomannu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '607', 'Deer lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '608', 'Dehra dun', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '609', 'Deire zor', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '610', 'Del bajio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '611', 'Del rio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '612', 'Delhi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '613', 'Delta junction', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '614', 'Denizli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '615', 'Denpasar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '616', 'Denver', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '617', 'Deridder', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '618', 'Des moines', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '619', 'Desroches', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '620', 'Detroit', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '621', 'Dhahran', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '622', 'Dhaka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '623', 'Dhanbad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '624', 'Dijon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '625', 'Dili', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '626', 'Dillingham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '627', 'Dinard', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '628', 'Dire dawa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '629', 'Diyabakir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '630', 'Djanet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '631', 'Djerba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '632', 'Dnepropetrovsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '633', 'Dodoma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '634', 'Doha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '635', 'Dole', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '636', 'Dominica', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '637', 'Donaueschingen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '638', 'Donetsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '639', 'Dongola', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '640', 'Dortmund', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '641', 'Dothan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '642', 'Douala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '643', 'Douglas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '644', 'Dover', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '645', 'Dresden', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '646', 'Dryden', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '647', 'Dubai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '648', 'Dubbo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '649', 'Dublin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '650', 'Dubrovnik', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '651', 'Duesseldorf', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '652', 'Duluth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '653', 'Dumaguete', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '654', 'Dumai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '655', 'Dundee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '656', 'Dunedin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '657', 'Dunhuang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '658', 'Durango', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '659', 'Durban', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '660', 'Dushanbe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '661', 'Dzaoudzi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '662', 'Dzhezkazgan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '663', 'Eagle pass', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '664', 'Earlton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '665', 'East london', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '666', 'East midlands', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '667', 'Easter island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '668', 'Ech-cheliff', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '669', 'Edinburgh', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '670', 'Edmonton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '671', 'Edson', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '672', 'Edwards afb', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '673', 'Egilsstadir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '674', 'Eindhoven', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '675', 'El bolson', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '676', 'El borma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '677', 'El centro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '678', 'El dorado', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '679', 'El fasher', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '680', 'El golea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '681', 'El maiten', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '682', 'El obeid', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '683', 'El paso', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '684', 'El-baha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '685', 'El-tor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '686', 'Elat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '687', 'Elazig', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '688', 'Eldoret', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '689', 'Elizabeth city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '690', 'Elkins', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '691', 'Ellisras', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '692', 'Emden', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '693', 'Ende', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '694', 'Enid', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '695', 'Eniwetok island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '696', 'Enniskillen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '697', 'Enontekio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '698', 'Enschede', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '699', 'Ensenada', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '700', 'Entebbe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '701', 'Enugu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '702', 'Epinal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '703', 'Er-rachidia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '704', 'Erfurt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '705', 'Erzincan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '706', 'Erzurum', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '707', 'Esbjerg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '708', 'Eskimo point', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '709', 'Eskisehir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '710', 'Esquel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '711', 'Essen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '712', 'Estevan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '713', 'Eureka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '714', 'Evenes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '715', 'Everett', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '716', 'Exeter', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '717', 'Fagernes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '718', 'Fairbanks', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '719', 'Fairfield', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '720', 'Fairford', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '721', 'Faisalabad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '722', 'Fajardo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '723', 'Fakarava', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '724', 'Faleolo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '725', 'Fallon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '726', 'Falmouth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '727', 'Farafangana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '728', 'Faranah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '729', 'Farmington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '730', 'Farnborough', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '731', 'Faro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '732', 'Faya-largeau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '733', 'Fayetteville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '734', 'Fengnin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '735', 'Fernando do noronha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '736', 'Fez', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '737', 'Fianarantsoa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '738', 'Figari', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '739', 'Fira', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '740', 'Firenze', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '741', 'Flin flon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '742', 'Florence', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '743', 'Florencia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '744', 'Flores (flores isl.)', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '745', 'Florianopolis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '746', 'Floro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '747', 'Foggia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '748', 'Forli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '749', 'Formosa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '750', 'Fort benning', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '751', 'Fort carson', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '752', 'Fort chipewyan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '753', 'Fort dodge', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '754', 'Fort drum', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '755', 'Fort eustis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '756', 'Fort hood', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '757', 'Fort huachuca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '758', 'Fort irwin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '759', 'Fort knox', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '760', 'Fort lauderdale', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '761', 'Fort leavenworth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '762', 'Fort leonardwood', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '763', 'Fort lewis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '764', 'Fort mcmurray', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '765', 'Fort mcpherson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '766', 'Fort myers', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '767', 'Fort nelson', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '768', 'Fort polk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '769', 'Fort resolution', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '770', 'Fort riley', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '771', 'Fort saint john', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '772', 'Fort sill', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '773', 'Fort simpson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '774', 'Fort smith', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '775', 'Fort wainwright', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '776', 'Fort worth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '777', 'Fort yukon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '778', 'Fort-de-france', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '779', 'Fortaleza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '780', 'Foumban', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '781', 'Foz do iguacu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '782', 'Franca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '783', 'Franceville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '784', 'Francisco mendez', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '785', 'Francistown', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '786', 'Frankfurt', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '787', 'Fredericton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '788', 'Freeport', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '789', 'Freetown', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '790', 'Fresno', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '791', 'Friedrichshafen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '792', 'Fuerstenfeldbruck', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '793', 'Fuerteventura', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '794', 'Fujeirah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '795', 'Fukue', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '796', 'Fukuoka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '797', 'Funafuti', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '798', 'Fuzhou', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '799', 'Gaberone', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '800', 'Gabes', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '801', 'Gafsa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '802', 'Gage', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '803', 'Gainesville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '804', 'Galapagos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '805', 'Galena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '806', 'Gallivare', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '807', 'Galoya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '808', 'Galveston', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '809', 'Galway', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '810', 'Gambella', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '811', 'Gander', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '812', 'Gao', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '813', 'Garden city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '814', 'Garissa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '815', 'Garoua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '816', 'Gaspe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '817', 'Gassim', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '818', 'Gatineau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '819', 'Gavle', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '820', 'Gaya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '821', 'Gaziantep', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '822', 'Gbadolite', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '823', 'Gdansk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '824', 'Geilenkirchen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '825', 'Gemena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '826', 'Geneva', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '827', 'Genoa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '828', 'George', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '829', 'Georgetown', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '830', 'Geraldton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '831', 'Gerona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '832', 'Ghadames', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '833', 'Ghardaia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '834', 'Ghat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '835', 'Ghriss', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '836', 'Gibraltar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '837', 'Giebelstadt', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '838', 'Gilgit', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '839', 'Gillam', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '840', 'Gisborne', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '841', 'Gisenyi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '842', 'Gizan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '843', 'Gjoa haven', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '844', 'Glasgow', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '845', 'Glentanner', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '846', 'Goa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '847', 'Godthaab', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '848', 'Goiania', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '849', 'Goldsboro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '850', 'Golfito', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '851', 'Golouchestershire', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '852', 'Goma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '853', 'Gomel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '854', 'Gondar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '855', 'Goose bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '856', 'Gorakhpur', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '857', 'Gore bay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '858', 'Gorna orechovica', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '859', 'Goroka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '860', 'Gorontalo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '861', 'Gotha ost', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '862', 'Gothenborg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '863', 'Governors harbor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '864', 'Graciosa island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '865', 'Gran canaria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '866', 'Granada', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '867', 'Grand forks', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '868', 'Grand rapids', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '869', 'Grande prairie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '870', 'Grandview', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '871', 'Grant county airport', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '872', 'Grants', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '873', 'Graz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '874', 'Great exuma', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '875', 'Great falls', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '876', 'Green bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '877', 'Green island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '878', 'Greenvile', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '879', 'Greenwood', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '880', 'Grenoble', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '881', 'Groningen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '882', 'Grosseto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '883', 'Grottaglie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '884', 'Guadalajara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '885', 'Gualeguaychu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '886', 'Guanaja', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '887', 'Guanare', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '888', 'Guangzhou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '889', 'Guantanamo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '890', 'Guapi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '891', 'Guatemala city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '892', 'Guayana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '893', 'Guayaquil', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '894', 'Guayaramerin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '895', 'Guaymas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '896', 'Guernsey', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '897', 'Guetersloh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '898', 'Guilin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '899', 'Guiria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '900', 'Gulkana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '901', 'Gunung sitoli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '902', 'Guriat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '903', 'Gusau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '904', 'Gwadar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '905', 'Gwalior', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '906', 'Gwert', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '907', 'Haapai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '908', 'Hachijojima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '909', 'Hafr al-batin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '910', 'Hahn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '911', 'Haifa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '912', 'Hail', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '913', 'Hailar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '914', 'Hakodate', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '915', 'Halifax', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '916', 'Hall beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '917', 'Halli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '918', 'Halmstad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '919', 'Hamar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '920', 'Hamburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '921', 'Hamilton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '922', 'Hampton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '923', 'Hana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '924', 'Hanamaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '925', 'Hanau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '926', 'Hangzhou', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '927', 'Hannover', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '928', 'Hanoi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '929', 'Hao island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '930', 'Harare', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '931', 'Harbin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '932', 'Hargeisa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '933', 'Harlingen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '934', 'Harrisburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '935', 'Harrison', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '936', 'Hartford', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '937', 'Hassi-messaoud', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '938', 'Hastings', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '939', 'Hasvik', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '940', 'Hatfield', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '941', 'Haugesund', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '942', 'Havana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '943', 'Havre', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '944', 'Hawarden', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '945', 'Hawthorne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '946', 'Hay river', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '947', 'Hefei', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '948', 'Heho', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '949', 'Heidelberg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '950', 'Helena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '951', 'Helsinki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '952', 'Heraklion', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '953', 'Herat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '954', 'Hermosillo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '955', 'Hewandorra', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '956', 'Hibbing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '957', 'Hickory', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '958', 'Hierro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '959', 'High level', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '960', 'Hilo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '961', 'Hiroshima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '962', 'Ho chi minh city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '963', 'Hobart', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '964', 'Hobbs', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '965', 'Hoedspruit', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '966', 'Hof', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '967', 'Hofn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '968', 'Hokitika', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '969', 'Holguin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '970', 'Hollywood', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '971', 'Holman island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '972', 'Homer', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '973', 'Homestead', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '974', 'Hong kong', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '975', 'Honington', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '976', 'Honolulu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '977', 'Hopkinsville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '978', 'Horta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '979', 'Hotan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '980', 'Houghton lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '981', 'Houlton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '982', 'Houston', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '983', 'Howard', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '984', 'Huahine island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '985', 'Hualien', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '986', 'Huambo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '987', 'Hudiksvall', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '988', 'Hudson bay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '989', 'Hultsfred', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '990', 'Humberside', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '991', 'Hunter aaf', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '992', 'Hurghada', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '993', 'Huron', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '994', 'Husavik', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '995', 'Hwange national park', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '996', 'Hyderabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '997', 'Hyeres', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '998', 'Iasi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '999', 'Ibadan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1000', 'Ibague', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1001', 'Ibiza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1002', 'Iguazu falls', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1003', 'Iki', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1004', 'Iles de la madeleine', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1005', 'Ilheus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1006', 'Iliamna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1007', 'Illizi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1008', 'Iloilo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1009', 'Ilorin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1010', 'Imperatriz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1011', 'Imperial', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1012', 'Impfondo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1013', 'Imphal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1014', 'In salah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1015', 'Indian mountains', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1016', 'Indian springs', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1017', 'Indianapolis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1018', 'Indore', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1019', 'Inhambane', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1020', 'Innsbruck', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1021', 'International falls', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1022', 'Inuvik', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1023', 'Invercargill', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1024', 'Inverness', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1025', 'Ioannina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1026', 'Ipatinga', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1027', 'Ipiales', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1028', 'Ipoh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1029', 'Iqaluit', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1030', 'Iquique', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1031', 'Iquitos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1032', 'Iringa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1033', 'Irkutsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1034', 'Isafjordur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1035', 'Ishigaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1036', 'Ishurdi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1037', 'Isiro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1038', 'Isla mujeres', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1039', 'Islamabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1040', 'Islay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1041', 'Isle of man', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1042', 'Islip', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1043', 'Istanbul', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1044', 'Ivalo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1045', 'Iwojima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1046', 'Izmir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1047', 'Izumo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1048', 'Jabalpur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1049', 'Jackson', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1050', 'Jacksonville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1051', 'Jaffna', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1052', 'Jaipur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1053', 'Jaisalmer', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1054', 'Jakarta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1055', 'Jakobshavn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1056', 'Jalalabad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1057', 'Jambi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1058', 'Jammu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1059', 'Jamnagar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1060', 'Jamshedpur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1061', 'Jayapura', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1062', 'Jeddah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1063', 'Jerez', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1064', 'Jersey', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1065', 'Jerusalem', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1066', 'Jessore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1067', 'Jijel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1068', 'Jimma', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1069', 'Jingdezhen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1070', 'Joao pessoa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1071', 'Jodhpur', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1072', 'Joenkoeping', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1073', 'Joensuu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1074', 'Johannesburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1075', 'Johnston island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1076', 'Johor bahru', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1077', 'Joinville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1078', 'Jonesboro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1079', 'Jorhat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1080', 'Jos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1081', 'Jose de san martin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1082', 'Juanjui', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1083', 'Juba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1084', 'Juiz de fora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1085', 'Jujuy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1086', 'Juliaca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1087', 'Juneau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1088', 'Jwaneng', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1089', 'Jyvaskyla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1090', 'Kabul', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1091', 'Kadena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1092', 'Kaduna', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1093', 'Kaedi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1094', 'Kagoshima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1095', 'Kahului', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1096', 'Kailashahar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1097', 'Kaimana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1098', 'Kaitaia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1099', 'Kajaani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1100', 'Kalamata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1101', 'Kalemie', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1102', 'Kalgoorlie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1103', 'Kalibo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1104', 'Kaliningrad', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1105', 'Kalkmar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1106', 'Kamarang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1107', 'Kamembe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1108', 'Kamina base', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1109', 'Kamloops', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1110', 'Kamuela', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1111', 'Kananga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1112', 'Kanazawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1113', 'Kandahar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1114', 'Kandla', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1115', 'Kaneohe bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1116', 'Kangnung', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1117', 'Kankakee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1118', 'Kano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1119', 'Kanpur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1120', 'Kansas city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1121', 'Kaohsiung', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1122', 'Kaolack', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1123', 'Kapuskasing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1124', 'Karachi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1125', 'Kariba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1126', 'Karlovy vary', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1127', 'Karlskoga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1128', 'Karonga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1129', 'Karpathos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1130', 'Karratha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1131', 'Karup', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1132', 'Kasane', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1133', 'Kashi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1134', 'Kasos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1135', 'Kassala', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1136', 'Kassel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1137', 'Kastoria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1138', 'Kathmandu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1139', 'Katowice', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1140', 'Kauhava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1141', 'Kaukura atoll', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1142', 'Kavala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1143', 'Kayes', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1144', 'Kayseri', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1145', 'Kazan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1146', 'Kedougou', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1147', 'Keffallinia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1148', 'Keflavik', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1149', 'Kelowna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1150', 'Kemi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1151', 'Kemorovo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1152', 'Kenai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1153', 'Kendall-tamiami', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1154', 'Kendari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1155', 'Kengtung', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1156', 'Kenora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1157', 'Kentira', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1158', 'Kerikeri', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1159', 'Kerkyra/corfu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1160', 'Kerman', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1161', 'Kerry', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1162', 'Kerteh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1163', 'Keshod', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1164', 'Ketapang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1165', 'Ketchikan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1166', 'Key west', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1167', 'Khabarovsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1168', 'Khajuraho', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1169', 'Khartoum', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1170', 'Khasab', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1171', 'Kichinau fir/acc/com', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1172', 'Kiel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1173', 'Kiev', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1174', 'Kiffa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1175', 'Kigali', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1176', 'Kikwit', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1177', 'Kilimanjaro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1178', 'Killeen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1179', 'Kimberley', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1180', 'Kimhae', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1181', 'Kindersley', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1182', 'Kindu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1183', 'King khalid mil.city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1184', 'King salmon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1185', 'Kingston', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1186', 'Kingstown', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1187', 'Kingsville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1188', 'Kinshasa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1189', 'Kiritimati', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1190', 'Kirkenes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1191', 'Kirkwall', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1192', 'Kirovograd', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1193', 'Kirtland a.f.b.', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1194', 'Kiruna', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1195', 'Kisangani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1196', 'Kish island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1197', 'Kismayu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1198', 'Kisumu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1199', 'Kitadaito', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1200', 'Kitakyushu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1201', 'Kitale', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1202', 'Kithira', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1203', 'Kittila', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1204', 'Klagenfurt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1205', 'Kleinsee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1206', 'Knobnoster', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1207', 'Knoxville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1208', 'Koblenz', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1209', 'Kochi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1210', 'Kodiak', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1211', 'Kolda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1212', 'Kolhapur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1213', 'Kolwezi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1214', 'Kona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1215', 'Kone', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1216', 'Konya', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1217', 'Kopasker', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1218', 'Korhogo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1219', 'Kortrijk-vevelgem', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1220', 'Kos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1221', 'Kosice', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1222', 'Kosrae', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1223', 'Kota', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1224', 'Kota bahru', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1225', 'Kota kinabalu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1226', 'Kotzebue', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1227', 'Koumac', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1228', 'Kozani', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1229', 'Krakow', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1230', 'Kralendijk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1231', 'Kramfors', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1232', 'Krasnodar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1233', 'Krasnovodsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1234', 'Kristiansand', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1235', 'Kristianstad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1236', 'Kristiansund', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1237', 'Kruunupyy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1238', 'Kuala lumpur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1239', 'Kuala terengganu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1240', 'Kuantan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1241', 'Kuching', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1242', 'Kufra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1243', 'Kuito', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1244', 'Kulu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1245', 'Kulusuk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1246', 'Kumamoto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1247', 'Kumejima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1248', 'Kunduz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1249', 'Kunming', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1250', 'Kunsan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1251', 'Kununurra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1252', 'Kuopio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1253', 'Kupang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1254', 'Kurgan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1255', 'Kustanay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1256', 'Kuujjuararapik', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1257', 'Kuusamo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1258', 'Kuwait', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1259', 'Kwajalein', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1260', 'Kwangju', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1261', 'Kyaukpyu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1262', 'La ceiba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1263', 'La coloma', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1264', 'La coruna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1265', 'La fria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1266', 'La grande riviere', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1267', 'La paz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1268', 'La plata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1269', 'La rioja', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1270', 'La roche-sur-yon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1271', 'La rochelle', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1272', 'La romana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1273', 'La ronge', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1274', 'La serena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1275', 'Laage', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1276', 'Laarbruch', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1277', 'Labe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1278', 'Labuan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1279', 'Labuhan bajo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1280', 'Ladag', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1281', 'Ladysmith', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1282', 'Lafayette', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1283', 'Laghouat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1284', 'Lago agrio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1285', 'Lago argentino', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1286', 'Lagos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1287', 'Lahad datu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1288', 'Lahania-kapalua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1289', 'Lahore', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1290', 'Lajes (terceira island)', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1291', 'Lake charles', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1292', 'Lakehurst', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1293', 'Lalibella', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1294', 'Lambarene', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1295', 'Lambasa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1296', 'Lamezia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1297', 'Lampang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1298', 'Lampedusa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1299', 'Lamu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1300', 'Lanai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1301', 'Landskrona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1302', 'Lannion', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1303', 'Lansing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1304', 'Lanyu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1305', 'Lanzerote', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1306', 'Lanzhou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1307', 'Lappeenranta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1308', 'Laredo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1309', 'Larissa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1310', 'Larnaca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1311', 'Las tunas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1312', 'Las vegas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1313', 'Lasham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1314', 'Lashio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1315', 'Lastourville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1316', 'Latakia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1317', 'Latina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1318', 'Launceston', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1319', 'Laval', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1320', 'Lazard cardenas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1321', 'Le castellet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1322', 'Le havre', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1323', 'Le mans', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1324', 'Le puy', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1325', 'Le tourquet', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1326', 'Learmonth', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1327', 'Lecce', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1328', 'Leeds', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1329', 'Leeuwarden', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1330', 'Legazpi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1331', 'Leh', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1332', 'Leipzig', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1333', 'Lemoore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1334', 'Lemwerder', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1335', 'Leros', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1336', 'Lethbridge', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1337', 'Lethem', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1338', 'Leticia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1339', 'Leuchars', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1340', 'Levaldigi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1341', 'Lhasa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1342', 'Liberia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1343', 'Libreville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1344', 'Lichinga', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1345', 'Lidkoping', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1346', 'Liege', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1347', 'Lifou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1348', 'Lihue', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1349', 'Lilabari', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1350', 'Lille', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1351', 'Lima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1352', 'Limnos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1353', 'Limoges', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1354', 'Limon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1355', 'Lincoln', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1356', 'Linkoeping', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1357', 'Lins', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1358', 'Linz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1359', 'Lisala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1360', 'Lisbon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1361', 'Lista', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1362', 'Little rock', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1363', 'Liverpool', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1364', 'Livingstone', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1365', 'Ljubliana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1366', 'Lloydminster', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1367', 'Lodwar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1368', 'Loei', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1369', 'Lome', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1370', 'Lompoc', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1371', 'London', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1372', 'Londonderry', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1373', 'Londrina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1374', 'Long beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1375', 'Longview', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1376', 'Loreto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1377', 'Lorient', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1378', 'Los angeles', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1379', 'Los mochis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1380', 'Lossiemouth', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1381', 'Loudima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1382', 'Louis trichardt', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1383', 'Louisiana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1384', 'Louisville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1385', 'Loyangalani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1386', 'Luanda', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1387', 'Luang prabang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1388', 'Lubbock', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1389', 'Lubumashi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1390', 'Lucknow', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1391', 'Ludhiaha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1392', 'Luebeck', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1393', 'Luena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1394', 'Lufkin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1395', 'Lugano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1396', 'Lulea', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1397', 'Lusaka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1398', 'Luwuk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1399', 'Luxemburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1400', 'Luxor', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1401', 'Lvov', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1402', 'Lycksele', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1403', 'Lydd', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1404', 'Lyneham', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1405', 'Lynn lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1406', 'Lyon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1407', 'Maastricht', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1408', 'Macapa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1409', 'Macas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1410', 'Macau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1411', 'Maceio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1412', 'Macenta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1413', 'Machala', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1414', 'Mackay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1415', 'Mackminnville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1416', 'Macon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1417', 'Madang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1418', 'Madinah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1419', 'Madison', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1420', 'Madras', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1421', 'Madrid', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1422', 'Madurai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1423', 'Mafikeng', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1424', 'Mafraq', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1425', 'Magadan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1426', 'Magangue', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1427', 'Magdalena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1428', 'Magnetiogorsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1429', 'Mahajanga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1430', 'Mahe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1431', 'Maiduguri', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1432', 'Maimama', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1433', 'Maio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1434', 'Majuro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1435', 'Makabana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1436', 'Makale', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1437', 'Makemo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1438', 'Makhachkala', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1439', 'Makokou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1440', 'Makoua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1441', 'Makung', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1442', 'Makurdi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1443', 'Malabo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1444', 'Malacca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1445', 'Malaga', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1446', 'Malakal', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1447', 'Malang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1448', 'Malanje', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1449', 'Malargue', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1450', 'Malatya', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1451', 'Male', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1452', 'Malindi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1453', 'Malmoe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1454', 'Malta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1455', 'Man', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1456', 'Manado', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1457', 'Managua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1458', 'Manakara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1459', 'Mananara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1460', 'Mananjary', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1461', 'Manapouri', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1462', 'Manaus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1463', 'Manchester', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1464', 'Mandalay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1465', 'Mandera', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1466', 'Mangalore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1467', 'Manihi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1468', 'Manila', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1469', 'Maniwaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1470', 'Manizales', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1471', 'Mannheim', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1472', 'Manokwari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1473', 'Manston', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1474', 'Manta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1475', 'Manzanillo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1476', 'Manzini', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1477', 'Maputo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1478', 'Mar del plata', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1479', 'Maraba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1480', 'Maracaibo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1481', 'Maradi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1482', 'Mare', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1483', 'Margate', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1484', 'Marham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1485', 'Maribor', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1486', 'Mariehamn', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1487', 'Marietta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1488', 'Marina di campo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1489', 'Maringa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1490', 'Maroantsetra', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1491', 'Maroochydore', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1492', 'Maroua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1493', 'Marquette', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1494', 'Marrakech', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1495', 'Marsabit', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1496', 'Marseille', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1497', 'Marsh harbor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1498', 'Marudi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1499', 'Mary esther', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1500', 'Marysville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1501', 'Masbate', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1502', 'Maseru', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1503', 'Masirah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1504', 'Masjed soleiman', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1505', 'Massena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1506', 'Masterton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1507', 'Masvingo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1508', 'Matadi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1509', 'Matagami', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1510', 'Mataiva', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1511', 'Matamoros', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1512', 'Mataram', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1513', 'Matsu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1514', 'Matsumoto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1515', 'Matsuyama', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1516', 'Matthew town', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1517', 'Maturin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1518', 'Maumere', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1519', 'Maun', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1520', 'Maupiti', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1521', 'Mayaguana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1522', 'Mayaguez', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1523', 'Mayo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1524', 'Mazar-i-sharif', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1525', 'Mazatlan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1526', 'Mbandaka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1527', 'Mbanza-congo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1528', 'Mbuji-mayi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1529', 'Mcalester', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1530', 'Mcallen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1531', 'Mcgrath', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1532', 'Meadow lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1533', 'Medan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1534', 'Medellin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1535', 'Medicine hat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1536', 'Meknes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1537', 'Melbourne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1538', 'Melilla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1539', 'Melo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1540', 'Memanbetsu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1541', 'Memphis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1542', 'Mende', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1543', 'Mendoza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1544', 'Menongue', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1545', 'Menorca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1546', 'Merauke', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1547', 'Merced', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1548', 'Merida', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1549', 'Meridian', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1550', 'Mersa-matruh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1551', 'Merzifon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1552', 'Messina', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1553', 'Metz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1554', 'Mexicali', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1555', 'Mexico city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1556', 'Mfuwe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1557', 'Miami', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1558', 'Miandrivazo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1559', 'Midland', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1560', 'Midway', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1561', 'Miho', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1562', 'Mikkeli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1563', 'Milan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1564', 'Milano', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1565', 'Mildenhall', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1566', 'Millington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1567', 'Millinocket', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1568', 'Millville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1569', 'Milton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1570', 'Milwaukee', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1571', 'Minami daito', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1572', 'Minatitlan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1573', 'Mineral wells', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1574', 'Mineralnye vody', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1575', 'Minna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1576', 'Minneapolis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1577', 'Minot', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1578', 'Minsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1579', 'Minsk 2', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1580', 'Miramar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1581', 'Miri', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1582', 'Misawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1583', 'Mitu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1584', 'Mitzic', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1585', 'Miyake jima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1586', 'Miyako', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1587', 'Miyazaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1588', 'Mmabatho', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1589', 'Moa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1590', 'Moanda', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1591', 'Mobile', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1592', 'Mocimboa da praia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1593', 'Modesto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1594', 'Moenchengladbach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1595', 'Moenjodaro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1596', 'Mogadishu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1597', 'Mohanbari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1598', 'Moheli', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1599', 'Molde', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1600', 'Molokai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1601', 'Mombasa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1602', 'Monastir', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1603', 'Monbetsu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1604', 'Monclova', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1605', 'Moncton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1606', 'Mong hsat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1607', 'Monroe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1608', 'Monrovia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1609', 'Mont joli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1610', 'Montego bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1611', 'Monteria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1612', 'Monterrey', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1613', 'Montes claros', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1614', 'Montevideo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1615', 'Montgomery', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1616', 'Montichiari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1617', 'Montlucon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1618', 'Montlucon-gueret', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1619', 'Montpelier', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1620', 'Montpellier', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1621', 'Montreal', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1622', 'Moorea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1623', 'Moose jaw', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1624', 'Moosonee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1625', 'Mopti', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1626', 'Mora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1627', 'Morelia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1628', 'Morlaix', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1629', 'Morombe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1630', 'Morondava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1631', 'Moroni', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1632', 'Moscow', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1633', 'Moshi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1634', 'Mosjoen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1635', 'Mostar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1636', 'Moulins', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1637', 'Moundou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1638', 'Mount clemens', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1639', 'Mount cook', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1640', 'Mount hagen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1641', 'Mount isa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1642', 'Mount pleasant', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1643', 'Mountain home', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1644', 'Mountain view', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1645', 'Moyale lower', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1646', 'Mtwara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1647', 'Muanda', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1648', 'Muenster/osnabrueck', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1649', 'Muir', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1650', 'Mulhouse', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1651', 'Multan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1652', 'Munich', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1653', 'Murcia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1654', 'Murmansk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1655', 'Muscat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1656', 'Muskogee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1657', 'Muskoka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1658', 'Mustique', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1659', 'Mutare', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1660', 'Muzaffarabad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1661', 'Mwanza', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1662', 'Myeik', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1663', 'Myitkyina', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1664', 'Mykonos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1665', 'Myrtle beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1666', 'Mytilini', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1667', 'Mzuzu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1668', 'Nabire', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1669', 'Nacala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1670', 'Nadzab', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1671', 'Nagasaki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1672', 'Nagoya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1673', 'Nagpur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1674', 'Naha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1675', 'Nainital', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1676', 'Nairobi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1677', 'Nakashibetsu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1678', 'Nakhon phanom', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1679', 'Nakhon ratchasima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1680', 'Nakhon si thammarat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1681', 'Nampula', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1682', 'Nanaimo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1683', 'Nanchang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1684', 'Nancy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1685', 'Nandi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1686', 'Nanisivik', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1687', 'Nanjing', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1688', 'Nanki-shirahama', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1689', 'Nanning', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1690', 'Nantes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1691', 'Nantucket', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1692', 'Nanyuki', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1693', 'Naples', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1694', 'Napuka island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1695', 'Narathiwat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1696', 'Narssarssuaq', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1697', 'Nashville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1698', 'Nasik road', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1699', 'Nassau', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1700', 'Natal', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1701', 'Natashquan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1702', 'Nausori', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1703', 'Navegantes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1704', 'Nawabshah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1705', 'Ndele', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1706', 'Ndjamena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1707', 'Ndola', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1708', 'Nea anghialos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1709', 'Negage', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1710', 'Neiva', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1711', 'Nejran', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1712', 'Nelson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1713', 'Nelspruit', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1714', 'Nema', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1715', 'Neuquen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1716', 'Nevers', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1717', 'New bern', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1718', 'New orleans', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1719', 'New plymouth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1720', 'New york', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1721', 'Newark', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1722', 'Newburgh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1723', 'Newcastle', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1724', 'Newport news', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1725', 'Newquai', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1726', 'Ngaoundere', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1727', 'Ngiva', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1728', 'Nhatrang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1729', 'Niagara falls', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1730', 'Niamey', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1731', 'Niatougou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1732', 'Nice', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1733', 'Nimes', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1734', 'Ninbo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1735', 'Nioro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1736', 'Niort', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1737', 'Nizhnevartovsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1738', 'Nogales', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1739', 'Nome', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1740', 'Norderney', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1741', 'Norfolk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1742', 'Norfolk island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1743', 'Norman wells', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1744', 'Norrkoeping', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1745', 'North battleford', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1746', 'North bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1747', 'North caicos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1748', 'North eleuthera', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1749', 'Northolt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1750', 'Northway', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1751', 'Norwich', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1752', 'Nosara beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1753', 'Nosy-be', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1754', 'Nouadhibou', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1755', 'Nouakschott', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1756', 'Noumea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1757', 'Nuernberg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1758', 'Nueva gerona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1759', 'Nuevo laredo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1760', 'Nuku hiva', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1761', 'Nukus', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1762', 'Nyala', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1763', 'Nyeri', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1764', 'Nzerekore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1765', 'Oakland', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1766', 'Oamaru', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1767', 'Oaxaca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1768', 'Oberpfaffenhofen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1769', 'Obihiro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1770', 'Ocana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1771', 'Oceana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1772', 'Ocho rios', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1773', 'Odense', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1774', 'Odessa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1775', 'Odiham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1776', 'Ogden', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1777', 'Ogdensburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1778', 'Ohrid', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1779', 'Oita', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1780', 'Okayama', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1781', 'Oki island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1782', 'Oklahoma city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1783', 'Okondja', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1784', 'Olbia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1785', 'Old crow', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1786', 'Oliktok point', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1787', 'Omaha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1788', 'Omboue hospial', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1789', 'Omsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1790', 'Ontario', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1791', 'Opolu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1792', 'Oradea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1793', 'Oran', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1794', 'Oranjestad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1795', 'Orapa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1796', 'Orebro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1797', 'Orenburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1798', 'Orland', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1799', 'Orlando', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1800', 'Orleans', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1801', 'Ormara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1802', 'Ornskoldsvik', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1803', 'Osaka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1804', 'Osan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1805', 'Osh', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1806', 'Oshima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1807', 'Osijek', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1808', 'Oskarshamn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1809', 'Oslo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1810', 'Osorno', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1811', 'Ostend', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1812', 'Ostersund', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1813', 'Ostrava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1814', 'Ottawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1815', 'Otu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1816', 'Ouagadougou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1817', 'Ouargla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1818', 'Ouarzazate', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1819', 'Oudtshoorn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1820', 'Ouesso', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1821', 'Oujda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1822', 'Oulu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1823', 'Ouvea', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1824', 'Ovda', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1825', 'Owando', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1826', 'Oxford', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1827', 'Oyem', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1828', 'Pachuca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1829', 'Padang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1830', 'Paderborn', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1831', 'Padova', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1832', 'Pago pago', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1833', 'Pakse', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1834', 'Pala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1835', 'Palacios', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1836', 'Palangkaraya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1837', 'Palembang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1838', 'Palermo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1839', 'Palm springs', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1840', 'Palma de mallorca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1841', 'Palmar sur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1842', 'Palmdale', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1843', 'Palmer', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1844', 'Palmerston north', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1845', 'Palmyra', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1846', 'Palu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1847', 'Pamplona', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1848', 'Panama', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1849', 'Panama city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1850', 'Pangkal pinang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1851', 'Pangkalan bun', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1852', 'Pangnirtung', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1853', 'Panjgur', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1854', 'Pantelleria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1855', 'Paphos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1856', 'Paraguana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1857', 'Parakou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1858', 'Paramaribo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1859', 'Parana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1860', 'Paraparaumu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1861', 'Parchim', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1862', 'Pardubice', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1863', 'Paris', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1864', 'Parma', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1865', 'Paro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1866', 'Pasighat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1867', 'Pasni', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1868', 'Paso de los libres', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1869', 'Passo fundo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1870', 'Pasto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1871', 'Pathankot', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1872', 'Patina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1873', 'Patras', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1874', 'Patreksfjordur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1875', 'Pattani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1876', 'Patuxent river', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1877', 'Pau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1878', 'Paulo alfonso', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1879', 'Paya lebar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1880', 'Paysandu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1881', 'Peace river', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1882', 'Pekanbaru', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1883', 'Pelly bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1884', 'Pelotas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1885', 'Pemba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1886', 'Penang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1887', 'Pensacola', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1888', 'Penticton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1889', 'Penza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1890', 'Pereira', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1891', 'Perigueux', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1892', 'Perm', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1893', 'Perpignan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1894', 'Perth', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1895', 'Peru', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1896', 'Perugia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1897', 'Pescara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1898', 'Peshawar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1899', 'Petawawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1900', 'Peterborough', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1901', 'Petrolina', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1902', 'Petropavlovsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1903', 'Phalaborwa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1904', 'Philadelphia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1905', 'Philipsburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1906', 'Phitsanulok', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1907', 'Phnom-penh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1908', 'Phoenix', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1909', 'Phrae', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1910', 'Phuket', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1911', 'Piacenza', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1912', 'Pickle lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1913', 'Pico', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1914', 'Piedras negras', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1915', 'Piestany', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1916', 'Pietermaritzburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1917', 'Pietersburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1918', 'Pilanesberg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1919', 'Pine bluff', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1920', 'Pingtung', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1921', 'Piracununga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1922', 'Pisa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1923', 'Pisco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1924', 'Pittsburgh (pennsylva)', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1925', 'Piura', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1926', 'Plaisance', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1927', 'Plattsburgh', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1928', 'Plovdiv', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1929', 'Plymouth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1930', 'Pocos de caldas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1931', 'Podgorica', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1932', 'Pohang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1933', 'Pohnpei', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1934', 'Point lay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1935', 'Point mugu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1936', 'Point salines', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1937', 'Pointe-a-pitre', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1938', 'Pointe-noire', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1939', 'Poitiers', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1940', 'Pokhara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1941', 'Ponca city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1942', 'Ponce', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1943', 'Pond inlet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1944', 'Ponta delgada', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1945', 'Ponta pora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1946', 'Pontianak', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1947', 'Pontoise', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1948', 'Popayan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1949', 'Poprad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1950', 'Porbandar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1951', 'Pori', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1952', 'Porlamar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1953', 'Port angeles', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1954', 'Port antonio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1955', 'Port blair', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1956', 'Port elizabeth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1957', 'Port gentil', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1958', 'Port hardy', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1959', 'Port hartcourt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1960', 'Port hedland', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1961', 'Port huron', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1962', 'Port menier', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1963', 'Port moller', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1964', 'Port moresby', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1965', 'Port said', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1966', 'Port sudan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1967', 'Port-au-prince', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1968', 'Port-of-spain', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1969', 'Port-vila', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1970', 'Portage-la-prairie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1971', 'Portland', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1972', 'Porto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1973', 'Porto alegre', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1974', 'Porto amboim', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1975', 'Porto nacional', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1976', 'Porto santo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1977', 'Porto velho', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1978', 'Portoroz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1979', 'Portoviejo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1980', 'Posadas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1981', 'Poso', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1982', 'Potosi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1983', 'Poza rico', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1984', 'Poznan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1985', 'Prachuap khiri khan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1986', 'Prague', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1987', 'Praslin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1988', 'Prerov', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1989', 'Prescott', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1990', 'President prudente', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1991', 'Presque isle', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1992', 'Prestwick', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1993', 'Pretoria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '1994', 'Preveza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1995', 'Prince albert', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1996', 'Prince george', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1997', 'Prince pupert', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1998', 'Princeton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '1999', 'Principe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2000', 'Pristina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2001', 'Prosserpine', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2002', 'Providence', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2003', 'Providencia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2004', 'Providenciales', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2005', 'Provideniya bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2006', 'Pucallpa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2007', 'Puebla', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2008', 'Pueblo memorial', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2009', 'Puerto asis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2010', 'Puerto ayacucho', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2011', 'Puerto cabello', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2012', 'Puerto cabezas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2013', 'Puerto carreno', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2014', 'Puerto deseado', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2015', 'Puerto escondido', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2016', 'Puerto lempira', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2017', 'Puerto madryn', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2018', 'Puerto maldonado', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2019', 'Puerto montt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2020', 'Puerto plata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2021', 'Puerto princesa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2022', 'Puerto suarez', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2023', 'Puerto vallarta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2024', 'Puka puka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2025', 'Pula', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2026', 'Pulau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2027', 'Pune', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2028', 'Punta arenas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2029', 'Punta cana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2030', 'Punta del este', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2031', 'Punta penasco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2032', 'Putao', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2033', 'Pyongyang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2034', 'Qingdao', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2035', 'Quantico', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2036', 'Quebec', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2037', 'Queenstown', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2038', 'Queenstown international', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2039', 'Quelimane', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2040', 'Quepos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2041', 'Queretaro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2042', 'Quesnel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2043', 'Quetta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2044', 'Quibdo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2045', 'Quimper', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2046', 'Quito', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2047', 'Quujjuaq', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2048', 'Rabat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2049', 'Rafha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2050', 'Rahim yar khan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2051', 'Raiatea island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2052', 'Raipur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2053', 'Rajahmundry', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2054', 'Rajkot', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2055', 'Rajshahi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2056', 'Raleigh-durham', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2057', 'Ramsar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2058', 'Ramstein', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2059', 'Ranchi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2060', 'Rancho murieta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2061', 'Rangiroa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2062', 'Rankin inlet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2063', 'Rapid city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2064', 'Ras al khaimah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2065', 'Rasht', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2066', 'Rawala kot', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2067', 'Rayong', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2068', 'Reao', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2069', 'Recife', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2070', 'Red deer industrial', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2071', 'Red river', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2072', 'Redstone', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2073', 'Reggio calabria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2074', 'Regina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2075', 'Reims', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2076', 'Rengat', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2077', 'Rennes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2078', 'Reno', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2079', 'Repulse bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2080', 'Resistencia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2081', 'Resolute', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2082', 'Reus', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2083', 'Reykjavik', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2084', 'Reynosa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2085', 'Rhodos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2086', 'Ribeirao preto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2087', 'Riberalta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2088', 'Richards bay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2089', 'Richmond', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2090', 'Rijeka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2091', 'Rimini', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2092', 'Rio branco', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2093', 'Rio cuarto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2094', 'Rio de janeiro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2095', 'Rio gallegos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2096', 'Rio grande', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2097', 'Rio turbio', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2098', 'Riohacha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2099', 'Rishiri island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2100', 'Rivera', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2101', 'Riverside', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2102', 'Riviere du loup', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2103', 'Riyadh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2104', 'Roadtown/beef island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2105', 'Roanne', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2106', 'Roatan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2107', 'Roberval', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2108', 'Robinson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2109', 'Rochefort', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2110', 'Rochester', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2111', 'Rock sound', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2112', 'Rockhampton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2113', 'Rocky mountain house', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2114', 'Rodez', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2115', 'Rodriguez island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2116', 'Rome', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2117', 'Ronchi de legionari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2118', 'Ronne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2119', 'Ronneby', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2120', 'Roosevelt roads', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2121', 'Roros', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2122', 'Rosario', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2123', 'Rosh pina', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2124', 'Rostov', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2125', 'Roswell', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2126', 'Rota', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2127', 'Rotorua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2128', 'Rotterdam', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2129', 'Rouen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2130', 'Rourkela', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2131', 'Rouyn', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2132', 'Rovaniemi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2133', 'Royan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2134', 'Rurrenabaque', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2135', 'Rurutu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2136', 'Ruteng', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2137', 'Rzeszow', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2138', 'Saarbruecken', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2139', 'Sabang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2140', 'Sachs harbour', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2141', 'Sacramento', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2142', 'Saidpur', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2143', 'Saidu sharif', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2144', 'Sainte marie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2145', 'Saipan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2146', 'Sakon nakhon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2147', 'Salalah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2148', 'Salamanca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2149', 'Salinas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2150', 'Salisbury', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2151', 'Salt lake city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2152', 'Salta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2153', 'Saltillo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2154', 'Salto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2155', 'Salvador', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2156', 'Salzburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2157', 'Samara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2158', 'Samarinda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2159', 'Samarkand', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2160', 'Sambava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2161', 'Samedan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2162', 'Samos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2163', 'Samsun', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2164', 'San andres island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2165', 'San andros', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2166', 'San angelo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2167', 'San antonio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2168', 'San borja', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2169', 'San carlos de bariloch', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2170', 'San diego', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2171', 'San felipe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2172', 'San fernando de apure', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2173', 'San francisco', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2174', 'San joaquin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2175', 'San jose', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2176', 'San jose del cabo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2177', 'San jose del guaviare', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2178', 'San juan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2179', 'San julian', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2180', 'San luis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2181', 'San luis potosi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2182', 'San martin des andes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2183', 'San pedro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2184', 'San pedro sula', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2185', 'San rafael', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2186', 'San salvador', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2187', 'San sebastian', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2188', 'San tome', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2189', 'San vincente de caguan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2190', 'Sanandaj', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2191', 'Sandnessjoen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2192', 'Sandspit', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2193', 'Sandusky', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2194', 'Santa ana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2195', 'Santa barbara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2196', 'Santa clara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2197', 'Santa cruz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2198', 'Santa cruz de la palma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2199', 'Santa fe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2200', 'Santa maria (island)', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2201', 'Santa marta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2202', 'Santa rosa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2203', 'Santander', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2204', 'Santarem', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2205', 'Santiago', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2206', 'Santiago de cuba', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2207', 'Santiago del estero', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2208', 'Santo angelo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2209', 'Santo domingo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2210', 'Santorini', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2211', 'Santos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2212', 'Sao jorge island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2213', 'Sao jose do rio preto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2214', 'Sao jose dos campos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2215', 'Sao luis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2216', 'Sao nocolau island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2217', 'Sao paulo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2218', 'Sao tome', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2219', 'Sao vicente island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2220', 'Sapporo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2221', 'Sarajevo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2222', 'Saravena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2223', 'Sarh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2224', 'Sarnia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2225', 'Saskatoon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2226', 'Satu mare', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2227', 'Sault sainte marie', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2228', 'Saurimo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2229', 'Savannah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2230', 'Savannakhet', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2231', 'Savonlinna', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2232', 'Scarborough', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2233', 'Scatsta', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2234', 'Schefferville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2235', 'Seattle', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2236', 'Sebha', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2237', 'Selebi-phikwe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2238', 'Selibabi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2239', 'Selma', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2240', 'Semarang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2241', 'Semiplatinsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2242', 'Sendai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2243', 'Seo de urgel', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2244', 'Seoul', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2245', 'Seoul east', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2246', 'Sept-iles', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2247', 'Setif', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2248', 'Sevilla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2249', 'Sfax', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2250', 'Shanghai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2251', 'Shannon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2252', 'Shantou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2253', 'Sharjah', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2254', 'Sharurah', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2255', 'Shemya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2256', 'Shenzhen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2257', 'Sherbrooke', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2258', 'Shimojishima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2259', 'Shiraz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2260', 'Sholapur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2261', 'Shoreham by sea', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2262', 'Shreveport', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2263', 'Sibiu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2264', 'Sibu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2265', 'Sidi ifini', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2266', 'Siem-reap', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2267', 'Siena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2268', 'Siglufjordur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2269', 'Sigonella', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2270', 'Silchar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2271', 'Simara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2272', 'Simferopol', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2273', 'Singapore', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2274', 'Singkep', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2275', 'Sintang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2276', 'Sion', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2277', 'Sioux city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2278', 'Sioux lookout', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2279', 'Sishen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2280', 'Sitia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2281', 'Sitka', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2282', 'Sittwe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2283', 'Sivas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2284', 'Skagway', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2285', 'Skelleftea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2286', 'Skiathos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2287', 'Skien', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2288', 'Skiros', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2289', 'Skopje', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2290', 'Skovde', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2291', 'Skrydstrup', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2292', 'Skukuza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2293', 'Slave lake', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2294', 'Sliac', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2295', 'Sligo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2296', 'Slupsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2297', 'Smithers', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2298', 'Smithfield', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2299', 'Sochi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2300', 'Sodankyla', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2301', 'Soenderborg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2302', 'Soesterberg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2303', 'Sofia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2304', 'Sogndal', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2305', 'Sokcho', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2306', 'Sokoto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2307', 'Solenzara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2308', 'Solo city', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2309', 'Sondrestrom', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2310', 'Songkhla', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2311', 'Sorkjosen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2312', 'Sorong', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2313', 'Soroti', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2314', 'South caicos', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2315', 'Southampton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2316', 'Southdowns', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2317', 'Southend', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2318', 'Soyo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2319', 'Spangdahlem', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2320', 'Sparrevohn', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2321', 'Spence bay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2322', 'Speyer', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2323', 'Split', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2324', 'Spokane', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2325', 'Spring point', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2326', 'Springbok', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2327', 'Srinagar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2328', 'St. anthony', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2329', 'St. catherine', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2330', 'St. criox island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2331', 'St. jean', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2332', 'St. john', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2333', 'St. johns', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2334', 'St. louis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2335', 'St. martin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2336', 'St. paul island', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2337', 'St. petersburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2338', 'St. thomas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2339', 'St.-barthelemy', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2340', 'St.-brieuc armor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2341', 'St.-denis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2342', 'St.-etienne', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2343', 'St.-nazaire', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2344', 'St.-pierre', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2345', 'Stauning', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2346', 'Stavanger', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2347', 'Stavropol', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2348', 'Stella maris', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2349', 'Stephenville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2350', 'Stockholm', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2351', 'Stockton', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2352', 'Stord', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2353', 'Stornoway', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2354', 'Strassbourg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2355', 'Stratford', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2356', 'Stuttgart', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2357', 'Suceava', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2358', 'Sucre', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2359', 'Sudbury', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2360', 'Sui', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2361', 'Sukhumi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2362', 'Sukkur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2363', 'Sulayel', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2364', 'Sumbawa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2365', 'Sumburgh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2366', 'Summerside', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2367', 'Sumter', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2368', 'Sundsvall', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2369', 'Sunyani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2370', 'Surabaya', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2371', 'Surat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2372', 'Surgut', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2373', 'Svalbard', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2374', 'Sveg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2375', 'Sverdlovsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2376', 'Swansea', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2377', 'Swift current', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2378', 'Sydney', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2379', 'Syktyvkar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2380', 'Sylhet osmani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2381', 'Syracuse', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2382', 'Szczechin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2383', 'Tabatinga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2384', 'Tabiteuea north', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2385', 'Tabriz', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2386', 'Tabuk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2387', 'Tachilek', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2388', 'Tacloban', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2389', 'Tacna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2390', 'Tacoma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2391', 'Tacuarembo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2392', 'Taegu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2393', 'Tahoua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2394', 'Taif', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2395', 'Tainan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2396', 'Taipei', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2397', 'Taiyuan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2398', 'Takamatsu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2399', 'Takapoto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2400', 'Takaroa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2401', 'Takoradi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2402', 'Talara', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2403', 'Talhar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2404', 'Talkeetna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2405', 'Tallahassee', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2406', 'Tallinn-ulemiste international', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2407', 'Tamale', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2408', 'Tamanrasset', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2409', 'Tambacounda', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2410', 'Tame', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2411', 'Tampa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2412', 'Tampere', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2413', 'Tampico', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2414', 'Tamuin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2415', 'Tamworth', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2416', 'Tan tan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2417', 'Tanana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2418', 'Tandil', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2419', 'Tanegashima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2420', 'Tanga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2421', 'Tanger', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2422', 'Tanjung pandan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2423', 'Tanjung pinang', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2424', 'Tapachula', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2425', 'Taraken', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2426', 'Tarapoa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2427', 'Tarapoto', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2428', 'Tarawa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2429', 'Tarbes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2430', 'Tarija', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2431', 'Tashkent', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2432', 'Tatalina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2433', 'Taupo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2434', 'Tauranga', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2435', 'Tawau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2436', 'Tbilisi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2437', 'Tchibanga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2438', 'Tebessa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2439', 'Teesside', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2440', 'Tefe', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2441', 'Tegucigalpa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2442', 'Teheran', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2443', 'Tehuacan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2444', 'Tel-aviv', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2445', 'Tela', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2446', 'Temuco', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2447', 'Tenerife', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2448', 'Tepic', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2449', 'Teresina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2450', 'Ternate', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2451', 'Terrace', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2452', 'Terre haute', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2453', 'Teslin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2454', 'Tete', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2455', 'Teterboro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2456', 'Tetouan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2457', 'Texarkana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2458', 'Thaba nchu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2459', 'Thandwe', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2460', 'The valley', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2461', 'Thessaloniki', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2462', 'Thisted', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2463', 'Thohoyandou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2464', 'Thompson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2465', 'Thule', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2466', 'Thumrait', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2467', 'Thunder bay', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2468', 'Tianjin', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2469', 'Tiaret', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2470', 'Tidjikja', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2471', 'Tijuana', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2472', 'Tikehau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2473', 'Tiko', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2474', 'Tilrempt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2475', 'Timaru', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2476', 'Timika', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2477', 'Timimoun', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2478', 'Timisoara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2479', 'Timmins', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2480', 'Tin city', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2481', 'Tindouf', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2482', 'Tingo maria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2483', 'Tirana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2484', 'Tiree', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2485', 'Tirgu mures', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2486', 'Tiruchchirappalli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2487', 'Tirupeti', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2488', 'Tivat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2489', 'Tlaxcala', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2490', 'Tlemcen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2491', 'Toamasina', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2492', 'Tobolsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2493', 'Tofino', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2494', 'Tokunoshima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2495', 'Tokushima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2496', 'Tokyo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2497', 'Tolagnaro', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2498', 'Toliara', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2499', 'Toluca', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2500', 'Tombouctou', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2501', 'Tongatapu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2502', 'Topeka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2503', 'Torino', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2504', 'Toronto', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2505', 'Torp', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2506', 'Torreon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2507', 'Tortoli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2508', 'Totegegie', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2509', 'Tottori', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2510', 'Touggourt', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2511', 'Touho', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2512', 'Toulouse', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2513', 'Tours', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2514', 'Toussous-le-noble', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2515', 'Townsville', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2516', 'Toyama', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2517', 'Tozeur', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2518', 'Trabzon', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2519', 'Trang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2520', 'Trapani', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2521', 'Treasure cay', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2522', 'Trelew', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2523', 'Trenton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2524', 'Treviso', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2525', 'Trier', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2526', 'Trinciomalee', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2527', 'Trinidad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2528', 'Tripoli', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2529', 'Trivandrum', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2530', 'Trollhattan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2531', 'Tromso', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2532', 'Trondheim', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2533', 'Troyes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2534', 'Trujillo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2535', 'Truth or consequences', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2536', 'Tselinograd', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2537', 'Tsushima', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2538', 'Tubuai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2539', 'Tucson', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2540', 'Tucuman', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2541', 'Tucumcari', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2542', 'Tucupita', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2543', 'Tucurui', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2544', 'Tuktoyaktuk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2545', 'Tulcan', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2546', 'Tulcea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2547', 'Tulsa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2548', 'Tulua', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2549', 'Tumaco', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2550', 'Tumbes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2551', 'Tunis', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2552', 'Turaif', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2553', 'Turany', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2554', 'Turbo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2555', 'Turku', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2556', 'Tustin', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2557', 'Tuxtla gutierrez', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2558', 'Tver', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2559', 'Twenty nine palms', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2560', 'Tyler', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2561', 'Tzaneen', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2562', 'Uberaba', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2563', 'Uberlandia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2564', 'Udaipur', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2565', 'Udon thani', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2566', 'Ufa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2567', 'Uige', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2568', 'Ujung pandang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2569', 'Ulan bator', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2570', 'Ulan-ude', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2571', 'Ulsan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2572', 'Ulundi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2573', 'Umea', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2574', 'Umtata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2575', 'Unalakleet', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2576', 'Unalaska', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2577', 'Upington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2578', 'Uralsk', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2579', 'Uruapan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2580', 'Uruguaiana', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2581', 'Urumqi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2582', 'Ushuaia', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2583', 'Utti', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2584', 'Vaasa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2585', 'Vagar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2586', 'Val d or', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2587', 'Valdez', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2588', 'Valdivia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2589', 'Valdosta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2590', 'Valence', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2591', 'Valencia', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2592', 'Valera', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2593', 'Valkenburg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2594', 'Valladolid', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2595', 'Valle de la pascua', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2596', 'Valledupar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2597', 'Valparaiso', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2598', 'Van', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2599', 'Vancouver', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2600', 'Vannes', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2601', 'Varadero', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2602', 'Varanasi', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2603', 'Varginha', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2604', 'Varkaus', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2605', 'Varna', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2606', 'Vasteras', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2607', 'Vavau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2608', 'Vaxjo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2609', 'Venice', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2610', 'Vera cruz', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2611', 'Vermillion', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2612', 'Vero beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2613', 'Vestmannaeyjar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2614', 'Vicenza', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2615', 'Vichy', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2616', 'Victoria', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2617', 'Victoria falls', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2618', 'Victorville', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2619', 'Viedma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2620', 'Vienna', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2621', 'Vientiane', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2622', 'Vigo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2623', 'Vijayawada', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2624', 'Vila real', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2625', 'Vilankulu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2626', 'Vilefrance', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2627', 'Vilhelmina', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2628', 'Vilhena', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2629', 'Villa dolores', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2630', 'Villa gesell', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2631', 'Villafranca', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2632', 'Villahermosa', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2633', 'Villavicencio', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2634', 'Visby', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2635', 'Vishakhapatnam', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2636', 'Vitebsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2637', 'Vitoria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2638', 'Vladivostok', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2639', 'Vohemar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2640', 'Volgograd', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2641', 'Voronezh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2642', 'Vryburg', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2643', 'Vryheid', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2644', 'Wabush', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2645', 'Waco', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2646', 'Waddington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2647', 'Wagga wagga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2648', 'Waingapu', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2649', 'Wajir', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2650', 'Wakkanai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2651', 'Wallis', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2652', 'Wallops island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2653', 'Wamena', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2654', 'Wanaka', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2655', 'Wang an', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2656', 'Wanganui', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2657', 'Warsaw', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2658', 'Washington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2659', 'Waterford', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2660', 'Waterloo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2661', 'Watertown', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2662', 'Watson lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2663', 'Wau', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2664', 'Weipa', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2665', 'Wejh', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2666', 'Welkom', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2667', 'Wellington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2668', 'Wendover', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2669', 'West chicago', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2670', 'West end', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2671', 'West hampton beach', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2672', 'West palm beach', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2673', 'West tinian', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2674', 'Westerland', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2675', 'Westport', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2676', 'Wewak', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2677', 'Whakatane', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2678', 'Whangarei', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2679', 'Whidbey island', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2680', 'White plains', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2681', 'White sands', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2682', 'Whitecourt', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2683', 'Whitehorse', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2684', 'Wiarton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2685', 'Wichita', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2686', 'Wichita falls', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2687', 'Wick', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2688', 'Wildwood', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2689', 'Wilhelmshaven', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2690', 'Willemstad', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2691', 'Williams lake', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2692', 'Williamsport', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2693', 'Williston', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2694', 'Willow grove', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2695', 'Wilmington', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2696', 'Windsor', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2697', 'Windsor locks', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2698', 'Wink', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2699', 'Winnipeg', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2700', 'Winston-salem', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2701', 'Woensdrecht', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2702', 'Woodbourne', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2703', 'Woomera', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2704', 'Wright', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2705', 'Wrightstown', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2706', 'Wrigley', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2707', 'Wroclaw', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2708', 'Wuhan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2709', 'Xangongo', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2710', 'Xi an', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2711', 'Xiamen', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2712', 'Xichang', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2713', 'Yakushima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2714', 'Yakutat', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2715', 'Yakutsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2716', 'Yalinga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2717', 'Yamagata', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2718', 'Yamaguchi', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2719', 'Yamoussoukro', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2720', 'Yangon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2721', 'Yantai', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2722', 'Yaounde', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2723', 'Yap', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2724', 'Yazd', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2725', 'Yechon', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2726', 'Yellowknife', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2727', 'Yenbo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2728', 'Yeosu', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2729', 'Yeovilton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2730', 'Yerevan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2731', 'Yogyakarta', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2732', 'Yokota', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2733', 'Yola', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2734', 'Yonaguni jima', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2735', 'Yorkton', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2736', 'Yoron', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2737', 'Youngstown', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2738', 'Yuma', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2739', 'Yurimaguas', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2740', 'Yuzhno-sakhalinsk', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2741', 'Zacatecas', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2742', 'Zadar', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2743', 'Zagreb', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2744', 'Zahedan', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2745', 'Zakynthos', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2746', 'Zamboanga', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2747', 'Zamora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2748', 'Zandery', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2749', 'Zanzibar', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2750', 'Zaragoza', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2751', 'Zaria', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2752', 'Zarzaitine', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2753', 'Zhengzhou', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2754', 'Zhob', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2755', 'Zielona gora', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2756', 'Ziguinchor', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2757', 'Zihuatanejo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2758', 'Zinder', '2');
-INSERT INTO ciudad(id,nombre,estado) values( '2759', 'Zuni pueblo', '1');
-INSERT INTO ciudad(id,nombre,estado) values( '2760', 'Zurich', '2');
-

@@ -58,6 +58,7 @@
                                     <option value="M" ${genero1}>Masculino</option>
                                     <option value="F" ${genero2}>Femenino</option>
                                 </select>
+                                <label for="genero">Género</label>
                             </div>
                             <div class="input-field col s12 l6">
                                 <select name="paisNacimiento" value="${socio.paisNacimiento}">
@@ -67,6 +68,7 @@
                                         <option value="${p.id}" <c:if test="${p.id == socio.paisNacimiento}"> selected </c:if>>${p.nombre}</option>
                                     </c:forEach>
                                 </select>
+                                <label for="paisNacimiento">Pais de Nacimiento</label>
                             </div>
                             <div class="input-field col s12 l6">
                                 <select name="paisResidencia" value="${socio.paisResidencia}">
@@ -75,6 +77,7 @@
                                         <option value="${p.id}" <c:if test="${p.id == socio.paisResidencia}"> selected </c:if>>${p.nombre}</option>
                                     </c:forEach>
                                 </select>
+                                <label for="paisResidencia">Pais de Residencia</label>
                             </div>
                             <div class="input-field col s12 l6">
                                 <select name="ciudad" value="${ciudad.id}">
@@ -83,6 +86,7 @@
                                         <option value="${ci.id}" <c:if test="${ci.id == ciudad.id}"> selected </c:if>>${ci.nombre}</option>
                                     </c:forEach>
                                 </select>
+                                <label for="ciudad">Ciudad</label>
                             </div>
                             <div class="input-field col s12 l6">
                                 <input type="text" id="direccion" name="direccion" value="${socio.direccion}">
@@ -107,6 +111,7 @@
                                     <option value="3">Pasaporte</option>
                                     <option value="4">Registro civil</option>
                                 </select>
+                                 <label for="tipoId">Tipo de Identificación</label>
                             </div>
                         </div>
                         <div class="row">

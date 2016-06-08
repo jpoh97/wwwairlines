@@ -49,19 +49,19 @@
                                         <th>HORA</th>
                                         </thead>
                                         <tbody>
-                                        <c:forEach items="${escalasida}" var="e1">
-                                            <tr>
-                                                <td>${e1.aeropuerto.ciudad}</td>
-                                                <td>${e1.aeropuerto.nombre}</td>
-                                                <td>${e1.idavion.id}</td>                        
-                                                <td>${e1.hora}</td>
-                                            </tr>
-                                        </c:forEach>
+                                            <c:forEach items="${escalasida}" var="e1">
+                                                <tr>
+                                                    <td>${e1.aeropuerto.ciudad}</td>
+                                                    <td>${e1.aeropuerto.nombre}</td>
+                                                    <td>${e1.idavion.id}</td>                        
+                                                    <td>${e1.hora}</td>
+                                                </tr>
+                                            </c:forEach>
                                         </tbody>
                                     </table>
                                 </td>
                             </tr>
-                    </tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
@@ -116,14 +116,14 @@
                                         <th>HORA</th>
                                         </thead>
                                         <tbody>
-                                        <c:forEach items="${escalasvenida}" var="e1">
-                                            <tr>
-                                                <td>${e1.aeropuerto.ciudad}</td>
-                                                <td>${e1.aeropuerto.nombre}</td>
-                                                <td>${e1.idavion.id}</td>                        
-                                                <td>${e1.hora}</td>
-                                            </tr>
-                                        </c:forEach>
+                                            <c:forEach items="${escalasvenida}" var="e1">
+                                                <tr>
+                                                    <td>${e1.aeropuerto.ciudad}</td>
+                                                    <td>${e1.aeropuerto.nombre}</td>
+                                                    <td>${e1.idavion.id}</td>                        
+                                                    <td>${e1.hora}</td>
+                                                </tr>
+                                            </c:forEach>
                                         </tbody>
                                     </table>
                                 </td>

@@ -8,11 +8,9 @@
 
                 ${confirma}
             </div>
-            
-
         </div>
     </div>
 </form>
-            
+
 
 <jsp:include page="footer.jsp"/>

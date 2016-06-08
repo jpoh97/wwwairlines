@@ -68,8 +68,8 @@ public class RegisterServlet extends HttpServlet {
                 Socio s = socioDAO.find(new SocioPK(tipoid, Integer.parseInt(numeroId)));
                 if ((new Date(fechaNacimiento)).compareTo(  new Date())==-1) {
                     if (s == null) {
-                        Ciudad c = ciudadDAO.findByNombre(ciudad);
-                        socioDAO.create(new Socio(tipoid, Integer.parseInt(numeroId), nombre, apellido, new Date(fechaNacimiento), correo, contrasena, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), Integer.parseInt(ciudad), direccion));
+                        Ciudad c = ciudadDAO.find(Integer.parseInt(ciudad));
+                        socioDAO.create(new Socio(tipoid, Integer.parseInt(numeroId), nombre, apellido, new Date(fechaNacimiento), correo, contrasena, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), c.getId(), direccion));
                         request.setAttribute("message", "Socio registrado");
                     } else {
                         request.setAttribute("message", "El cliente ya existe");

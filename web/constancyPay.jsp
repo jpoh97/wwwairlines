@@ -12,22 +12,22 @@
                 <th>DOCUMENTO</th>
                 </thead>
                 <tbody>
-                <c:forEach items="${tiquetesidaclientes}" var="t1">
-                    <tr>
-                        <td>${t1.tiquetePK.vuelo}</td>
-                        <td>${t1.tiquetePK.asiento}</td>
-                        <td>${t1.codigo}</td>                        
-                        <td>${t1.numeroid}</td>
-                    </tr>
-                </c:forEach>
-                <c:forEach items="${tiquetesvenidaclientes}" var="t2">
-                    <tr>
-                        <td>${t2.tiquetePK.vuelo}</td>
-                        <td>${t2.tiquetePK.asiento}</td>
-                        <td>${t2.codigo}</td>
-                        <td>${t2.numeroid}</td>
-                    </tr>
-                </c:forEach>
+                    <c:forEach items="${tiquetesidaclientes}" var="t1">
+                        <tr>
+                            <td>${t1.tiquetePK.vuelo}</td>
+                            <td>${t1.tiquetePK.asiento}</td>
+                            <td>${t1.codigo}</td>                        
+                            <td>${t1.numeroid}</td>
+                        </tr>
+                    </c:forEach>
+                    <c:forEach items="${tiquetesvenidaclientes}" var="t2">
+                        <tr>
+                            <td>${t2.tiquetePK.vuelo}</td>
+                            <td>${t2.tiquetePK.asiento}</td>
+                            <td>${t2.codigo}</td>
+                            <td>${t2.numeroid}</td>
+                        </tr>
+                    </c:forEach>
                 </tbody>
             </table>
             <br/>
