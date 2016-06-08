@@ -75,7 +75,7 @@ public class MiCuenta extends HttpServlet {
                     && paisResidencia != null && !paisResidencia.trim().equalsIgnoreCase("")
                     && direccion != null && !direccion.trim().equalsIgnoreCase("")
                     && ciudad != null && !ciudad.trim().equalsIgnoreCase("")) {
-                System.out.println(tipoId);
+                
                 switch (tipoId) {
                     case "Cedula":
                         tipoId = "1";

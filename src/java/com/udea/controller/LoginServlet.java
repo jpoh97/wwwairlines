@@ -148,7 +148,12 @@ public class LoginServlet extends HttpServlet {
                 if (asientos2 != null) {
                     session.setAttribute("tiquetesvenida", asientos2);
                 }
-                request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()));
+                String fechaNacimiento = socio.getFechaNacimiento().toString();
+                request.setAttribute("paisr", paisDAO.find(socio.getPaisResidencia()).getNombre());
+                    request.setAttribute("paisn", paisDAO.find(socio.getPaisNacimiento()).getNombre());
+                    request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()));
+                    request.setAttribute("fechanacimiento", fechaNacimiento.substring(4, 10) + ", "+ fechaNacimiento.substring(24, fechaNacimiento.length()));
+                request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()).getNombre());
                 request.getRequestDispatcher("/clientDetails.jsp").forward(request, response);
                 return;
             } else if (action!=null &&  action.equalsIgnoreCase("continuar")) {

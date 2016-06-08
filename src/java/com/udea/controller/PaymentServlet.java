@@ -302,7 +302,7 @@ public class PaymentServlet extends HttpServlet {
     
     private String sendEmail (Tiquete t, Vuelo v, String origen){
         t = tiqueteDAO.find(t.getTiquetePK());
-        System.out.println("esteeeeee" + origen);
+        
         String nombres;
         String ident;
         String destino = v.getAeropuertoLlegada().getCiudad();
