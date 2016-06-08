@@ -94,7 +94,7 @@ public class MiCuenta extends HttpServlet {
                 Socio socio = socioDAO.find(new SocioPK(tipoId, Integer.parseInt(identificacion)));
                 socio.setNombre(nombre);
                 socio.setApellido(apellido);
-                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                
                 Date date;
                 try {
                     date = new Date(fechaNacimiento);

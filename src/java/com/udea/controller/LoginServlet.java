@@ -149,11 +149,11 @@ public class LoginServlet extends HttpServlet {
                     session.setAttribute("tiquetesvenida", asientos2);
                 }
                 String fechaNacimiento = socio.getFechaNacimiento().toString();
-                request.setAttribute("paisr", paisDAO.find(socio.getPaisResidencia()).getNombre());
-                    request.setAttribute("paisn", paisDAO.find(socio.getPaisNacimiento()).getNombre());
-                    request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()));
-                    request.setAttribute("fechanacimiento", fechaNacimiento.substring(4, 10) + ", "+ fechaNacimiento.substring(24, fechaNacimiento.length()));
-                request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()).getNombre());
+                session.setAttribute("paisr", paisDAO.find(socio.getPaisResidencia()).getNombre());
+                    session.setAttribute("paisn", paisDAO.find(socio.getPaisNacimiento()).getNombre());
+                    session.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()));
+                    session.setAttribute("fechanacimiento", fechaNacimiento.substring(4, 10) + ", "+ fechaNacimiento.substring(24, fechaNacimiento.length()));
+                session.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()).getNombre());
                 request.getRequestDispatcher("/clientDetails.jsp").forward(request, response);
                 return;
             } else if (action!=null &&  action.equalsIgnoreCase("continuar")) {
@@ -183,7 +183,7 @@ public class LoginServlet extends HttpServlet {
 
                     ClientePK clientePK = new ClientePK(tipoId, Integer.parseInt(identificacion));
                     Cliente cliente = clienteDAO.find(clientePK);
-                    Ciudad c = ciudadDAO.findByNombre(ciudad);
+                    Ciudad c = ciudadDAO.find(Integer.parseInt(ciudad));
                     if (cliente == null) {
                         cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), Integer.parseInt(ciudad), direccion);
                         clienteDAO.create(cliente);
@@ -211,10 +211,10 @@ public class LoginServlet extends HttpServlet {
                     } else {
                         session.setAttribute("genero", "Femenino");
                     }
-                    request.setAttribute("paisr", paisDAO.find(cliente.getPaisResidencia()).getNombre());
-                    request.setAttribute("paisn", paisDAO.find(cliente.getPaisNacimiento()).getNombre());
-                    request.setAttribute("ciudad", ciudadDAO.find(cliente.getCiudad()));
-                    request.setAttribute("fechanacimiento", fechaNacimiento.substring(4, 10) + ", "+ fechaNacimiento.substring(24, fechaNacimiento.length()));
+                    session.setAttribute("paisr", paisDAO.find(cliente.getPaisResidencia()).getNombre());
+                    session.setAttribute("paisn", paisDAO.find(cliente.getPaisNacimiento()).getNombre());
+                    session.setAttribute("ciudad", ciudadDAO.find(cliente.getCiudad()).getNombre());
+                    session.setAttribute("fechanacimiento", fechaNacimiento);
                     
                     List<Asiento> asientos1 = getAvailableSeats(cabina1, vuelo1);
                     List<Asiento> asientos2 = getAvailableSeats(cabina2, vuelo2);

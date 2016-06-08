@@ -42,13 +42,13 @@ public class PaymentServlet extends HttpServlet {
 
     @EJB
     private SocioFacadeLocal socioDAO;
-    
+
     @EJB
     private ClienteFacadeLocal clienteDAO;
-    
+
     @EJB
     private VueloFacadeLocal vueloDAO;
-    
+
     private SendEmail se = new SendEmail();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -86,11 +86,11 @@ public class PaymentServlet extends HttpServlet {
                 }
                 myFlag = true;
             }
-
+            String codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
             if (clientes != null && !clientes.isEmpty()) {
                 double precioIdaCliente = Integer.parseInt(request.getSession().getAttribute("precioida").toString());
                 for (int i = 1; i <= clientes.size(); i++) {
-                    String codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+
                     while (tiqueteDAO.finfByCodigo(codigo) != null) {
                         codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                     }
@@ -99,6 +99,9 @@ public class PaymentServlet extends HttpServlet {
                     } else {
                         tiquetesClientes.add(new Tiquete(new TiquetePK(vuelo.getId(), asientos1.get(1).getId()), precioIdaCliente, clientes.get(i - 1).getClientePK().getTipoid(), clientes.get(i - 1).getClientePK().getNumeroid(), 2, codigo));
                         asientos1.remove(1);
+                    }
+                    while (tiqueteDAO.finfByCodigo(codigo) != null) {
+                        codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                     }
                     if (tipo == 0) {
                         double precioVenidaCliente = Integer.parseInt(request.getSession().getAttribute("precioregreso").toString());
@@ -122,11 +125,11 @@ public class PaymentServlet extends HttpServlet {
                 }
                 for (Tiquete t : tiquetesClientes) {
                     tiqueteDAO.create(t);
-                    
+
                 }
                 for (Tiquete t : tiquetesClientes2) {
                     tiqueteDAO.create(t);
-                    
+
                 }
             }
 
@@ -147,7 +150,7 @@ public class PaymentServlet extends HttpServlet {
                         }
                     }
                 }
-                String codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                 while (tiqueteDAO.finfByCodigo(codigo) != null) {
                     codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                 }
@@ -193,7 +196,7 @@ public class PaymentServlet extends HttpServlet {
                         while (tiqueteDAO.finfByCodigo(codigo) != null) {
                             codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                         }
-                        
+
                         if (tiquetesvenida != null) {
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidaSocio, socio.getSocioPK().getTipoid(), socio.getSocioPK().getNumeroid(), 1, codigo);
                             tiqueteDAO.create(tiquete2);
@@ -207,7 +210,7 @@ public class PaymentServlet extends HttpServlet {
                     }
                 }
                 socio.setMillas(socio.getMillas() + total * 0.2);
-                if(myFlag) {
+                if (myFlag) {
                     socio.setTarjeta_credito(Double.parseDouble(tarjeta));
                 }
                 socioDAO.edit(socio);
@@ -230,7 +233,7 @@ public class PaymentServlet extends HttpServlet {
                         }
                     }
                 }
-                String codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                 while (tiqueteDAO.finfByCodigo(codigo) != null) {
                     codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
                 }
@@ -245,15 +248,15 @@ public class PaymentServlet extends HttpServlet {
                         }
                         if (tiquetesvenida != null) {
                             while (tiqueteDAO.finfByCodigo(codigo) != null) {
-                    codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
-                }
+                                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                            }
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
                             request.setAttribute("message", sendEmail(tiquete2, vuelo, vuelo.getAeropuertoSalida().getCiudad()));
                         } else {
                             while (tiqueteDAO.finfByCodigo(codigo) != null) {
-                    codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
-                }
+                                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                            }
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidaCliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
                             request.setAttribute("message", sendEmail(tiquete2, vuelo, vuelo.getAeropuertoSalida().getCiudad()));
@@ -272,15 +275,15 @@ public class PaymentServlet extends HttpServlet {
                         }
                         if (tiquetesvenida != null) {
                             while (tiqueteDAO.finfByCodigo(codigo) != null) {
-                    codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
-                }
+                                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                            }
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), Integer.parseInt(tiquetesvenida[0])), precioVenidacliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
                             request.setAttribute("message", sendEmail(tiquete2, vuelo, vuelo.getAeropuertoSalida().getCiudad()));
                         } else {
                             while (tiqueteDAO.finfByCodigo(codigo) != null) {
-                    codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
-                }
+                                codigo = UUID.randomUUID().toString().substring(0, 6).toUpperCase();
+                            }
                             tiquete2 = new Tiquete(new TiquetePK(vuelo2.getId(), asientos2.get(0).getId()), precioVenidacliente, cliente.getClientePK().getTipoid(), cliente.getClientePK().getNumeroid(), 2, codigo);
                             tiqueteDAO.create(tiquete2);
                             request.setAttribute("message", sendEmail(tiquete2, vuelo, vuelo.getAeropuertoSalida().getCiudad()));
@@ -288,7 +291,7 @@ public class PaymentServlet extends HttpServlet {
                         }
                     }
                 }
-                if(myFlag) {
+                if (myFlag) {
                     cliente.setTarjeta_credito(Double.parseDouble(tarjeta));
                     clienteDAO.edit(cliente);
                 }
@@ -312,10 +315,10 @@ public class PaymentServlet extends HttpServlet {
             request.getRequestDispatcher("/constancyPay.jsp").forward(request, response);
         }
     }
-    
-    private String sendEmail (Tiquete t, Vuelo v, String origen){
+
+    private String sendEmail(Tiquete t, Vuelo v, String origen) {
         t = tiqueteDAO.find(t.getTiquetePK());
-        
+
         String nombres;
         String ident;
         String destino = v.getAeropuertoLlegada().getCiudad();
@@ -325,9 +328,9 @@ public class PaymentServlet extends HttpServlet {
         String recipient;
         Socio s;
         Cliente c;
-        
+
         if (t.getTipo() == 2) {
-            c = clienteDAO.find(new ClientePK(t.getTipoid(),t.getNumeroid()));
+            c = clienteDAO.find(new ClientePK(t.getTipoid(), t.getNumeroid()));
             nombres = c.getNombre() + " " + c.getApellido();
             int inttipo = Integer.parseInt(c.getClientePK().getTipoid());
             String strtipo = "";
@@ -348,8 +351,8 @@ public class PaymentServlet extends HttpServlet {
             }
             ident = strtipo + " " + c.getClientePK().getNumeroid();
             recipient = c.getCorreo();
-        } else{
-            s = socioDAO.find(new SocioPK(t.getTipoid(),t.getNumeroid()));
+        } else {
+            s = socioDAO.find(new SocioPK(t.getTipoid(), t.getNumeroid()));
             nombres = s.getNombre() + " " + s.getApellido();
             int inttipo = Integer.parseInt(s.getSocioPK().getTipoid());
             String strtipo = "";
@@ -371,7 +374,7 @@ public class PaymentServlet extends HttpServlet {
             ident = strtipo + " " + s.getSocioPK().getNumeroid();
             recipient = s.getCorreo();
         }
-        
+
         return se.send(t.getCodigo(), recipient, nombres, ident, origen, destino, aeroorigen, aerodestino, fecha);
     }
 
