@@ -1,7 +1,9 @@
 package com.udea.controller;
 
+import com.udea.business.Ciudad;
 import com.udea.business.Socio;
 import com.udea.business.SocioPK;
+import com.udea.ejb.CiudadFacadeLocal;
 import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import java.io.IOException;
@@ -26,6 +28,8 @@ public class MiCuenta extends HttpServlet {
     private SocioFacadeLocal socioDAO;
     @EJB
     private PaisFacadeLocal paisDAO;
+    @EJB
+    private CiudadFacadeLocal ciudadDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,6 +44,7 @@ public class MiCuenta extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setAttribute("paises", paisDAO.findAll());
+        request.setAttribute("ciudades", ciudadDAO.findAll());
         String tipoid = request.getParameter("tipoIdentificacion");
         String numid = request.getParameter("id");
         String pass = request.getParameter("contrasenia");
@@ -56,7 +61,6 @@ public class MiCuenta extends HttpServlet {
             String genero = request.getParameter("genero");
             String paisNacimiento = request.getParameter("paisNacimiento");
             String paisResidencia = request.getParameter("paisResidencia");
-            String departamento = request.getParameter("departamento");
             String ciudad = request.getParameter("ciudad");
             String direccion = request.getParameter("direccion");
 
@@ -69,7 +73,6 @@ public class MiCuenta extends HttpServlet {
                     && genero != null && !genero.trim().equalsIgnoreCase("")
                     && paisNacimiento != null && !paisNacimiento.trim().equalsIgnoreCase("")
                     && paisResidencia != null && !paisResidencia.trim().equalsIgnoreCase("")
-                    && departamento != null && !departamento.trim().equalsIgnoreCase("")
                     && direccion != null && !direccion.trim().equalsIgnoreCase("")
                     && ciudad != null && !ciudad.trim().equalsIgnoreCase("")) {
                 System.out.println(tipoId);
@@ -94,9 +97,9 @@ public class MiCuenta extends HttpServlet {
                 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                 Date date;
                 try {
-                    date = formatter.parse(fechaNacimiento);
+                    date = new Date(fechaNacimiento);
                     socio.setFechaNacimiento(date);
-                } catch (ParseException ex) {
+                } catch (Exception ex) {
                     Logger.getLogger(MiCuenta.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
@@ -105,8 +108,9 @@ public class MiCuenta extends HttpServlet {
                 socio.setGenero(genero);
                 socio.setPaisNacimiento(Integer.parseInt(paisNacimiento));
                 socio.setPaisResidencia(Integer.parseInt(paisResidencia));
-                socio.setDepartamento(Integer.parseInt(departamento));
-                socio.setCiudad(Integer.parseInt(ciudad));
+                Ciudad c = ciudadDAO.find(Integer.parseInt(ciudad));
+                socio.setDepartamento(c.getEstado().getId());
+                socio.setCiudad(c.getId());
                 socio.setDireccion(direccion);
                 socioDAO.edit(socio);
                 request.setAttribute("message", "Datos actulizados correctamente.");
@@ -174,8 +178,9 @@ public class MiCuenta extends HttpServlet {
                     request.setAttribute("apellido", apellido);
                     request.setAttribute("email", email);
                     request.setAttribute("direccion", direccion);
-                    request.setAttribute("ciudad", ciudad);
-                    request.setAttribute("fechanacimiento", fechanacimiento);
+                    request.setAttribute("ciudad", ciudadDAO.find(ciudad));
+                    String fechaString = fechanacimiento.toString();
+                    request.setAttribute("fechanacimiento", fechaString.substring(4, 10) + ", "+ fechaString.substring(24, fechaString.length()));
                     request.setAttribute("tipoid", tipoid);
                     request.setAttribute("numid", numid);
                     request.setAttribute("millas", millas);

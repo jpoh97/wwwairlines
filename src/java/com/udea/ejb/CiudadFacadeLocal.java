@@ -23,6 +23,8 @@ public interface CiudadFacadeLocal {
     void remove(Ciudad ciudad);
 
     Ciudad find(Object id);
+    
+    Ciudad findByNombre(String nombre);
 
     List<Ciudad> findAll();
 

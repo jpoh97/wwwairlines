@@ -5,8 +5,10 @@
  */
 package com.udea.controller;
 
+import com.udea.business.Ciudad;
 import com.udea.business.Socio;
 import com.udea.business.SocioPK;
+import com.udea.ejb.CiudadFacadeLocal;
 import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
 import java.io.IOException;
@@ -28,6 +30,8 @@ public class RegisterServlet extends HttpServlet {
     private SocioFacadeLocal socioDAO;
     @EJB
     private PaisFacadeLocal paisDAO;
+    @EJB
+    private CiudadFacadeLocal ciudadDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -43,6 +47,8 @@ public class RegisterServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         request.setAttribute("paises", paisDAO.findAll());
+        
+        request.setAttribute("ciudades", ciudadDAO.findAll());
         try (PrintWriter out = response.getWriter()) {
             String nombre = request.getParameter("nombre");
             String apellido = request.getParameter("apellido");
@@ -52,20 +58,18 @@ public class RegisterServlet extends HttpServlet {
             String genero = request.getParameter("genero");
             String paisNacimiento = request.getParameter("paisNacimiento");
             String paisResidencia = request.getParameter("paisResidencia");
-            String departamento = request.getParameter("departamento");
             String ciudad = request.getParameter("ciudad");
             String direccion = request.getParameter("direccion");
             String tipoid = request.getParameter("tipoId");
             String numeroId = request.getParameter("numeroId");
             
 
-            request.setAttribute("message", "hubo un problem");
             if (tipoid != null && numeroId != null && !tipoid.trim().equals("") && !numeroId.trim().equals("")) {
                 Socio s = socioDAO.find(new SocioPK(tipoid, Integer.parseInt(numeroId)));
                 if ((new Date(fechaNacimiento)).compareTo(  new Date())==-1) {
                     if (s == null) {
-
-                        socioDAO.create(new Socio(tipoid, Integer.parseInt(numeroId), nombre, apellido, new Date(fechaNacimiento), correo, contrasena, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion));
+                        Ciudad c = ciudadDAO.findByNombre(ciudad);
+                        socioDAO.create(new Socio(tipoid, Integer.parseInt(numeroId), nombre, apellido, new Date(fechaNacimiento), correo, contrasena, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), Integer.parseInt(ciudad), direccion));
                         request.setAttribute("message", "Socio registrado");
                     } else {
                         request.setAttribute("message", "El cliente ya existe");

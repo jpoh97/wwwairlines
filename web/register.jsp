@@ -46,7 +46,7 @@
             </select>
             <label>Género</label>
         </div>
-        <div class="input-field col s12 l6">
+        <div class="input-field col s12 l4">
             <select name="paisNacimiento" value="${socio.paisNacimiento}">
                 <option value="" disabled selected>Pais de Nacimiento</option>
 
@@ -55,7 +55,7 @@
                 </c:forEach>
             </select>
         </div>
-        <div class="input-field col s12 l6">
+        <div class="input-field col s12 l4 offset-l2">
             <select name="paisResidencia" value="${socio.paisResidencia}">
                 <option value="" disabled selected>Pais de Residencia</option>
                 <c:forEach items="${paises}" var="p">
@@ -64,14 +64,14 @@
             </select>
         </div>
         <div class="input-field col s12 l4">
-            <input type="text" id="departamento" name="departamento">
-            <label for="departamento">Departamento</label>
+            <select name="ciudad" value="${ciudad.id}">
+                <option value="" disabled selected>Ciudad</option>
+                <c:forEach items="${ciudades}" var="ci">
+                    <option value="${ci.id}" <c:if test="${ci.id == ciudad.id}"> selected </c:if>>${ci.nombre}</option>
+                </c:forEach>
+            </select>
         </div>
         <div class="input-field col s12 l4 offset-l2">
-            <input type="text" id="ciudad" name="ciudad">
-            <label for="ciudad">Ciudad</label>
-        </div>
-        <div class="input-field col s12 l4">
             <input type="text" id="direccion" name="direccion">
             <label for="direccion">Direccion</label>
         </div>

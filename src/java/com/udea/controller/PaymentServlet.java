@@ -72,7 +72,7 @@ public class PaymentServlet extends HttpServlet {
             double total = (double) session.getAttribute("totalPagar");
             String tarjeta = request.getParameter("tarjeta");
             String action = request.getParameter("action");
-
+            String fechanacimiento;
             ArrayList<Tiquete> tiquetesClientes = new ArrayList<>();
             ArrayList<Tiquete> tiquetesClientes2 = new ArrayList<>();
             Tiquete tiquete1 = null;

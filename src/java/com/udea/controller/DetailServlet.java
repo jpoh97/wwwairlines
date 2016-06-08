@@ -5,8 +5,11 @@
  */
 package com.udea.controller;
 
+import com.udea.ejb.CiudadFacadeLocal;
+import com.udea.ejb.PaisFacadeLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +22,10 @@ import javax.servlet.http.HttpSession;
  */
 public class DetailServlet extends HttpServlet {
 
+        @EJB
+    private PaisFacadeLocal paisDAO;
+         @EJB
+    private CiudadFacadeLocal ciudadDAO;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,7 +44,9 @@ public class DetailServlet extends HttpServlet {
             
             String sillasida = request.getParameter("sillasida");
             String sillasregreso = request.getParameter("sillasregreso");
+            request.setAttribute("paises", paisDAO.findAll());
             
+        request.setAttribute("ciudades", ciudadDAO.findAll());
             session.setAttribute("sillasida", sillasida);
             session.setAttribute("sillasregreso", sillasregreso);
             request.getRequestDispatcher("/login.jsp").forward(request, response);

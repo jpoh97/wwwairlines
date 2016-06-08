@@ -1,4 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="header.jsp" />
+
 <form action="./LoginServlet" method="POST">
     <div class="col s12 m6">
         <div class="card white center z-depth-5">
@@ -66,7 +68,7 @@
                         <label for="apellido">Apellido</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="datepicker" value="${socio.fechaNacimiento}">
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="datepicker" value="${fechanacimiento}">
                         <label for="fechaNacimiento">Fecha Nacimiento</label>
                     </div>
 
@@ -104,9 +106,13 @@
                         <label for="departamento">Departamento</label>
                     </div>
                     <div class="input-field col s12 l6">
-                        <input type="text" id="ciudad" name="ciudad" value="${socio.ciudad}">
-                        <label for="ciudad">Ciudad</label>
-                    </div>
+                                <select name="ciudad" value="${ciudad.id}">
+                                    <option value="" disabled selected>Ciudad</option>
+                                    <c:forEach items="${ciudades}" var="ci">
+                                        <option value="${ci.id}" <c:if test="${ci.id == ciudad.id}"> selected </c:if>>${ci.nombre}</option>
+                                    </c:forEach>
+                                </select>
+                            </div>
                     <div class="input-field col s12 l6">
                         <input type="text" id="direccion" name="direccion" value="${socio.direccion}">
                         <label for="direccion">Direccion</label>

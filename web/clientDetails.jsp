@@ -25,7 +25,7 @@
                         </tr>
                         <tr>
                             <td>FECHA DE NACIMIENTO:</td>
-                            <td><p>${socio.fechaNacimiento}${cliente.fechaNacimiento}</p></td>
+                            <td><p>${fechanacimiento}</p></td>
                         </tr>
                         <tr>
                             <td>CORREO:</td>
@@ -37,19 +37,15 @@
                         </tr>
                         <tr>
                             <td>PAÍS DE NACIMIENTO:</td>
-                            <td><p>${socio.paisNacimiento}${cliente.paisNacimiento}</p></td>
+                            <td><p>${paisn}</p></td>
                         </tr>
                         <tr>
                             <td>PAÍS DE RESIDENCIA:</td>
-                            <td><p>${socio.paisResidencia}${cliente.paisResidencia}</p></td>
-                        </tr>
-                        <tr>
-                            <td>DEPARTAMENTEO:</td>
-                            <td><p>${socio.departamento}${cliente.departamento}</p></td>
+                            <td><p>${paisr}</p></td>
                         </tr>
                         <tr>
                             <td>CIUDAD:</td>
-                            <td><p>${socio.ciudad}${cliente.ciudad}</p></td>
+                            <td><p>${ciudad}</p></td>
                         </tr>                
                         <tr>
                             <td>DIRECCIÓN:</td>

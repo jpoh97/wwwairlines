@@ -7,6 +7,7 @@ package com.udea.controller;
 
 import com.udea.business.Asiento;
 import com.udea.business.Cabina;
+import com.udea.business.Ciudad;
 import com.udea.business.Cliente;
 import com.udea.business.ClientePK;
 import com.udea.business.Socio;
@@ -14,6 +15,7 @@ import com.udea.business.SocioPK;
 import com.udea.business.TiquetePK;
 import com.udea.business.Vuelo;
 import com.udea.ejb.AsientoFacadeLocal;
+import com.udea.ejb.CiudadFacadeLocal;
 import com.udea.ejb.ClienteFacadeLocal;
 import com.udea.ejb.PaisFacadeLocal;
 import com.udea.ejb.SocioFacadeLocal;
@@ -49,6 +51,8 @@ public class LoginServlet extends HttpServlet {
     private TiqueteFacadeLocal tiqueteDAO;
     @EJB
     private PaisFacadeLocal paisDAO;
+    @EJB
+    private CiudadFacadeLocal ciudadDAO;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -64,6 +68,7 @@ public class LoginServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         request.setAttribute("paises", paisDAO.findAll());
+        request.setAttribute("ciudades", ciudadDAO.findAll());
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
 
@@ -143,6 +148,7 @@ public class LoginServlet extends HttpServlet {
                 if (asientos2 != null) {
                     session.setAttribute("tiquetesvenida", asientos2);
                 }
+                request.setAttribute("ciudad", ciudadDAO.find(socio.getCiudad()));
                 request.getRequestDispatcher("/clientDetails.jsp").forward(request, response);
                 return;
             } else if (action!=null &&  action.equalsIgnoreCase("continuar")) {
@@ -156,7 +162,6 @@ public class LoginServlet extends HttpServlet {
                 String genero = request.getParameter("genero");
                 String paisNacimiento = request.getParameter("paisNacimiento");
                 String paisResidencia = request.getParameter("paisResidencia");
-                String departamento = request.getParameter("departamento");
                 String ciudad = request.getParameter("ciudad");
                 String direccion = request.getParameter("direccion");
 
@@ -169,16 +174,16 @@ public class LoginServlet extends HttpServlet {
                         && genero != null && !genero.trim().equalsIgnoreCase("")
                         && paisNacimiento != null && !paisNacimiento.trim().equalsIgnoreCase("")
                         && paisResidencia != null && !paisResidencia.trim().equalsIgnoreCase("")
-                        && departamento != null && !departamento.trim().equalsIgnoreCase("")
                         && direccion != null && !direccion.trim().equalsIgnoreCase("")) {
 
                     ClientePK clientePK = new ClientePK(tipoId, Integer.parseInt(identificacion));
                     Cliente cliente = clienteDAO.find(clientePK);
+                    Ciudad c = ciudadDAO.findByNombre(ciudad);
                     if (cliente == null) {
-                        cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion);
+                        cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), Integer.parseInt(ciudad), direccion);
                         clienteDAO.create(cliente);
                     } else {
-                        cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), Integer.parseInt(departamento), Integer.parseInt(ciudad), direccion);
+                        cliente = new Cliente(clientePK, nombre, apellido, new Date(fechaNacimiento), correo, genero, Integer.parseInt(paisNacimiento), Integer.parseInt(paisResidencia), c.getEstado().getId(), Integer.parseInt(ciudad), direccion);
                         clienteDAO.edit(cliente);
                     }
                     session.setAttribute("cliente", cliente);
@@ -201,6 +206,11 @@ public class LoginServlet extends HttpServlet {
                     } else {
                         session.setAttribute("genero", "Femenino");
                     }
+                    request.setAttribute("paisr", paisDAO.find(cliente.getPaisResidencia()).getNombre());
+                    request.setAttribute("paisn", paisDAO.find(cliente.getPaisNacimiento()).getNombre());
+                    request.setAttribute("ciudad", ciudadDAO.find(cliente.getCiudad()));
+                    request.setAttribute("fechanacimiento", fechaNacimiento.substring(4, 10) + ", "+ fechaNacimiento.substring(24, fechaNacimiento.length()));
+                    
                     List<Asiento> asientos1 = getAvailableSeats(cabina1, vuelo1);
                     List<Asiento> asientos2 = getAvailableSeats(cabina2, vuelo2);
                     if (asientos1 != null) {

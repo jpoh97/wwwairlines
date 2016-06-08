@@ -9,6 +9,7 @@ import com.udea.business.Ciudad;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -27,6 +28,13 @@ public class CiudadFacade extends AbstractFacade<Ciudad> implements CiudadFacade
 
     public CiudadFacade() {
         super(Ciudad.class);
+    }
+
+    @Override
+    public Ciudad findByNombre(String nombre) {
+        Query q = em.createNamedQuery("Ciudad.findByNombre", Ciudad.class);
+        q.setParameter("nombre", nombre);
+        return (Ciudad)q.getSingleResult();
     }
     
 }

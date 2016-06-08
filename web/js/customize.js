@@ -33,7 +33,7 @@ function theValidator() {
     var textBox = document.getElementsByClassName('validator');
     //alert(textBox[1].value.length);
     for (var i = textBox.length - 1; i >= 0; i--) {
-        if (textBox[i].value.length === 0)
+        if (textBox[i].value.trim().length === 0)
         {
             alert('Faltan campos por llenar');
             return false;

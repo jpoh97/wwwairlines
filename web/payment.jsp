@@ -60,11 +60,11 @@
                         <div class="collapsible-body">
                             <div class="row">
                                 <div class="offset-l1 input-field col s12 l6">
-                                    <input type="text" id="tarjeta" name="tarjeta" onkeydown="return validNumber()">
+                                    <input class="validator" type="text" id="tarjeta" name="tarjeta" onkeydown="return validNumber()">
                                     <label for="id">Número de tarjeta de crédito</label>
                                 </div>
                                 <br/>
-                                <button data-target="modalPagar" class="btn waves-effect waves-light modal-trigger indigo accent-2" type="submit" id="pagarbtn" disabled="disabled">PAGAR
+                                <button data-target="modalPagar" class="btn waves-effect waves-light modal-trigger indigo accent-2" type="submit" id="pagarbtn" disabled="disabled" onclick="return theValidator()">PAGAR
                                     <i class="material-icons right">done</i>
                                 </button>
                             </div>
