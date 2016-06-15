@@ -5,7 +5,6 @@
     <div class="col s12 m6">
         <div class="card white center z-depth-5">
             <div class="card-content black-text" >
-
                 ${confirma}
             </div>
         </div>
